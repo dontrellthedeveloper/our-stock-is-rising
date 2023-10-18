@@ -8,3 +8,4 @@ export {default as Gallery} from './gallery/gallery';
 export {default as Services} from './services/services';
 export {default as Standards} from './standards/standards';
 export {default as Team} from './team/team';
+export {default as Statement} from './statement/statement'

@@ -10,6 +10,7 @@ import {
   Media,
   Team,
   AddServices,
+  Statement,
 } from "./../container";
 
 // import { Navbar } from "../components";
@@ -24,6 +25,7 @@ const Homepage = () => {
       {/* <Brands/> */}
 
       <Gallery />
+      <Statement/>
       {/* <Services/> */}
       {/* <Media/>
       <Team/>

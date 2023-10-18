@@ -29,7 +29,7 @@
   }
   
   .portfolio-item {
-    overflow: hidden;
+    // overflow: hidden;
     position: relative;
   }
   
@@ -130,10 +130,10 @@
     /*transition: transform .5s ease, -webkit-transform .5s ease ;*/
   }
   
-  .portfolio-item:hover img {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
+//   .portfolio-item:hover img {
+//     -webkit-transform: scale(1.1);
+//     transform: scale(1.1);
+//   }
   
   /* Overlay Effect */
   .portfolio-item-overlay {

@@ -235,16 +235,15 @@ section {
 
 .btn-red {
   color: #dcdcdc;
-  border: 1px solid #cd0000;
-  background-color: #cd0000;
-
+  border: 2px solid #dcdcdc;
+  background-color: #a1a0a1;
 }
 
 .btn-red:hover,
 .btn-red:focus {
-  color: #dcdcdc;
-  background-color: #a1a0a1;
-  border: 1px solid #454545;
+  color: #000;
+  background-color: #4dd0e1;
+  border: 2px solid #4dd0e1;
 }
 
 .btn-instagram {
@@ -683,11 +682,13 @@ section {
 ul.social-list {
   padding: 0;
   margin-top: 0;
+  text-align: center;
+  margin-bottom: 12px;
 }
 
 ul.social-list li {
   display: inline-block;
-  padding: 0;
+  padding: 5px;
 }
 
 ul.social-list li a {
@@ -711,6 +712,17 @@ ul.social-list .instagram-bg-color a:hover {
   animation: GradientT 300ms ease-in;
 }
 
+ul.social-list .instagram-bg-color a {
+  background: #f09433;
+  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+  border-color: transparent;
+  animation: GradientT 300ms ease-in;
+  color: #dcdcdc;
+  border: 1px solid #dcdcdc;
+}
+
 ul.social-list .youtube-bg-color a:hover {
   background: #FF0000;
   border-color: transparent;
@@ -718,9 +730,23 @@ ul.social-list .youtube-bg-color a:hover {
 }
 
 ul.social-list .facebook-bg-color a:hover {
+    /*background: #3b5998;*/
+    background: #a1aca1;
+    border-color: transparent;
+    animation: GradientT 300ms ease-in;
+  }
+  
+  .contact-icon-margin {
+    margin-bottom: 5px;
+    /*margin-right: 2px;*/
+  }
+  
+  ul.social-list .facebook-bg-color a {
   background: #3b5998;
   border-color: transparent;
   animation: GradientT 300ms ease-in;
+  color: #dcdcdc;
+  border: 1px solid #dcdcdc;
 }
 
 ul.social-list .twitter-bg-color a:hover {
@@ -806,6 +832,7 @@ ul.social-list .twitter-bg-color a:hover {
 
 #statement {
   /*background: url("../img/kt_about/Influence_is_power.png") no-repeat fixed center;*/
+  background: url("./assets/dayton.jpg") no-repeat fixed center;
   background-size: cover;
 }
 
@@ -965,7 +992,8 @@ ul.social-list .twitter-bg-color a:hover {
 
 .show-button {
   text-align: center;
-  margin-top: 15px;
+  /*margin-top: 15px;*/
+  margin-top: 20px;
   margin-bottom: 10px;
 }
 
@@ -1183,7 +1211,9 @@ ul.social-list .twitter-bg-color a:hover {
 
 
 #contact {
-  background-color: #454545;
+  /* background-color: #454545; */
+  background-color: #223903cc;
+
 }
 
 #contact-left p {
@@ -1193,11 +1223,13 @@ ul.social-list .twitter-bg-color a:hover {
 ul.office-details {
   list-style: none;
   padding: 0;
+  text-align: center;
+  margin-bottom: 0;
 }
 
 ul.office-details li {
   font-family: "Open Sans", sans-serif;
-  margin-top: 12px;
+  margin-top: 8px;
   margin-bottom: 12px;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -1207,17 +1239,17 @@ ul.office-details li {
 }
 
 ul.office-details li a {
-  color: #dcdcdc;
+  color: #223903;
   margin-top: 3px;
 }
 
 ul.office-details li:hover {
-  color: #500000;
+  color: #dcdcdc;
   text-decoration: none;
 }
 
 ul.office-details li:hover a {
-  color: #500000;
+  color: #dcdcdc;
   text-decoration: none;
 }
 
@@ -1273,21 +1305,44 @@ ul.office-details li i {
 
 #contact-right h4 {
   font-size: 24px;
+  text-align: center;
+
 }
 
 #contact-right p {
   margin-bottom: 25px;
+  text-align: center;
+
 }
 
 #contact-right form .form-control {
   font-family: "Open Sans", sans-serif;
-  padding: 10px 15px;
+  padding: 5px 15px;
   font-size: 12px;
   line-height: 24px;
+  margin: 6px;
 }
 
 #contact-right form textarea.form-control {
   min-height: 164px;
+}
+
+.contact-main-form-s {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contact-main-form-h {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-main-form-h h5 {
+  color: #fff !important;
+}
+
+.contact-main-form-h h2 {
+  color: #fff;
 }
 
 /* ================================================

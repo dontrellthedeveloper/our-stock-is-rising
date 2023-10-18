@@ -1317,8 +1317,8 @@ ul.social-list .twitter-bg-color a:hover {
 /* ================================================
 |   |   |   |   Brands
 ================================================ */
-#brands .horizontal-heading {
-  /*margin-bottom: 30px;*/
+/* #brands .horizontal-heading {
+  margin-bottom: 30px;
 }
 
 #clients-list {
@@ -1345,7 +1345,7 @@ ul.social-list .twitter-bg-color a:hover {
 .brand-thin {
   font-weight: 100;
   font-size: 35px !important;
-}
+} */
 
 /* ================================================
 |   |   |   |   Contact

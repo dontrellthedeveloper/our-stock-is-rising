@@ -2,7 +2,7 @@ import './App.css';
 import './Responsive.css';
 
 
-import {Header, About, Brands, Stats, Portfolio, Services, Media, Team, AddServices} from './container';
+import {Header, About, Brands, Standards, Portfolio, Services, Media, Team, AddServices} from './container';
 import {Navbar} from './components'
 
 const App = () => {
@@ -11,8 +11,9 @@ const App = () => {
       {/* <Navbar/> */}
       <Header/>
       <About/>
+      <Standards/>
       {/* <Brands/>
-      <Stats/>
+
       <Portfolio/>
       <Services/>
       <Media/>

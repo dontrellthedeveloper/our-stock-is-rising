@@ -6,5 +6,5 @@ export {default as Brands} from './brands/brands';
 export {default as Media} from './media/media';
 export {default as Portfolio} from './portfolio/portfolio';
 export {default as Services} from './services/services';
-export {default as Stats} from './stats/stats';
+export {default as Standards} from './standards/standards';
 export {default as Team} from './team/team';

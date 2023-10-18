@@ -5,7 +5,11 @@ import './gallery.scss';
 import {images} from "../../constants";
 import {urlFor, client} from "../../client";
 
-const Gallery = () => {
+// import 'photoswipe/dist/photoswipe.css'
+
+import {Link} from "react-router-dom";
+
+const GalleryS = () => {
 
 
     const [galleries, setGalleries] = useState([]);
@@ -70,12 +74,8 @@ const Gallery = () => {
 
 
 
-                                            <a href={urlFor(gallery.imageUrl)}
-                                               data-title="
-    <div class='show-button'><a href='mailto:shawn@ktmanagers.com?subject=I am interested in Mimi promoting my brand' target='_blank'><button class='btn btn-client-book btn-red'>Book Mimi to promote your brand!</button></a><hr><a href='https://www.instagram.com/mimifaust' target='_blank'><button class='btn btn-social-i btn-instagram'><i class='fa fa-instagram'></i></button></a><a href='https://www.facebook.com/officialmimifaust' target='_blank'><button class='btn btn-social-i-f btn-facebook'><i class='fa fa-facebook'></i></button></a><a href='https://twitter.com/mimifaust' target='_blank'><button class='btn btn-social-i-t btn-twitter'><i class='fa fa-twitter'></i></button></a></div><hr>
-    "
+                                        <Link to={'/gallery/' + gallery.slug.current} >
 
-                                            >
                                                 <img src={urlFor(gallery.imageUrl)} className="img-responsive"
                                                      alt="portfolio 01"/>
 
@@ -94,7 +94,7 @@ const Gallery = () => {
                                                         </div>
                                                     </div>
 
-                                            </a>
+                                        </Link>
                                         </div>
                                     </div>
 
@@ -142,4 +142,4 @@ const Gallery = () => {
     );
 };
 
-export default Gallery;
+export default GalleryS;

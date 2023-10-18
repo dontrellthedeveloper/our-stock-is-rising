@@ -2,25 +2,27 @@ import './App.css';
 import './Responsive.css';
 import './loader';
 
+import React from 'react';
 
-import {Header, About, Brands, Standards, Gallery, Services, Media, Team, AddServices} from './container';
-import {Navbar} from './components'
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+
+// import {Header, About, Brands, Standards, Gallery, Services, Media, Team, AddServices} from './container';
+// import {Navbar} from './components'
+
+import Homepage from "./pages/Homepage";
+import Gallery from "./pages/Gallery";
 
 const App = () => {
   return (
-    <div>
-      {/* <Navbar/> */}
-      <Header/>
-      <About/>
-      <Standards/>
-      {/* <Brands/> */}
+    <Router>
+        <Routes>
+            <Route path='/' element={<Homepage/>} exact />
+            <Route path='/gallery/:slug' element={<Gallery/>} exact />
+        </Routes>
+        {/*<Homepage/>*/}
 
-      <Gallery/>
-      {/* <Services/> */}
-      {/* <Media/>
-      <Team/>
-      <AddServices/> */}
-    </div>
+
+    </Router>
   );
 }
 

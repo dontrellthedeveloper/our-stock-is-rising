@@ -339,27 +339,6 @@ section {
   z-index: 50;
 }
 
-/* ================================================
-|   |   |   |   Arrow Down
-================================================ */
-
-.arrow-down {
-  position: absolute;
-  left: 50%;
-  bottom: 20px;
-  color: #dcdcdc;
-  font-size: 32px;
-  width: 32px;
-  height: 32px;
-  text-align: center;
-  margin-left: -16px;
-  z-index: 1;
-}
-
-.arrow-down:hover,
-.arrow-down:focus {
-  color: #cd0000;
-}
 
 /* ================================================
 |   |   |   |   Content Boxes
@@ -447,7 +426,7 @@ section {
 |   |   |   |   About 01
 ================================================ */
 
-#about .vertical-heading h2 {
+/* #about .vertical-heading h2 {
   color: #454545;
   margin-top: 90px;
 }
@@ -509,8 +488,7 @@ section {
 }
 
 .about-text-bold {
-  /*color: #cd0000;*/
-  /*font-weight: 700;*/
+
 }
 
 .about-right p:first-child {
@@ -523,13 +501,13 @@ section {
 
 .about-bottom img {
   margin: 0 auto;
-}
+} */
 
 /* ================================================
 |   |   |   |   About 02
 ================================================ */
 
-.about-02 {
+/* .about-02 {
   background-color: #a1a0a1;
 }
 
@@ -544,7 +522,7 @@ section {
   box-shadow: 0 0 10px rgba(0,0,0,.1);
 }
 
-.about-item i {
+.about-item .react-icon-about {
   font-size: 42px;
   margin: 0;
 }
@@ -566,13 +544,14 @@ section {
   margin-top: 20px;
 }
 
-/* Hover state */
+
 
 .about-item:hover {
   background-color: #cd0000;
 }
 
 .about-item:hover i,
+.about-item:hover .react-icon-about,
 .about-item:hover h3,
 .about-item:hover p {
   color: #dcdcdc;
@@ -582,17 +561,19 @@ section {
   background-color: #dcdcdc;
 }
 
-.about-item:hover i {
+.about-item:hover i,
+.about-item:hover .react-icon-about {
   transform: translateY(-5px);
 }
 
-/* Smooth transition */
+
 .about-item,
 .about-item i,
+.about-item .react-icon-about,
 .about-item hr {
   -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
-}
+} */
 
 
 /* ================================================

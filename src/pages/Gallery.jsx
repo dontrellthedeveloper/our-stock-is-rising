@@ -19,7 +19,7 @@ import OwlCarousel from "react-owl-carousel";
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import {BiCaretRight, BiRightArrow} from "react-icons/bi";
-
+import videoBgMp4 from '../assets/our-stock-is-rising.mp4';
 
 
 
@@ -97,14 +97,23 @@ function Gallery() {
 
 
 
-    if(!singleGallery) return <div>Loading.....</div>
-    if(!services) return <div>Loading.....</div>
+    if(!singleGallery || !services) return (
+        <div className="preloader">
+            <div className="status"></div>
+        </div>
+    )
+    // if(!services) return <div>Loading.....</div>
 
 
     return (
         <>
 
+            <section id="home-4">
+                            <video className="home-bg-video" src={videoBgMp4} autoPlay loop muted playsInline>
+                            </video>
 
+                            <div id="home-overlay-2"></div>
+            </section>
             <section id="">
                 <div className="content-box-md-interact">
                     <div className="">
@@ -253,6 +262,8 @@ function Gallery() {
                                                                 More information?
                                                                     Please send us a message using our 
                                                                     <a
+                                                                        className='email__design-s'
+
                                                                         href='/contact'
                                                                         target='_blank'> contact form
                                                                         </a>

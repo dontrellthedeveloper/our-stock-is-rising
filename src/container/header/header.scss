@@ -1,0 +1,91 @@
+/* ================================================
+|   |   |   |   Home
+================================================ */
+.home-bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    /*background: url("../video/ktmanagers_homepage-2.jpg") no-repeat;*/
+    background-size: cover;
+  }
+  
+  .home-overlay {
+    background-color: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .home-content {
+    width: 100%;
+    height: 100vh;
+    display: table;
+  }
+  
+  .home-content-inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
+  .home-heading h1 {
+    color: white;
+    font-size: 65px;
+    font-weight: 100;
+    /*text-transform: uppercase;*/
+    margin: 0;
+    display: inline-block;
+
+    color: #13C501;
+    font-weight: 600;
+    text-shadow: 15px 10px 0 #000;
+    -webkit-text-fill-color: #9fd399;
+    // -webkit-text-stroke: 2px #4dd0e1;
+    // text-stroke: 8px #4dd0e1;
+  }
+  
+  .home-heading h1 span {
+    // color: #213805;
+    font-weight: 500;
+    font-size: 1.12em;
+
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 15px 10px 0 #000;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 2px #4dd0e1;
+    text-stroke: 8px #4dd0e1;
+  }
+  
+  .home-text p {
+    color: white;
+    font-size: 23px;
+    font-weight: 600;
+    margin: 8px 0 30px 0;
+
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 15px 10px 0 #000;
+    -webkit-text-fill-color: #fff;
+  }
+  
+  .btn-home {
+    color: #dcdcdc;
+    border: 1px solid #dcdcdc;
+  }
+  
+  .btn-home:hover,
+  .btn-home:focus {
+    color: #000;
+    background-color: #4dd0e1;
+    border: 1px solid #4dd0e1;
+  }

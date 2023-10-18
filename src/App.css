@@ -87,7 +87,7 @@ section {
 /* ================================================
 |   |   |   |   Home
 ================================================ */
-.home-bg-video {
+/* .home-bg-video {
   position: fixed;
   top: 50%;
   left: 50%;
@@ -98,7 +98,7 @@ section {
   width: auto;
   height: auto;
   z-index: -1;
-  /*background: url("../video/ktmanagers_homepage-2.jpg") no-repeat;*/
+  background: url("../video/ktmanagers_homepage-2.jpg") no-repeat;
   background-size: cover;
 }
 
@@ -127,7 +127,7 @@ section {
   color: white;
   font-size: 65px;
   font-weight: 100;
-  /*text-transform: uppercase;*/
+  text-transform: uppercase;
   margin: 0;
   display: inline-block;
 }
@@ -143,7 +143,9 @@ section {
   font-size: 23px;
   font-weight: 600;
   margin: 8px 0 30px 0;
-}
+} */
+
+
 
 /* ================================================
 |   |   |   |   Buttons
@@ -219,7 +221,7 @@ section {
   border: 1px solid #a1a0a1;
 }
 
-.btn-home {
+/* .btn-home {
   color: #dcdcdc;
   border: 1px solid #dcdcdc;
 }
@@ -229,7 +231,7 @@ section {
   color: #dcdcdc;
   background-color: #cd0000;
   border: 1px solid #cd0000;
-}
+} */
 
 .btn-red {
   color: #dcdcdc;

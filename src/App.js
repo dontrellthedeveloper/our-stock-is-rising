@@ -8,16 +8,16 @@ import {Navbar} from './components'
 const App = () => {
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Header/>
-      <About/>
+      {/* <About/>
       <Brands/>
       <Stats/>
       <Portfolio/>
       <Services/>
       <Media/>
       <Team/>
-      <AddServices/>
+      <AddServices/> */}
     </div>
   );
 }

@@ -1,8 +1,9 @@
 import './App.css';
 import './Responsive.css';
+import './loader';
 
 
-import {Header, About, Brands, Standards, Portfolio, Services, Media, Team, AddServices} from './container';
+import {Header, About, Brands, Standards, Gallery, Services, Media, Team, AddServices} from './container';
 import {Navbar} from './components'
 
 const App = () => {
@@ -12,11 +13,11 @@ const App = () => {
       <Header/>
       <About/>
       <Standards/>
-      {/* <Brands/>
+      {/* <Brands/> */}
 
-      <Portfolio/>
-      <Services/>
-      <Media/>
+      <Gallery/>
+      {/* <Services/> */}
+      {/* <Media/>
       <Team/>
       <AddServices/> */}
     </div>

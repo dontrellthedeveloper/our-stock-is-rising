@@ -23,7 +23,7 @@ const standards = () => {
                             <OwlCarousel
                                 items='6'
                                 autoplay
-                            smartSpeed='700'
+                            smartSpeed='1400'
                             loop
                             autoplayHoverPause='true'
                             width='1000'
@@ -36,7 +36,7 @@ const standards = () => {
 
 
                                 <div className="item client">
-                                    <div class="basic-card basic-card-light ">
+                                    <div class="basic-card basic-card-aqua ">
                                         <div class="card-content">
                                             <span class="card-title">Card Title</span>
                                             <p class="card-text">
@@ -51,23 +51,7 @@ const standards = () => {
                 
                                 </div>
                                 <div className="item client">
-                                    <div class="basic-card basic-card-light ">
-                                        <div class="card-content">
-                                            <span class="card-title">Card Title</span>
-                                            <p class="card-text">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                            </p>
-                                        </div>
-                        
-                                        <div class="card-link">
-                                            <a href="#" title="Read Full"><span>Read Full</span></a>
-                                        </div>
-                                    </div>
-                
-                                </div>
-
-                                <div className="item client">
-                                    <div class="basic-card basic-card-light ">
+                                    <div class="basic-card basic-card-aqua ">
                                         <div class="card-content">
                                             <span class="card-title">Card Title</span>
                                             <p class="card-text">
@@ -83,7 +67,7 @@ const standards = () => {
                                 </div>
 
                                 <div className="item client">
-                                    <div class="basic-card basic-card-light ">
+                                    <div class="basic-card basic-card-aqua ">
                                         <div class="card-content">
                                             <span class="card-title">Card Title</span>
                                             <p class="card-text">
@@ -99,7 +83,7 @@ const standards = () => {
                                 </div>
 
                                 <div className="item client">
-                                    <div class="basic-card basic-card-light ">
+                                    <div class="basic-card basic-card-aqua ">
                                         <div class="card-content">
                                             <span class="card-title">Card Title</span>
                                             <p class="card-text">
@@ -115,7 +99,7 @@ const standards = () => {
                                 </div>
 
                                 <div className="item client">
-                                    <div class="basic-card basic-card-light ">
+                                    <div class="basic-card basic-card-aqua ">
                                         <div class="card-content">
                                             <span class="card-title">Card Title</span>
                                             <p class="card-text">
@@ -131,7 +115,23 @@ const standards = () => {
                                 </div>
 
                                 <div className="item client">
-                                    <div class="basic-card basic-card-light ">
+                                    <div class="basic-card basic-card-aqua ">
+                                        <div class="card-content">
+                                            <span class="card-title">Card Title</span>
+                                            <p class="card-text">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                            </p>
+                                        </div>
+                        
+                                        <div class="card-link">
+                                            <a href="#" title="Read Full"><span>Read Full</span></a>
+                                        </div>
+                                    </div>
+                
+                                </div>
+
+                                <div className="item client">
+                                    <div class="basic-card basic-card-aqua ">
                                         <div class="card-content">
                                             <span class="card-title">Card Title</span>
                                             <p class="card-text">

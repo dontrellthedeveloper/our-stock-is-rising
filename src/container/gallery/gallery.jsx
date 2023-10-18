@@ -88,8 +88,7 @@ const GalleryS = () => {
                                                             <span></span>
 
                                                              {/*Item Description */}
-                                                            <p>Currently Starring on the Hit TV Show<br/>“Love & Hip Hop:
-                                                                Atlanta” on the<br/> VH1 Network <br/> influencer</p>
+                                                             <p>{gallery.description}</p>
 
                                                         </div>
                                                     </div>

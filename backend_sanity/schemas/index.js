@@ -1,3 +1,4 @@
 import gallery from "./gallery"
+import about from './about';
 
-export const schemaTypes = [gallery]
+export const schemaTypes = [gallery, about]

@@ -73,27 +73,44 @@
   
         margin-bottom: 5px;
       }
-  
-      a {
-        // color: var(--gray-color);
+
+      .navbar__links-styles {
         text-decoration: none;
         flex-direction: column;
-        text-transform: capitalize;
+        text-transform: uppercase;
         font-weight: 500;
   
         transition: all 0.3s ease-in-out;
-        // color: white;
-        // text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
-        // 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+        //color: white;
+        //text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
+        //1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+  
+    //   a {
+    //     // color: var(--gray-color);
+    //     text-decoration: none;
+    //     flex-direction: column;
+    //     text-transform: capitalize;
+    //     font-weight: 500;
+  
+    //     transition: all 0.3s ease-in-out;
+    //     // color: white;
+    //     // text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
+    //     // 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
   
         &:hover {
-          color:var(--secondary-color)
+        //   color:var(--secondary-color)
+        color: #9fd399;
         }
       }
   
       &:hover {
         div {
-          background-color: var(--secondary-color)
+        //   background-color: var(--secondary-color)
+                //background-color: var(--secondary-color)
+                margin-left: auto;
+                margin-right: auto;
+                // margin-bottom: 4px;
+                color: #9fd399;
         }
       }
     }
@@ -106,10 +123,50 @@
 
   .navbar__links-color {
     color: #fff;
+
+    &:hover {
+        //color:var(--secondary-color);
+        color: #9fd399;
+      }
+    
+      &:target {
+        color: #9fd399;
+      }
+    
+      &:focus {
+        color: #9fd399;
+      }
+    
+      &:active {
+        //color:var(--secondary-color)
+        color: #9fd399;
+        //text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
+        //1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+      }
   }
   
   .navbar__links-color-scroll {
     color: #000;
+
+    &:hover {
+        //color:var(--secondary-color);
+        color: #9fd399;
+      }
+    
+      &:target {
+        color: #9fd399;
+      }
+    
+      &:focus {
+        color: #9fd399;
+      }
+    
+      &:active {
+        //color:var(--secondary-color)
+        color: #9fd399;
+        //text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
+        //1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+      }
   }
   
   .app__navbar-menu {

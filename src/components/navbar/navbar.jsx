@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import {HiMenuAlt4, HiX} from "react-icons/hi";
 import {images} from "../../constants";
 import './navbar.scss';
+import {NavLink} from "react-router-dom";
+
 
 const Navbar = () => {
     const [toggle, setToggle] = useState(false);
@@ -22,12 +24,53 @@ const Navbar = () => {
             <img src={scroll ? images.logo2 : images.logo} alt="logo"/>
             </div>
             <ul className='app__navbar-links'>
-                {['home','shop','updates','purpose/objective', 'about', 'history', 'extras', 'contact'].map((item)=> (
+                {/* {['home','shop','updates','purpose/objective', 'about', 'history', 'extras', 'contact'].map((item)=> (
                     <li className='app__flex p-text' key={`link-${item}`}>
                         <div/>
                         <a className={scroll ? 'navbar__links-color-scroll' : 'navbar__links-color'} href={`#${item}`}>{item}</a>
                     </li>
-                ))}
+                ))} */}
+
+                <li className='app__flex p-text'>
+                    <div/>
+                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/'>Home
+                    </NavLink>
+                </li>
+                <li className='app__flex p-text'>
+                    <div/>
+                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/shop'>Shop
+                    </NavLink>
+                </li>
+                <li className='app__flex p-text'>
+                    <div/>
+                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/updates'>Updates
+                    </NavLink>
+                </li>
+                <li className='app__flex p-text'>
+                    <div/>
+                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/purpose'>Purpose/Objectives
+                    </NavLink>
+                </li>
+                <li className='app__flex p-text'>
+                    <div/>
+                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/about'>About
+                    </NavLink>
+                </li>
+                <li className='app__flex p-text'>
+                    <div/>
+                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/history'>History
+                    </NavLink>
+                </li>
+                <li className='app__flex p-text'>
+                    <div/>
+                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/extras'>Extras
+                    </NavLink>
+                </li>
+                <li className='app__flex p-text'>
+                    <div/>
+                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/contact'>Contact
+                    </NavLink>
+                </li>
             </ul>
 
             <div className='app__navbar-menu'>

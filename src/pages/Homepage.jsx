@@ -31,10 +31,10 @@ const Homepage = () => {
 
       {/* <Brands/> */}
       <Statement/>
-      {/* <Gallery /> */}
+
       <History/>
       <Testimonials/>
-
+      {/* <Gallery /> */}
 
       {/* <Services/> */}
       {/* <Media/>

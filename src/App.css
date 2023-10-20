@@ -1194,11 +1194,16 @@ ul.social-list .twitter-bg-color a:hover {
 ================================================ */
 /* Contact Left */
 .form-styles-c {
-  background-color: #a1a0a1;
+  /* background-color: #a1a0a1; */
+  background-color: #cdcdcd;
 }
 
 .line-br-color {
   border: 1px solid #454545;
+}
+
+#submit-btn {
+  margin-top: 20px;
 }
 
 #contact-left .vertical-heading h5 {
@@ -1229,7 +1234,8 @@ ul.social-list .twitter-bg-color a:hover {
 
 #contact {
   /* background-color: #454545; */
-  background-color: #223903cc;
+  /* background-color: #223903cc; */
+  background-color: #000000cc;
 
 }
 

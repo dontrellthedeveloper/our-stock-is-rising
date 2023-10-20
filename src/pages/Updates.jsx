@@ -120,14 +120,20 @@ function Updates() {
                             <div className="row">
                                 <div className="home-headings tools-p-align">
                                     <div className="horizontal-heading influencer-name">
-                                        <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> @{singleTeamMember.slug.current}</span></h1>
+                                    <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> 
+                                        {/* @{singleTeamMember.slug.current} */}
+                                        Updates
+                                        </span></h1>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div className="map-color-6">
-                            <div className="container">
-                                <div className="row">
+                            <div className="container" style={{height: '600px', display: 'table', verticalAlign: 'middle'}}>
+
+                            <h3 style={{display: 'table-cell', verticalAlign: 'middle', textAlign: 'center'}}>In Development...</h3>                                                        
+
+                                <div className="row" style={{display: 'none'}}>
                                     <div id="content">
                                         <section id="map-section" className="inner over client-section-b">
                                             {/*<ul id="examples-2">*/}

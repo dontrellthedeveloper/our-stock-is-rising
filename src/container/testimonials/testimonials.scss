@@ -137,3 +137,14 @@
 
 
   .circular--square { display: inline-block; position: relative;  overflow: hidden; border-radius: 50%; } .circular--landscape img { width: auto; height: 100%; margin-left: -50px; }
+
+
+  #testimonials {
+    /*background: url("../img/kt_about/Influence_is_power.png") no-repeat fixed center;*/
+    background: url("../../assets/dayton.jpg") no-repeat fixed center;
+    background-size: cover;
+  }
+  
+  #testimonials .content-box-md-brands {
+    background: rgba(0,0,0,0.8);
+  }

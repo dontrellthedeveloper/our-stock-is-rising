@@ -58,25 +58,25 @@ const footer = () => {
                                         <h4 className="form-t-c">Send A Message</h4>
                                         <hr className="line-br-color"/>
 
-
+{/* 
                                         <ul className="office-details">
                                             <li>
-                                                {/*<i className="fa fa-envelope-o"></i>*/}
-                                                {/* <a
+                                                <i className="fa fa-envelope-o"></i>
+                                                <a
                                                     href="mailto:shawn@ktmanagers.com"
-                                                    target="_blank">shawn@ktmanagers.com</a> */}
+                                                    target="_blank">shawn@ktmanagers.com</a>
                                             </li>
-                                        </ul>
+                                        </ul> */}
 
 
                                         <ul className="social-list contact-icon-s">
                                             <li className="instagram-bg-color">
-                                                <a href="https://www.instagram.com/ktmanagers" target="_blank">
+                                                <a href="#" target="_blank">
                                                     <FaInstagram className="fa fa-instagram contact-icon-m insta-c-i contact-icon-margin"/>
                                                 </a>
                                             </li>
                                             <li className="facebook-bg-color">
-                                                <a href="https://www.facebook.com/ktmanagers/?ref=br_rs" target="_blank">
+                                                <a href="#" target="_blank">
                                                     <FaFacebookF className="fa fa-facebook contact-icon-m face-c-i contact-icon-margin"/>
                                                 </a>
                                             </li>

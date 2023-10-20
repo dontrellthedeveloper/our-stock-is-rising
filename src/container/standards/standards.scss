@@ -30,15 +30,24 @@
   }
   
   .brand-bold {
-    color: #9fd399;
+    // color: #9fd399;
     font-weight: 700 !important;
   
-    
+    color: #fff;
+    font-weight: 600;
+    text-shadow: 15px 10px 0 #000;
+    -webkit-text-fill-color: #fff;
+    -webkit-text-stroke: 1px #4dd0e1;
   }
   
   .brand-thin {
     font-weight: 100;
     font-size: 35px !important;
+
+    color: #13C501;
+    font-weight: 600;
+    text-shadow: 15px 10px 0 #000;
+    -webkit-text-fill-color: #9fd399;
   }
 
 
@@ -108,7 +117,8 @@
         -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
         -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
         -o-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
-        box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+        // box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+        box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
     }
     
         .basic-card .card-content {
@@ -158,18 +168,37 @@
     
     .basic-card-aqua {
         background-image: linear-gradient(to bottom right, #00bfad, #99a3d4);
+        background-image: linear-gradient(to bottom right, #fff, #fff);
+
+        :hover {
+            background-image: linear-gradient(to bottom right, #4dd0e1, #9fd399);
+            cursor: pointer;
+
+        }
+
+        .card-link a {
+            color: #000;
+            font-weight: 500;
+        }
+
     }
 
         .basic-card-aqua .card-content, .basic-card .card-link a {
-            color: #fff;
+            
+            text-align: center;
+
+
         }
         
         .basic-card-aqua .card-link {
-            border-top:1px solid #82c1bb;
+            border-top:1px solid #000;
+            text-align: center;
+            background-color: #dcdcdc;
+            margin: 30px auto;
         }
 
             .basic-card-aqua .card-link a:after {
-                background:#fff;
+                background:#000;
             }
 
     .basic-card-lips {

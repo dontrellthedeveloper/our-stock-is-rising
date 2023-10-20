@@ -11,6 +11,10 @@ import {
   Team,
   AddServices,
   Statement,
+  Purpose,
+  History,
+  Shop,
+  Testimonials
 } from "./../container";
 
 // import { Navbar } from "../components";
@@ -21,11 +25,17 @@ const Homepage = () => {
       {/* <Navbar/> */}
       <Header />
       <About />
+      {/* <Shop/> */}
       <Standards />
-      {/* <Brands/> */}
+      <Purpose/>
 
-      <Gallery />
+      {/* <Brands/> */}
       <Statement/>
+      {/* <Gallery /> */}
+      <History/>
+      <Testimonials/>
+
+
       {/* <Services/> */}
       {/* <Media/>
       <Team/>

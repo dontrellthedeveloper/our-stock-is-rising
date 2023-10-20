@@ -54,7 +54,7 @@ const standards = () => {
 
 
                                 <div className="item client">
-                                    <div class="basic-card basic-card-aqua ">
+                                    <div class="basic-card basic-card-aqua " >
                                         <div class="card-content">
                                             <span class="card-title">Card Title</span>
                                             <p class="card-text">

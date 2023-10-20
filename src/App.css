@@ -26,7 +26,11 @@ html, body {
 
 body {
   color: #000;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+
 }
+
+
 
 h1,
 h2,
@@ -854,6 +858,18 @@ ul.social-list .twitter-bg-color a:hover {
   margin-top: 8px;
 }
 
+
+#brands {
+  /*background: url("../img/kt_about/Influence_is_power.png") no-repeat fixed center;*/
+  background: url("./assets/dayton.jpg") no-repeat fixed center;
+  background-size: cover;
+}
+
+#brands .content-box-md-brands {
+  background: rgba(0,0,0,0.8);
+}
+
+
 /* ================================================
 |   |   |   |   Services 02 (Responsive Tabs)
 ================================================ */
@@ -1340,6 +1356,23 @@ ul.office-details li i {
 
 .contact-main-form-h h5 {
   color: #fff !important;
+}
+
+.main-about-p {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 60px;
+  
+}
+
+.main-about {
+  text-align: center;
+  margin-bottom: 40px;
+  
+}
+
+.main-about h5 {
+  color: #000 !important;
 }
 
 .contact-main-form-h h2 {

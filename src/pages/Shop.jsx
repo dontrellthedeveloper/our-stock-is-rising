@@ -152,12 +152,82 @@ function Shop() {
 
                                                     </div>
                                                 )}
-                                                <div className="column-show map-color-7 influencer-image"
-                                                >
-                                                    <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2"
-                                                         alt=""/>
+                                                <div className="mobile__hide-image column-show map-color-7 influencer-image">
+                                                            <div className="portfolio-item">
+                                                                <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
 
-                                                </div>
+                                                                <div className="portfolio-item-overlay margin-top-g">
+                                                                    <div className="portfolio-item-details text-center">
+                                                                        {/*Item Header*/}
+                                                                        {singleTeamMember.imageTitle2 && (
+                                                                            <>
+                                                                                <h3>{singleTeamMember.imageTitle2}</h3>
+                                                                                {/*Item Strips*/}
+                                                                                <span></span>
+                                                                            </>
+
+                                                                        )}
+
+                                                                        {/*Item Description */}
+                                                                        {singleTeamMember.imageDescription2 && (
+                                                                            <p className='influencer-description'>{singleTeamMember.imageDescription2}</p>
+                                                                        )}
+
+                                                                        <div className='show-button'>
+
+                                                                            {singleTeamMember.instagramLink && (
+                                                                                <a href={singleTeamMember.instagramLink} target='_blank'>
+                                                                                    <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
+                                                                                        <FaInstagram/>
+                                                                                    </button>
+                                                                                </a>
+                                                                            )}
+
+                                                                            {singleTeamMember.facebookLink && (
+                                                                                <a href={singleTeamMember.facebookLink} target='_blank'>
+                                                                                    <button className='btn btn-social-influencer-img btn-social-img
+                                                                                    btn-social-facebook'>
+                                                                                        <FaFacebookF/>
+                                                                                    </button>
+                                                                                </a>
+                                                                            )}
+
+                                                                            {singleTeamMember.twitterLink && (
+                                                                                <a href={singleTeamMember.twitterLink} target='_blank'>
+                                                                                    <button className='btn btn-social-influencer-img btn-social-img
+                                                                                    btn-social-twitter'>
+                                                                                        <FaTwitter/>
+                                                                                    </button>
+                                                                                </a>
+                                                                            )}
+
+                                                                            {singleTeamMember.youtubeLink && (
+                                                                                <a href={singleTeamMember.youtubeLink}
+                                                                                   target='_blank'>
+                                                                                    <button className='btn btn-social-influencer-img btn-social-img
+                                                                                    btn-social-youtube'>
+                                                                                        <FaYoutube/>
+                                                                                    </button>
+                                                                                </a>
+                                                                            )}
+
+                                                                            {singleTeamMember.tiktokLink && (
+                                                                                <a href={singleTeamMember.tiktokLink}
+                                                                                   target='_blank'>
+                                                                                    <button className='btn btn-social-influencer-img btn-social-img
+                                                                                    btn-social-tiktok'>
+                                                                                        <FaTiktok/>
+                                                                                    </button>
+                                                                                </a>
+                                                                            )}
+
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+
+                                                        </div>
 
                                                 {singleTeamMember.imageUrl3 && (
                                                     <div className="column-show map-color-7 influencer-image"

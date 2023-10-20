@@ -4,6 +4,7 @@ import './about.scss'
 import {images} from "../../constants";
 import {AiOutlineLineChart} from "react-icons/ai";
 import {FaFacebookF, FaInstagram, FaRegEye, FaRegHandshake, FaTiktok, FaTwitter, FaYoutube} from "react-icons/fa";
+import {MdOutlineTipsAndUpdates} from 'react-icons/md'
 
 const about = () => {
     return (
@@ -17,25 +18,25 @@ const about = () => {
                             <div className="col-md-4 col-sm-4">
                                 <div className="about-item text-center about-h">
                                     <AiOutlineLineChart className="react-icon-about"></AiOutlineLineChart>
-                                    <h3>Mission</h3>
+                                    <h3>Purpose/Objectives</h3>
                                     <hr/>
-                                        <p>Create a partnership with brands that provide increased profits and long lasting business relationships. Brands grow and Influencers share in the success of branding.</p>
-                                </div>
-                            </div>
-                            <div className="col-md-4 col-sm-4">
-                                <div className="about-item text-center about-h">
-                                    <FaRegEye className="react-icon-about"></FaRegEye>
-                                    <h3>Vision</h3>
-                                    <hr/>
-                                        <p>We believe that Influencers are the key to successful business growth.  We pair elite influencers with brands that they love so that the experience is organic. </p>
+                                        <p>Purpose: To provide elementary students with a basic understanding of the stock market and its impact on their daily lives. </p>
                                 </div>
                             </div>
                             <div className="col-md-4 col-sm-4">
                                 <div className="about-item text-center about-h">
                                     <FaRegHandshake className="react-icon-about"></FaRegHandshake>
-                                    <h3>Passion</h3>
+                                    <h3>Professional Development</h3>
                                     <hr/>
-                                        <p>Our passion is to make a difference and lead by example.  Brands can count on our team to deliver an organic product integration experience.</p>
+                                        <p>I Need information to put for professional development. </p>
+                                </div>
+                            </div>
+                            <div className="col-md-4 col-sm-4">
+                                <div className="about-item text-center about-h">
+                                    <MdOutlineTipsAndUpdates className="react-icon-about"></MdOutlineTipsAndUpdates>
+                                    <h3>Updates</h3>
+                                    <hr/>
+                                        <p>I Need information to put for updates.</p>
                                 </div>
                             </div>
                         </div>

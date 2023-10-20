@@ -175,12 +175,20 @@
             cursor: pointer;
 
         }
+        
 
         .card-link a {
             color: #000;
             font-weight: 500;
         }
 
+    }
+
+    .basic-card-aqua {
+
+        .card-content {
+            height: 220px;
+        }
     }
 
         .basic-card-aqua .card-content, .basic-card .card-link a {
@@ -194,7 +202,8 @@
             border-top:1px solid #000;
             text-align: center;
             background-color: #dcdcdc;
-            margin: 30px auto;
+            // margin: 30px auto;
+            
         }
 
             .basic-card-aqua .card-link a:after {

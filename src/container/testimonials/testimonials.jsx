@@ -23,7 +23,7 @@ export default class Testimonials extends Component {
                         interval={6100}
                     >
                         <div className="testimonial_styles">
-                        <img className="circular" src={images.logo} />
+                        <img className="" src={images.logo2} />
                         <div className="myCarousel">
                             <h3>Shirley Fultz</h3>
                             <h4>Designer</h4>
@@ -35,7 +35,7 @@ export default class Testimonials extends Component {
                         </div>
 
                         <div className="testimonial_styles">
-                        <img className="circular" src={images.logo} />
+                        <img className="" src={images.logo2} />
                         <div className="myCarousel">
                             <h3>Daniel Keystone</h3>
                             <h4>Designer</h4>
@@ -47,7 +47,7 @@ export default class Testimonials extends Component {
                         </div>
 
                         <div className="testimonial_styles">
-                        <img className="circular" src={images.logo} />
+                        <img className="" src={images.logo2} />
                         <div className="myCarousel">
                             <h3>Theo Sorel</h3>
                             <h4>Designer</h4>

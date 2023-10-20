@@ -34,7 +34,7 @@ const header = () => {
                     </div>
 
                     <div className="home-btn">
-                        <a className="btn btn-general btn-home smooth-scroll" href="#portfolio" title="Get Represented" role="button">Shop</a>
+                        <a className="btn btn-general btn-home smooth-scroll" href="/shop" title="Get Represented" role="button">Shop</a>
                     </div>
                 </div>
             </div>

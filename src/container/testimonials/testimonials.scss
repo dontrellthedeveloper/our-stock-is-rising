@@ -23,7 +23,7 @@
 
   
   .myCarousel {
-    background: #fafafa;
+    background: #213705;
     // margin-top: -6%;
     margin-top: 6%;
     width: 54%;
@@ -44,7 +44,7 @@
   }
   
   .myCarousel h3 {
-    color: #222;
+    color: #fff;
     font-weight: 100;
     letter-spacing: 0.2px;
     margin-bottom: 4px;
@@ -58,14 +58,14 @@
     margin-top: 0;
     padding-top: 0;
     font-weight: 500;
-    color: #787878;
+    color: #fff;
     font-size: 14px;
   }
   
   .myCarousel p {
     font-weight: 100 !important;
     line-height: 29px !important;
-    color: #222;
+    color: #fff;
     font-size: 15px;
     font-family: sans-serif;
     max-height: 67px;
@@ -73,7 +73,7 @@
   
   .myCarousel p:before {
     content: "“";
-    color: #aaa;
+    color: #fff;
     font-size: 26px;
     font-family: monospace;
     font-weight: 100;
@@ -81,7 +81,7 @@
   
   .myCarousel p:after {
     content: "”";
-    color: #aaa;
+    color: #fff;
     font-size: 26px;
     font-family: monospace;
     font-weight: 100;

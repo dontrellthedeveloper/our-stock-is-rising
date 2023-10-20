@@ -21,9 +21,9 @@ const standards = () => {
                     <div className="row">
                         <div className="col-md-12">
                             <OwlCarousel
-                                items='6'
+                                items='5'
                                 autoplay
-                            smartSpeed='1400'
+                            smartSpeed='700'
                             loop
                             autoplayHoverPause='true'
                             width='1000'
@@ -44,10 +44,10 @@ const standards = () => {
                                         items: 3
                                     },
                                     1000: {
-                                        items: 6
+                                        items: 5
                                     },
                                     1200: {
-                                        items: 6
+                                        items: 5
                                     },
                                 }}
                             >
@@ -56,10 +56,9 @@ const standards = () => {
                                 <div className="item client">
                                     <div class="basic-card basic-card-aqua " >
                                         <div class="card-content">
-                                            <span class="card-title">Card Title</span>
+                                            <span class="card-title">ELA-LITERACY <br/> (SL6.2) </span>
                                             <p class="card-text">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                            </p>
+                                            Interpret information presented in diverse media and formats and explain how it contributes to a topic under study                                            </p>
                                         </div>
                         
                                         <div class="card-link">
@@ -71,9 +70,25 @@ const standards = () => {
                                 <div className="item client">
                                     <div class="basic-card basic-card-aqua ">
                                         <div class="card-content">
-                                            <span class="card-title">Card Title</span>
+                                            <span class="card-title">ELA-LITERACY <br/> (SL.6.5)</span>
                                             <p class="card-text">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                            Include multimedia components and visual displays in presentations to clarify information.                                            </p>
+                                        </div>
+                        
+                                        <div class="card-link">
+                                            <a href="#" title="Read Full"><span>Read Full</span></a>
+                                        </div>
+                                    </div>
+                
+                                </div>
+
+                                <div className="item client">
+                                    <div class="basic-card basic-card-aqua ">
+                                        <div class="card-content">
+                                            <span class="card-title">ELA-LITERACY <br/> (W.6.4)</span>
+                                            <p class="card-text">
+                                            Produce clear and coherent writing.
+	Math (Revised 2017)
                                             </p>
                                         </div>
                         
@@ -87,10 +102,9 @@ const standards = () => {
                                 <div className="item client">
                                     <div class="basic-card basic-card-aqua ">
                                         <div class="card-content">
-                                            <span class="card-title">Card Title</span>
+                                            <span class="card-title">ANALYZE DATA <br/> (6.SP.1c) </span>
                                             <p class="card-text">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                            </p>
+                                            Select appropriate graphical methods and numerical measures to analyze data.                                            </p>
                                         </div>
                         
                                         <div class="card-link">
@@ -103,10 +117,9 @@ const standards = () => {
                                 <div className="item client">
                                     <div class="basic-card basic-card-aqua ">
                                         <div class="card-content">
-                                            <span class="card-title">Card Title</span>
+                                            <span class="card-title">SCIENTIFIC <br/> INQUIRY </span>
                                             <p class="card-text">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                            </p>
+                                            Use appropriate mathematics tools and techniques to gather data and information.                                            </p>
                                         </div>
                         
                                         <div class="card-link">
@@ -119,10 +132,9 @@ const standards = () => {
                                 <div className="item client">
                                     <div class="basic-card basic-card-aqua ">
                                         <div class="card-content">
-                                            <span class="card-title">Card Title</span>
+                                            <span class="card-title">ECONOMICS <br/> STRAND </span>
                                             <p class="card-text">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                            </p>
+                                            Markets (15) – The interaction of supply and demand, influenced by competition, helps to determine price in a market.                                            </p>
                                         </div>
                         
                                         <div class="card-link">
@@ -132,37 +144,7 @@ const standards = () => {
                 
                                 </div>
 
-                                <div className="item client">
-                                    <div class="basic-card basic-card-aqua ">
-                                        <div class="card-content">
-                                            <span class="card-title">Card Title</span>
-                                            <p class="card-text">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                            </p>
-                                        </div>
-                        
-                                        <div class="card-link">
-                                            <a href="#" title="Read Full"><span>Read Full</span></a>
-                                        </div>
-                                    </div>
-                
-                                </div>
-
-                                <div className="item client">
-                                    <div class="basic-card basic-card-aqua ">
-                                        <div class="card-content">
-                                            <span class="card-title">Card Title</span>
-                                            <p class="card-text">
-                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                                            </p>
-                                        </div>
-                        
-                                        <div class="card-link">
-                                            <a href="#" title="Read Full"><span>Read Full</span></a>
-                                        </div>
-                                    </div>
-                
-                                </div>
+              
                             </OwlCarousel>
                         </div>
                     </div>

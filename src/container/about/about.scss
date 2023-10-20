@@ -2,6 +2,13 @@
 |   |   |   |   About 01
 ================================================ */
 
+.about__image-section {
+    @media(max-width: 767px) {
+      display: none;
+    }
+  }
+
+
 #about .vertical-heading h2 {
     color: #454545;
     margin-top: 90px;

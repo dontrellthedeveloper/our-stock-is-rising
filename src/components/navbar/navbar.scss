@@ -81,27 +81,26 @@
         font-weight: 500;
   
         transition: all 0.3s ease-in-out;
-        //color: white;
-        //text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
-        //1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
-  
-    //   a {
-    //     // color: var(--gray-color);
-    //     text-decoration: none;
-    //     flex-direction: column;
-    //     text-transform: capitalize;
-    //     font-weight: 500;
-  
-    //     transition: all 0.3s ease-in-out;
-    //     // color: white;
-    //     // text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
-    //     // 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
   
         &:hover {
-        //   color:var(--secondary-color)
         color: #9fd399;
         }
       }
+
+      .navbar__links-styles-scroll {
+        text-decoration: none;
+        flex-direction: column;
+        text-transform: uppercase;
+        font-weight: 500;
+  
+        transition: all 0.3s ease-in-out;
+  
+        &:hover {
+        color: #4dd0e1;
+        }
+      }
+
+
   
       &:hover {
         div {
@@ -150,20 +149,20 @@
 
     &:hover {
         //color:var(--secondary-color);
-        color: #9fd399;
+        color: #4dd0e1;
       }
     
       &:target {
-        color: #9fd399;
+        color: #4dd0e1;
       }
     
       &:focus {
-        color: #9fd399;
+        color: #4dd0e1;
       }
     
       &:active {
         //color:var(--secondary-color)
-        color: #9fd399;
+        color: #4dd0e1;
         //text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
         //1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
       }
@@ -177,14 +176,150 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondary-color);
+ //background-color: var(--secondary-color);
+    background-color: #9fd399;
   
     svg {
       width: 70%;
       height: 70%;
       color: var(--white-color);
     }
+
+    .app__navbar-menu-scroll {
+      background-color: #4dd0e1; 
+    }
   
+    div {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 5;
+  
+      padding: 1rem;
+  
+      width: 80%;
+      height: 100vh;
+  
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      flex-direction: column;
+  
+      //background: url('../../assets/bgWhite.png');
+      background-color: var(--white-color);
+      background-size: cover;
+      background-repeat: repeat;
+  
+      box-shadow: 0 0 20px rgba(168, 168, 168, 0.15);
+  
+      svg {
+        width: 35px;
+        height: 48px;
+        color: #213805;
+        margin: 0.5rem 1rem;
+      }
+  
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+  
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+  
+        li {
+          margin: 1rem;
+
+          .app__navbar-menu-links {
+            //color: var(--gray-color);
+            color: #213805;
+            text-decoration: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 500;
+  
+            transition: all 0.3s ease-in-out;
+  
+  
+          }
+  
+          a {
+            color: var(--gray-color);
+            text-decoration: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            font-weight: 500;
+  
+            transition: all 0.3s ease-in-out;
+  
+            &:hover {
+              color: var(--secondary-color);
+            }
+          }
+
+          &:hover {
+            //color:var(--secondary-color);
+            color: #9fd399;
+          }
+  
+          &:target {
+            color: #9fd399;
+          }
+  
+          &:focus {
+            color: #9fd399;
+          }
+  
+          &:active {
+            //color:var(--secondary-color)
+            color: #9fd399;
+            //text-shadow: 1px 0 #000, -1px 0 #000, 0 1px #000, 0 -1px #000,
+            //1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+          }
+        }
+  
+        @media screen and (min-width: 900px) {
+          display: none;
+        }
+      }
+  
+      @media screen and (min-width: 900px) {
+        display: none;
+      }
+    }
+    @media screen and (min-width: 900px) {
+      display: none;
+    }
+  }
+
+
+
+
+
+  .app__navbar-menu-scroll {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ //background-color: var(--secondary-color);
+    background-color: #9fd399;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #213805;
+  
+    svg {
+      width: 70%;
+      height: 70%;
+      color: #213805;
+    }
+
     div {
       position: fixed;
       top: 0;

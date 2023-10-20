@@ -1215,7 +1215,7 @@
 
 }
 
-@media(max-width: 480px) {
+@media(max-width: 767px) {
 
     /* Navigation */
     .navbar-brand {

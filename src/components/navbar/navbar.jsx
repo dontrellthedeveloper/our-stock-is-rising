@@ -33,47 +33,47 @@ const Navbar = () => {
 
                 <li className='app__flex p-text'>
                     <div/>
-                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/'>Home
+                    <NavLink className={scroll ? 'navbar__links-styles-scroll navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/'>Home
                     </NavLink>
                 </li>
                 <li className='app__flex p-text'>
                     <div/>
-                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/shop'>Shop
+                    <NavLink className={scroll ? 'navbar__links-styles-scroll navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/shop'>Shop
                     </NavLink>
                 </li>
                 <li className='app__flex p-text'>
                     <div/>
-                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/updates'>Updates
+                    <NavLink className={scroll ? 'navbar__links-styles-scroll navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/updates'>Updates
                     </NavLink>
                 </li>
                 <li className='app__flex p-text'>
                     <div/>
-                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/purpose'>Purpose/Objectives
+                    <NavLink className={scroll ? 'navbar__links-styles-scroll navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/purpose'>Purpose/Objectives
                     </NavLink>
                 </li>
                 <li className='app__flex p-text'>
                     <div/>
-                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/about'>About
+                    <NavLink className={scroll ? 'navbar__links-styles-scroll navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/about'>About
                     </NavLink>
                 </li>
                 <li className='app__flex p-text'>
                     <div/>
-                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/history'>History
+                    <NavLink className={scroll ? 'navbar__links-styles-scroll navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/history'>History
                     </NavLink>
                 </li>
                 <li className='app__flex p-text'>
                     <div/>
-                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/extras'>Extras
+                    <NavLink className={scroll ? 'navbar__links-styles-scroll navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/extras'>Extras
                     </NavLink>
                 </li>
                 <li className='app__flex p-text'>
                     <div/>
-                    <NavLink className={scroll ? 'navbar__links-styles navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/contact'>Contact
+                    <NavLink className={scroll ? 'navbar__links-styles-scroll navbar__links-color-scroll' : 'navbar__links-styles navbar__links-color'} to='/contact'>Contact
                     </NavLink>
                 </li>
             </ul>
 
-            <div className='app__navbar-menu'>
+            <div className=  'app__navbar-menu'>
                 <HiMenuAlt4 onClick={() => setToggle(true)}/>
 
                 {toggle && (
@@ -83,11 +83,55 @@ const Navbar = () => {
                     >
                         <HiX onClick={() => setToggle(false)}/>
                         <ul>
-                            {['home','about','work','skills','contact'].map((item)=> (
-                                <li key={item}>
-                                    <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
-                                </li>
-                            ))}
+  {/*{['home','about','work','skills','contact'].map((item)=> (*/}
+                            {/*    <li key={item}>*/}
+                            {/*        <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>*/}
+                            {/*    </li>*/}
+                            {/*))}*/}
+                            <li>
+                                <NavLink className='app__navbar-menu-links' to='/' onClick={() => setToggle(false)}>Home
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className='app__navbar-menu-links' to='/shop' onClick={() => setToggle(false)}>Shop
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className='app__navbar-menu-links' to='/updates' onClick={() => setToggle(false)}>Updates
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className='app__navbar-menu-links' to='/purpose' onClick={() => setToggle(false)}>Purpose/Objectives
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className='app__navbar-menu-links' to='/about' onClick={() => setToggle(false)}>About
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className='app__navbar-menu-links' to='/history' onClick={() => setToggle(false)}>History
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className='app__navbar-menu-links' to='/extras' onClick={() => setToggle(false)}>Extras
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink className='app__navbar-menu-links' to='/contact' onClick={() => setToggle(false)}>Contact
+                                </NavLink>
+                            </li>
+                            {/*<li>*/}
+                            {/*    <a href={`#`} onClick={() => setToggle(false)}>About</a>*/}
+                            {/*</li>*/}
+                            {/*<li>*/}
+                            {/*    <a href={`#`} onClick={() => setToggle(false)}>Influencers</a>*/}
+                            {/*</li>*/}
+                            {/*<li>*/}
+                            {/*    <a href={`#`} onClick={() => setToggle(false)}>KTM Kids</a>*/}
+                            {/*</li>*/}
+                            {/*<li>*/}
+                            {/*    <a href={`#`} onClick={() => setToggle(false)}>Services</a>*/}
+                            {/*</li>*/}
                         </ul>
                     </div>
                 )}

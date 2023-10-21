@@ -13,8 +13,8 @@ const standards = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12 text-center">
-                            <div className="horizontal-heading" style={{marginBottom: '30px'}}>
-                                <h2 className="brand-thin">Ohio   <strong className="brand-bold">Common Core </strong>Standards</h2>
+                            <div className="horizontal-heading" style={{marginBottom: '40px'}}>
+                                <h2 className="brand-thin"> <strong className="brand-bold">Ohio  Common Core Standards </strong></h2>
                             </div>
                         </div>
                     </div>

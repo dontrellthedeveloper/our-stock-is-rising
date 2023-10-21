@@ -42,7 +42,7 @@
   
   .brand-thin {
     font-weight: 100;
-    font-size: 35px !important;
+    font-size: 45px !important;
 
     color: #13C501;
     font-weight: 600;
@@ -170,16 +170,32 @@
         background-image: linear-gradient(to bottom right, #00bfad, #99a3d4);
         background-image: linear-gradient(to bottom right, #fff, #fff);
 
+        background-color: #fff;
+
         :hover {
-            background-image: linear-gradient(to bottom right, #4dd0e1, #9fd399);
+            // background-image: linear-gradient(to bottom right, #4dd0e1, #9fd399);
             cursor: pointer;
 
         }
+
+        .card-content:hover {
+            background-image: linear-gradient(to bottom right, #fff, #9fd399);
+        }
         
+        .card-link:hover {
+            background-image: linear-gradient(to bottom right, #4dd0e1, #9fd399);
+
+        }
 
         .card-link a {
             color: #000;
             font-weight: 500;
+        }
+
+        .card-link:hover a {
+            color: #213705;
+            font-weight: 500;
+            // -webkit-text-stroke: .25px #4dd0e1;
         }
 
     }
@@ -206,9 +222,9 @@
             
         }
 
-            .basic-card-aqua .card-link a:after {
-                background:#000;
-            }
+            // .basic-card-aqua .card-link a:after {
+            //     background:#000;
+            // }
 
     .basic-card-lips {
         background-image: linear-gradient(to bottom right, #ec407b, #ff7d94);

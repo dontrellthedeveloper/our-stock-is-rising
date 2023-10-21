@@ -2,6 +2,12 @@
 |   |   |   |   About 01
 ================================================ */
 
+.main-about h2 {
+    -webkit-text-stroke: 1px #213705;
+    color: #9fd399;
+    font-weight: 700!important;
+}
+
 .about__image-section {
     @media(max-width: 767px) {
       display: none;
@@ -15,7 +21,7 @@
   }
   
   #about .about-right {
-    margin-top: 100px;
+    margin-top: 60px;
   }
   
   #about .about-left {
@@ -104,6 +110,7 @@
     padding: 40px 30px;
     -webkit-box-shadow: 0 0 10px rgba(0,0,0,.1);
     box-shadow: 0 0 10px rgba(0,0,0,.1);
+    color: #000;
   }
   
   .about-item .react-icon-about {
@@ -367,6 +374,10 @@
     font-size: 48px;
     font-weight: 200;
     line-height: 45px;
+
+    -webkit-text-stroke: 1px #213705;
+    color: #9fd399;
+    font-weight: 700!important;
   }
   
   .services-button-s {

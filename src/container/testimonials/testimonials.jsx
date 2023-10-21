@@ -11,8 +11,8 @@ export default class Testimonials extends Component {
             <div className="content-box-md-brands" style={{border: '0'}}>
                 <div>
                     <div className="horizontal-heading contact-main-form-h">
-                        <h5></h5>
-                        <h2>Testimonials <strong></strong></h2>
+                    <h2 className="brand-thin"> <strong className="brand-bold">Testimonials </strong></h2>
+
                     </div>
                     <Carousel
                         showArrows={true}

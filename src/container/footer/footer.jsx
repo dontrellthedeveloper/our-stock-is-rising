@@ -12,7 +12,7 @@ const footer = () => {
 
                             <div className="horizontal-heading contact-main-form-h">
                                 <h5>connect &</h5>
-                                <h2>Get In <strong>Touch</strong></h2>
+                                <h2 className="brand-thin"> <strong className="brand-bold">Get In Touch </strong></h2>
                             </div>
 
                             {/*<div className="col-md-3">*/}

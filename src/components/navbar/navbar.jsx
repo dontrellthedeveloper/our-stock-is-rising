@@ -79,22 +79,10 @@ const Navbar = () => {
             }
             to="/purpose"
           >
-            Purpose/Objectives
+            Purpose/Objective
           </NavLink>
         </li>
-        <li className="app__flex p-text">
-          <div />
-          <NavLink
-            className={
-              scroll
-                ? "navbar__links-styles-scroll navbar__links-color-scroll"
-                : "navbar__links-styles navbar__links-color"
-            }
-            to="/about"
-          >
-            About
-          </NavLink>
-        </li>
+
         <li className="app__flex p-text">
           <div />
           <NavLink
@@ -119,6 +107,19 @@ const Navbar = () => {
             to="/extras"
           >
             Extras
+          </NavLink>
+        </li>
+        <li className="app__flex p-text">
+          <div />
+          <NavLink
+            className={
+              scroll
+                ? "navbar__links-styles-scroll navbar__links-color-scroll"
+                : "navbar__links-styles navbar__links-color"
+            }
+            to="/about"
+          >
+            About
           </NavLink>
         </li>
         <li className="app__flex p-text">
@@ -184,18 +185,10 @@ const Navbar = () => {
                   to="/purpose"
                   onClick={() => setToggle(false)}
                 >
-                  Purpose/Objectives
+                  Purpose/Objective
                 </NavLink>
               </li>
-              <li>
-                <NavLink
-                  className="app__navbar-menu-links"
-                  to="/about"
-                  onClick={() => setToggle(false)}
-                >
-                  About
-                </NavLink>
-              </li>
+
               <li>
                 <NavLink
                   className="app__navbar-menu-links"
@@ -212,6 +205,15 @@ const Navbar = () => {
                   onClick={() => setToggle(false)}
                 >
                   Extras
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className="app__navbar-menu-links"
+                  to="/about"
+                  onClick={() => setToggle(false)}
+                >
+                  About
                 </NavLink>
               </li>
               <li>

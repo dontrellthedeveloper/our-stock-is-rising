@@ -12,9 +12,7 @@
     z-index: 5;
   }
   
-  .home-headings {
-    text-align: center;
-  }
+
   
   .home-headings h1 {
     color: #11151C;
@@ -26,10 +24,13 @@
   }
   
   .home-headings h1 span {
-    color: #223903;
-    font-weight: 500;
-    //font-size: 40px;
-    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+    // color: #223903;
+    // font-weight: 700;
+    // text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+
+    color: #213805;
+    font-weight: 600;
+    text-shadow: -0.25px 0 #213805, 0 0.25px #213805, 0.25px 0 #213805, 0 -0.25px #213805;
   }
   
   .tools-p-align {

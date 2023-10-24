@@ -186,6 +186,7 @@ section {
   padding: 6px 12px 6px 12px;
   -webkit-transition: all .5s;
   transition: all .5s;
+  border: 1px solid #000;
 }
 
 .btn-social-i-f {
@@ -197,6 +198,7 @@ section {
   padding: 6px 12px 6px 12px;
   -webkit-transition: all .5s;
   transition: all .5s;
+  border: 1px solid #000;
 }
 
 .btn-social-i-t {
@@ -208,6 +210,7 @@ section {
   padding: 6px 11px 6px 11px;
   -webkit-transition: all .5s;
   transition: all .5s;
+  border: 1px solid #000;
 }
 
 .btn-social-i-y {
@@ -219,6 +222,7 @@ section {
   padding: 6px 11px 6px 11px;
   -webkit-transition: all .5s;
   transition: all .5s;
+  border: 1px solid #000;
 }
 
 .social-hr-s {
@@ -251,9 +255,17 @@ section {
 }
 
 .btn-instagram {
-  color: white;
-  background:
+  /* color: white; */
+  color: #213805;
+  background: #fff;
+  border: 1px solid #213805;
+}
 
+
+.btn-instagram:hover,
+.btn-instagram:focus {
+  color: #fff;
+  background:
           radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
           radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
 
@@ -267,62 +279,55 @@ section {
 
           linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
   border: 1px solid rgb(82, 88, 207);
-}
-
-
-.btn-instagram:hover,
-.btn-instagram:focus {
-  color: #dcdcdc;
-  background: #a1a0a1;
-  border: 1px solid rgb(160,160,255);
+  border: 1px solid #fff;
 }
 
 .btn-facebook {
-  color: white;
-  background: #3b5998;
+  color: #213805;
+  background: #fff;
 }
 
 .btn-facebook:hover,
 .btn-facebook:focus {
-  color: #dcdcdc;
-  background: #a1a0a1;
-  border: 1px solid #dcdcdc;
+  color: #fff;
+  background: #3b5998;
+  border: 1px solid #fff;
 }
 
 .btn-tiktok {
-  color: white;
-  background: #5bdcd2;
+  color: #213805;
+  background: white;
 }
 
 .btn-tiktok:hover,
 .btn-tiktok:focus {
-  color: #dcdcdc;
-  background: #a1a0a1;
-  border: 1px solid #dcdcdc;
+  color: white;
+  background: #5bdcd2;
+  border: 1px solid white;
 }
 
 .btn-youtube {
-  color: white;
-  background: #FF0000;
+  color: #213805;
+  background: #fff;
 }
 
 .btn-youtube:hover,
 .btn-youtube:focus {
-  color: #dcdcdc;
-  background: #a1a0a1;
-  border: 1px solid #dcdcdc;
+  color: #fff;
+  background: #FF0000;
+  border: 1px solid #fff;
 }
 
 .btn-twitter {
-  color: white;
-  background: #00aced;
+  color: #213805;
+  background: #fff;
 }
 
 .btn-twitter:hover,
 .btn-twitter:focus {
-  color: #dcdcdc;
-  background: #a1a0a1;
-  border: 1px solid #dcdcdc;
+  color: #fff;
+  background: #00aced;
+  border: 1px solid #fff;
 }
 
 .btn-grey {
@@ -1011,7 +1016,15 @@ ul.social-list .twitter-bg-color a:hover {
   text-align: center;
   /*margin-top: 15px;*/
   margin-top: 20px;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
+  margin-bottom: 25px;
+
+  background: linear-gradient(to right, rgb(0 0 0 / 0%) 0%, #9fd399 15%, #9fd399 25%, #9fd399 25%, #9fd399 35%, #9fd399 35%, #9fd399 50%, #9fd399 65%, #9fd399 65%, #9fd399 75%, #9fd399 75%, #9fd399 85%, rgb(0 0 0 / 0%) 100%);
+}
+
+.home-headings {
+  text-align: center;
+  background: linear-gradient(to right, rgba(0 0 0 / 0%) 0%, #9fd399 15%, #9fd399 25%, #9fd399 25%, #9fd399 35%, #9fd399 35%, #9fd399 50%, #9fd399 65%, #9fd399 65%, #9fd399 75%, #9fd399 75%, #9fd399 85%, rgba(0 0 0 / 0%) 100%);
 }
 
 .mfp-title {

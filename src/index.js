@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from "react-router-dom";
 import ScrollToTop from "./helper/ScrollToTop";
 
-import 'mdb-react-ui-kit/dist/css/mdb.min.css';
+// import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import './index.css';

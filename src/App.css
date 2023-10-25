@@ -265,7 +265,7 @@ section {
 .btn-instagram:hover,
 .btn-instagram:focus {
   color: #fff;
-  background:
+  /* background:
           radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
           radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
 
@@ -278,7 +278,8 @@ section {
           radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
 
           linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
-  border: 1px solid rgb(82, 88, 207);
+  border: 1px solid rgb(82, 88, 207); */
+  background: #FF9900;
   border: 1px solid #fff;
 }
 
@@ -290,8 +291,9 @@ section {
 .btn-facebook:hover,
 .btn-facebook:focus {
   color: #fff;
-  background: #3b5998;
+  /* background: #3b5998; */
   border: 1px solid #fff;
+  background: #213805;
 }
 
 .btn-tiktok {
@@ -398,6 +400,7 @@ section {
 
 .content-box-contact {
   padding: 60px 0;
+  border-top: 2px solid #9fd399;;
 }
 
 /* ================================================
@@ -1014,11 +1017,14 @@ ul.social-list .twitter-bg-color a:hover {
 
 .show-button {
   text-align: center;
-  /*margin-top: 15px;*/
   margin-top: 20px;
-  /* margin-bottom: 10px; */
   margin-bottom: 25px;
+}
 
+.show-button-page {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
   background: linear-gradient(to right, rgb(0 0 0 / 0%) 0%, #9fd399 15%, #9fd399 25%, #9fd399 25%, #9fd399 35%, #9fd399 35%, #9fd399 50%, #9fd399 65%, #9fd399 65%, #9fd399 75%, #9fd399 75%, #9fd399 85%, rgb(0 0 0 / 0%) 100%);
 }
 
@@ -1413,7 +1419,7 @@ ul.office-details li i {
 |   |   |   |   Footer
 ================================================ */
 footer {
-  background: #dcdcdc;
+  background: #9fd399;
   padding: 20px;
 }
 

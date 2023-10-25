@@ -129,7 +129,7 @@ function Updates() {
                     <div className="container">
                         <div className="row">
                             {/* Left Side */}
-                            <div className="col-md-6 col-sm-6">
+                            <div className="col-md-6 col-sm-6" style={{display: 'none'}}>
                                 <div className="mobile__hide-image column-show map-color-7 influencer-image">
                                     <div className="portfolio-item">
                                         <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
@@ -200,7 +200,7 @@ function Updates() {
                             </div>
                             
                             {/* Right Side */}
-                            <div className="col-md-6 col-sm-6" style={{display: 'table'}}>
+                            <div className="col-md-12 col-sm-12" style={{display: 'table'}}>
                                 <div className="about-right" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                                     <div className="horizontal-heading main-about" style={{color: '#000'}}>
                                         <h5 style={{color: '#000'}}>Information about</h5>
@@ -211,11 +211,17 @@ function Updates() {
 
                                     
 
-                                    <div className='show-button'>
+                                    <div className='show-button-page'>
 
                                         <hr style={{margin: '0.5rem'}}/>
+
+                                        <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
+                                            <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
+                                                <a href="#" title="Read Full" style={{backgroundColor: 'none'}}><span>More Info About Our Program</span></a>
+                                            </div>
+                                        </div>
                                     
-                                        {singleTeamMember.instagramLink && (
+                                        {/* {singleTeamMember.instagramLink && (
                                             <a href={singleTeamMember.instagramLink} target='_blank'>
                                                 <button className='btn btn-social-i btn-instagram'>
                                                     <FaInstagram/>
@@ -255,7 +261,7 @@ function Updates() {
                                                     <FaTiktok/>
                                                 </button>
                                             </a>
-                                        )}
+                                        )} */}
 
                                         <hr style={{margin: '0.5rem'}}/>
 
@@ -329,11 +335,11 @@ function Updates() {
                                         </div>
                                     </div>                                    
                                                                         
-                                    <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
+                                    {/* <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
                                         <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
                                             <a href="#" title="Read Full" style={{backgroundColor: 'none'}}><span>More Info About Our Program</span></a>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

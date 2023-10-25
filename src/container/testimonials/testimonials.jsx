@@ -11,8 +11,7 @@ export default class Testimonials extends Component {
             <div className="content-box-md-brands" style={{border: '0'}}>
                 <div>
                     <div className="horizontal-heading contact-main-form-h">
-                    <h2 className="brand-thin"> <strong className="brand-bold">Testimonials </strong></h2>
-
+                        <h2 className="brand-thin"> <strong className="brand-bold">Testimonials </strong></h2>
                     </div>
                     <Carousel
                         showArrows={true}
@@ -23,7 +22,7 @@ export default class Testimonials extends Component {
                         interval={6100}
                     >
                         <div className="testimonial_styles">
-                        <img className="" src={images.logo2} />
+                        {/* <img className="" src={images.logo2} /> */}
                         <div className="myCarousel">
                             <h3>Shirley Fultz</h3>
                             <h4>Designer</h4>
@@ -35,7 +34,7 @@ export default class Testimonials extends Component {
                         </div>
 
                         <div className="testimonial_styles">
-                        <img className="" src={images.logo2} />
+                        {/* <img className="" src={images.logo2} /> */}
                         <div className="myCarousel">
                             <h3>Daniel Keystone</h3>
                             <h4>Designer</h4>
@@ -47,7 +46,7 @@ export default class Testimonials extends Component {
                         </div>
 
                         <div className="testimonial_styles">
-                        <img className="" src={images.logo2} />
+                        {/* <img className="" src={images.logo2} /> */}
                         <div className="myCarousel">
                             <h3>Theo Sorel</h3>
                             <h4>Designer</h4>

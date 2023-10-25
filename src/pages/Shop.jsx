@@ -4,15 +4,20 @@ import {
     FaInstagram, FaRegEye, FaRegHandshake,
     FaTiktok,
     FaTwitter,
-    FaYoutube
+    FaYoutube,
+    FaAmazon,
+    FaShoppingCart
 } from "react-icons/fa";
 import {client, urlFor} from "../client";
 import {Link, useParams} from "react-router-dom";
+
+import {AiOutlineAmazon} from 'react-icons/ai'
+
 import {images} from "../constants";
 
 import './scss/Gallery.scss';
 
-import {Services, Statement, About as AboutSection, Brands} from "../container";
+import {Services, Statement, About as AboutSection, Brands, Testimonials} from "../container";
 
 
 import OwlCarousel from "react-owl-carousel";
@@ -132,7 +137,12 @@ function Shop() {
                             <div className="col-md-6 col-sm-6">
                                 <div className="mobile__hide-image column-show map-color-7 influencer-image">
                                     <div className="portfolio-item">
-                                        <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
+                                        <img 
+                                            // src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} 
+                                            src={images.book} 
+                                            className="influencer-image-2" 
+                                            alt=""
+                                        />
                                         <div className="portfolio-item-overlay margin-top-g">
                                             <div className="portfolio-item-details text-center">
                                                 {singleTeamMember.imageTitle2 && (
@@ -150,7 +160,8 @@ function Shop() {
                                                     {singleTeamMember.instagramLink && (
                                                         <a href={singleTeamMember.instagramLink} target='_blank'>
                                                             <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
-                                                                <FaInstagram/>
+                                                                {/* <FaInstagram/> */}
+                                                                <FaAmazon/>
                                                             </button>
                                                         </a>
                                                     )}
@@ -159,12 +170,12 @@ function Shop() {
                                                         <a href={singleTeamMember.facebookLink} target='_blank'>
                                                             <button className='btn btn-social-influencer-img btn-social-img
                                                             btn-social-facebook'>
-                                                                <FaFacebookF/>
+                                                                <FaShoppingCart/>
                                                             </button>
                                                         </a>
                                                     )}
 
-                                                    {singleTeamMember.twitterLink && (
+                                                    {/* {singleTeamMember.twitterLink && (
                                                         <a href={singleTeamMember.twitterLink} target='_blank'>
                                                             <button className='btn btn-social-influencer-img btn-social-img
                                                             btn-social-twitter'>
@@ -191,7 +202,7 @@ function Shop() {
                                                                 <FaTiktok/>
                                                             </button>
                                                         </a>
-                                                    )}
+                                                    )} */}
                                                 </div>
                                             </div>
                                         </div>
@@ -207,18 +218,23 @@ function Shop() {
                                         <h2> <strong ></strong>Our Stock Is Rising</h2>
                                     </div>
 
-                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>Our Stock is Rising" is a classroom activity originally developed in 2000 in response to students' disinterest in the Business section of the local newspaper during a Social Studies current events review.  I took it as a personal challenge to design an ongoing activity that incorporated the basic principles of an elementary curriculum to teach students the fundamentals of the stock market.  </p>
+                                    {/* <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>Our Stock is Rising" is a classroom activity originally developed in 2000 in response to students' disinterest in the Business section of the local newspaper during a Social Studies current events review.  I took it as a personal challenge to design an ongoing activity that incorporated the basic principles of an elementary curriculum to teach students the fundamentals of the stock market.  </p> */}
+
+                                    <hr style={{margin: '2rem'}}/>
+
+                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>Book Synopsis  </p>
 
                                     
 
-                                    <div className='show-button'>
+                                    <div className='show-button-page'>
 
                                         <hr style={{margin: '0.5rem'}}/>
                                     
                                         {singleTeamMember.instagramLink && (
                                             <a href={singleTeamMember.instagramLink} target='_blank'>
                                                 <button className='btn btn-social-i btn-instagram'>
-                                                    <FaInstagram/>
+                                                    {/* <FaInstagram/> */}
+                                                    <FaAmazon/>
                                                 </button>
                                             </a>
                                         )}
@@ -226,12 +242,12 @@ function Shop() {
                                         {singleTeamMember.facebookLink && (
                                             <a href={singleTeamMember.facebookLink} target='_blank'>
                                                 <button className='btn btn-social-i-f btn-facebook'>
-                                                    <FaFacebookF/>
+                                                    <FaShoppingCart/>
                                                 </button>
                                             </a>
                                         )}
 
-                                        {singleTeamMember.twitterLink && (
+                                        {/* {singleTeamMember.twitterLink && (
                                             <a href={singleTeamMember.twitterLink} target='_blank'>
                                                 <button className='btn btn-social-i-t btn-twitter'>
                                                     <FaTwitter/>
@@ -255,7 +271,7 @@ function Shop() {
                                                     <FaTiktok/>
                                                 </button>
                                             </a>
-                                        )}
+                                        )} */}
 
                                         <hr style={{margin: '0.5rem'}}/>
 
@@ -341,7 +357,9 @@ function Shop() {
                 </div>
             </section>
 
-            <Statement/>
+            {/* <Statement/> */}
+
+            <Testimonials/>
 
             <section id="" style={{display: 'none'}} >
                 <div className="content-box-md-interact">

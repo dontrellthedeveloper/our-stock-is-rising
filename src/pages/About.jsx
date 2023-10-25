@@ -116,8 +116,9 @@ function About() {
                     <div className="home-headings tools-p-align">
                         <div className="horizontal-heading influencer-name">
                             <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> 
-                            About
-                            </span></h1>
+                            Bio
+                            </span>
+                            </h1>
                         </div>
                     </div>
                 </div>
@@ -129,7 +130,7 @@ function About() {
                     <div className="container">
                         <div className="row">
                             {/* Left Side */}
-                            <div className="col-md-6 col-sm-6">
+                            <div className="col-md-4 col-sm-4">
                                 <div className="mobile__hide-image column-show map-color-7 influencer-image">
                                     <div className="portfolio-item">
                                         <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
@@ -197,21 +198,38 @@ function About() {
                                         </div>
                                     </div>
                                 </div>
+
+
                             </div>
                             
                             {/* Right Side */}
-                            <div className="col-md-6 col-sm-6" style={{display: 'table'}}>
+                            <div className="col-md-8 col-sm-8" style={{display: 'table'}}>
                                 <div className="about-right" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                                     <div className="horizontal-heading main-about" style={{color: '#000'}}>
-                                        <h5 style={{color: '#000'}}>Information</h5>
-                                        <h2> <strong ></strong>About Us</h2>
+                                        <h5 style={{color: '#000'}}>About</h5>
+                                        <h2> <strong ></strong>Gregory A. Powell</h2>
                                     </div>
 
-                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>Our Stock is Rising" is a classroom activity originally developed in 2000 in response to students' disinterest in the Business section of the local newspaper during a Social Studies current events review.  I took it as a personal challenge to design an ongoing activity that incorporated the basic principles of an elementary curriculum to teach students the fundamentals of the stock market.  </p>
+                                    <p className="about-text" style={{marginLeft: '20px', marginRight: '20px'}}>Gregory A. Powell is a former A Better Chance (ABC) Scholar and graduate
+                                                                                                                of The Peddie School in Hightstown, NJ. He is a retired, decorated U.S. Air
+                                                                                                                Force Major and a 22-year veteran of teaching in Dayton Public Schools. In
+                                                                                                                2005, he was District Teacher of the Year, a state finalist in Ohio, and a Martha
+                                                                                                                Holden Jennings Scholar. Mr. Powell is also a former Master Teacher with the
+                                                                                                                Ohio Department of Education and former Senior STEM Fellow with the
+                                                                                                                Dayton Regional STEM Center (DRSC). His “Compressed Air Vehicle”
+                                                                                                                lesson plan gained national distribution on the DRSC website. He has
+                                                                                                                published articles in Social Studies and the Young Learner in 2018 and 2021.
+                                                                                                                Mr. Powell has also presented to national audiences, including; Symposium on
+                                                                                                                Urban Teacher Education, Birmingham, AL (2011); Critical Questions in
+                                                                                                                Education Conference, New Orleans, LA (2017); and Innovative Schools
+                                                                                                                Summit, Atlanta, GA (2022). He holds a Master’s Degree from The Air Force
+                                                                                                                Institute of Technology and certificates in teaching and educational
+                                                                                                                supervision from the University of Dayton. Originally from Miami, FL, Mr.
+                                                                                                                Powell now resides in Union, Ohio.  </p>
 
                                     
 
-                                    <div className='show-button'>
+                                    <div className='show-button-page'>
 
                                         <hr style={{margin: '0.5rem'}}/>
                                     
@@ -335,6 +353,248 @@ function About() {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div className="map-color-3" >
+                <div className="row" style={{marginRight: '0'}}>
+                    <div className="home-headings tools-p-align">
+                        <div className="horizontal-heading influencer-name">
+                            <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> 
+                            My Story
+                            </span>
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section id="about" style={{height: 'calc(100vh - 140px)', display: 'table', width: '100%'}}>
+                <div className="about-01" style={{display: 'table-cell', verticalAlign: 'middle'}}>
+                    <div className="container">
+                        <div className="row">
+
+                            
+                            {/* Right Side */}
+                            <div className="col-md-8 col-sm-8" style={{display: 'table'}}>
+                                <div className="about-right" style={{display: 'table-cell', verticalAlign: 'middle'}}>
+                                    <div className="horizontal-heading main-about" style={{color: '#000'}}>
+                                        <h5 style={{color: '#000'}}>Info About</h5>
+                                        <h2> <strong ></strong>My Story</h2>
+                                    </div>
+
+                                    <p className="about-text" style={{marginLeft: '20px', marginRight: '20px'}}>I spent the early years researching the topic. The goal was to teach them as I learned and to stay one step ahead of my classes. I took them to see the experts, at Key Bank and the Wright State University School of Business.  As time went on, the experts came to us. The late Ellis Rowe (former VP, Mars Candy), and Theo Killion (former CEO, Zales Jewelry) flew in from Jacksonville and Chicago respectively, just to spend a few of their valuable hours for what they both found to be an invaluable cause.
+
+
+
+This book is written by a teacher, for teachers. So unlike other books of its kind, this one’s not written by an expert in the field of investment financing. Quite frankly, I saw in this project, such a sense of urgency, that the need for it to be delivered by experts (whenever they became available), was outweighed by the need for it to be delivered in the here and now.
+
+
+
+Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, but to all the little kids in all the neighborhoods outside New York’s famed Financial District. It says that we are not always too young. And that the things we are allowed to be challenged by in our youth, won’t be the things that deny us a place at the table, as adults.  </p>
+
+                                    
+
+                                    <div className='show-button-page'>
+
+                                        <hr style={{margin: '0.5rem'}}/>
+                                    
+                                        {singleTeamMember.instagramLink && (
+                                            <a href={singleTeamMember.instagramLink} target='_blank'>
+                                                <button className='btn btn-social-i btn-instagram'>
+                                                    <FaInstagram/>
+                                                </button>
+                                            </a>
+                                        )}
+
+                                        {singleTeamMember.facebookLink && (
+                                            <a href={singleTeamMember.facebookLink} target='_blank'>
+                                                <button className='btn btn-social-i-f btn-facebook'>
+                                                    <FaFacebookF/>
+                                                </button>
+                                            </a>
+                                        )}
+
+                                        {singleTeamMember.twitterLink && (
+                                            <a href={singleTeamMember.twitterLink} target='_blank'>
+                                                <button className='btn btn-social-i-t btn-twitter'>
+                                                    <FaTwitter/>
+                                                </button>
+                                            </a>
+                                        )}
+
+                                        {singleTeamMember.youtubeLink && (
+                                            <a href={singleTeamMember.youtubeLink}
+                                            target='_blank'>
+                                                <button className='btn btn-social-i-y btn-youtube'>
+                                                    <FaYoutube/>
+                                                </button>
+                                            </a>
+                                        )}
+
+                                        {singleTeamMember.tiktokLink && (
+                                            <a href={singleTeamMember.tiktokLink}
+                                            target='_blank'>
+                                                <button className='btn btn-social-i btn-tiktok'>
+                                                    <FaTiktok/>
+                                                </button>
+                                            </a>
+                                        )}
+
+                                        <hr style={{margin: '0.5rem'}}/>
+
+                                    </div>
+                                    
+                                    <div className="desc map-color-7 container-paragraph influencer-info" style={{display: 'none'}}>
+                                        <div className="map-paragraph">
+                                            <h2 className="i-map-paragraph"><b className='show-page-name-s'>{singleTeamMember.name}</b></h2>
+                                                <div className='show-button'>
+
+
+                                                    {singleTeamMember.instagramLink && (
+                                                        <a href={singleTeamMember.instagramLink} target='_blank'>
+                                                            <button className='btn btn-social-i btn-instagram'>
+                                                                <FaInstagram/>
+                                                            </button>
+                                                        </a>
+                                                    )}
+
+                                                    {singleTeamMember.facebookLink && (
+                                                        <a href={singleTeamMember.facebookLink} target='_blank'>
+                                                            <button className='btn btn-social-i-f btn-facebook'>
+                                                                <FaFacebookF/>
+                                                            </button>
+                                                        </a>
+                                                    )}
+
+                                                    {singleTeamMember.twitterLink && (
+                                                        <a href={singleTeamMember.twitterLink} target='_blank'>
+                                                            <button className='btn btn-social-i-t btn-twitter'>
+                                                                <FaTwitter/>
+                                                            </button>
+                                                        </a>
+                                                    )}
+
+                                                    {singleTeamMember.youtubeLink && (
+                                                        <a href={singleTeamMember.youtubeLink}
+                                                        target='_blank'>
+                                                            <button className='btn btn-social-i-y btn-youtube'>
+                                                                <FaYoutube/>
+                                                            </button>
+                                                        </a>
+                                                    )}
+
+                                                    {singleTeamMember.tiktokLink && (
+                                                        <a href={singleTeamMember.tiktokLink}
+                                                        target='_blank'>
+                                                            <button className='btn btn-social-i btn-tiktok'>
+                                                                <FaTiktok/>
+                                                            </button>
+                                                        </a>
+                                                    )}
+
+                                                    <hr />
+
+                                                    <div className='template-p-detail'>
+                                                        {singleTeamMember.description}
+                                                    </div>
+
+                                                    <hr/>
+                                                </div>
+                    
+                                            <hr className='show-break-style'/>
+                                            <div className='template-p-detail'>
+
+                                                    <a
+                                                className='email__design-s'
+                                                href='mailto:shawn@ktmanagers.com'
+                                                target='_blank'>shawn@ktmanagers.com</a>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                                                        
+                                    <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
+                                        <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
+                                            <a href="#" title="Read Full" style={{backgroundColor: 'none'}}><span>More Info About Our Program</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Left Side */}
+                            <div className="col-md4 col-sm-4">
+                                <div className="mobile__hide-image column-show map-color-7 influencer-image">
+                                    <div className="portfolio-item">
+                                        <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
+                                        <div className="portfolio-item-overlay margin-top-g">
+                                            <div className="portfolio-item-details text-center">
+                                                {singleTeamMember.imageTitle2 && (
+                                                    <>
+                                                        <h3>{singleTeamMember.imageTitle2}</h3>
+                                                        <span></span>
+                                                    </>
+                                                )}
+
+                                                {singleTeamMember.imageDescription2 && (
+                                                    <p className='influencer-description'>{singleTeamMember.imageDescription2}</p>
+                                                )}
+
+                                                <div className='show-button'>
+                                                    {singleTeamMember.instagramLink && (
+                                                        <a href={singleTeamMember.instagramLink} target='_blank'>
+                                                            <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
+                                                                <FaInstagram/>
+                                                            </button>
+                                                        </a>
+                                                    )}
+
+                                                    {singleTeamMember.facebookLink && (
+                                                        <a href={singleTeamMember.facebookLink} target='_blank'>
+                                                            <button className='btn btn-social-influencer-img btn-social-img
+                                                            btn-social-facebook'>
+                                                                <FaFacebookF/>
+                                                            </button>
+                                                        </a>
+                                                    )}
+
+                                                    {singleTeamMember.twitterLink && (
+                                                        <a href={singleTeamMember.twitterLink} target='_blank'>
+                                                            <button className='btn btn-social-influencer-img btn-social-img
+                                                            btn-social-twitter'>
+                                                                <FaTwitter/>
+                                                            </button>
+                                                        </a>
+                                                    )}
+
+                                                    {singleTeamMember.youtubeLink && (
+                                                        <a href={singleTeamMember.youtubeLink}
+                                                            target='_blank'>
+                                                            <button className='btn btn-social-influencer-img btn-social-img
+                                                            btn-social-youtube'>
+                                                                <FaYoutube/>
+                                                            </button>
+                                                        </a>
+                                                    )}
+
+                                                    {singleTeamMember.tiktokLink && (
+                                                        <a href={singleTeamMember.tiktokLink}
+                                                            target='_blank'>
+                                                            <button className='btn btn-social-influencer-img btn-social-img
+                                                            btn-social-tiktok'>
+                                                                <FaTiktok/>
+                                                            </button>
+                                                        </a>
+                                                    )}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+      
                             </div>
                         </div>
                     </div>

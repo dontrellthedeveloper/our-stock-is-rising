@@ -17,17 +17,17 @@
   }
 
   .testimonial_styles {
-    height: 500px;
+    height: 370px;
     margin-top: 6%;
   }
 
   
   .myCarousel {
     // background: #213705;
-    background: #000;
+    // background: #000;
     // margin-top: -6%;
     margin-top: 6%;
-    width: 54%;
+    // width: 54%;
     margin-left: auto;
     margin-right: auto;
     padding-top: 6%;
@@ -36,6 +36,15 @@
     padding-right: 5%;
     border: 1px solid #ddd;
     height: 286px;
+    background: url("../../assets/dayton4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40%;
+    // width: 100%;
+  }
+
+  .content-box-md-brands .myCarousel {
+    // background: rgba(0,0,0,0.8);
   }
   
   .carousel .control-dots {

@@ -127,9 +127,14 @@ function Updates() {
             <section id="about" style={{height: 'calc(100vh - 140px)', display: 'table', width: '100%'}}>
                 <div className="about-01" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                     <div className="container">
-                        <div className="row">
+                        <div className="row" style={{justifyContent: 'center'}}>
                             {/* Left Side */}
-                            <div className="col-md-6 col-sm-6" style={{display: 'none'}}>
+                            {/* <div className="col-md-3 col-sm-3">
+                            <div className="vertical-heading">
+                                    <h5>Info about</h5>
+                                    <h2>Book <br/>Updates  </h2>
+                                </div>
+
                                 <div className="mobile__hide-image column-show map-color-7 influencer-image">
                                     <div className="portfolio-item">
                                         <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
@@ -197,73 +202,35 @@ function Updates() {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                             
                             {/* Right Side */}
-                            <div className="col-md-12 col-sm-12" style={{display: 'table'}}>
+                            <div className="col-md-10 col-sm-10" style={{display: 'table'}}>
                                 <div className="about-right" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                                     <div className="horizontal-heading main-about" style={{color: '#000'}}>
                                         <h5 style={{color: '#000'}}>Information about</h5>
-                                        <h2> <strong ></strong>Book Updates</h2>
+                                        <h2> <strong ></strong> Updates</h2>
                                     </div>
 
-                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>Our Stock is Rising" is a classroom activity originally developed in 2000 in response to students' disinterest in the Business section of the local newspaper during a Social Studies current events review.  I took it as a personal challenge to design an ongoing activity that incorporated the basic principles of an elementary curriculum to teach students the fundamentals of the stock market.  </p>
+                                    <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
+
+                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>Welcome to the Updates Page! Here, you'll find the latest news, revisions, and additions to Our Stock Is Rising. We're committed to keeping you informed about any changes or exciting developments related to the book. Whether it's enhanced content or important announcements, this is your go-to source for staying up-to-date with our literary journey.  </p>
 
                                     
 
                                     <div className='show-button-page'>
 
-                                        <hr style={{margin: '0.5rem'}}/>
+                                        <hr style={{margin: '1rem'}}/>
 
                                         <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
-                                            <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
-                                                <a href="#" title="Read Full" style={{backgroundColor: 'none'}}><span>More Info About Our Program</span></a>
+                                            <div class="card-link-b" style={{padding: '7px', borderTop: '0', }}>
+                                                <a href="#" title="Read Full" style={{backgroundColor: 'none'}}><span>Join Our Mailing List!</span></a>
                                             </div>
                                         </div>
                                     
-                                        {/* {singleTeamMember.instagramLink && (
-                                            <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                <button className='btn btn-social-i btn-instagram'>
-                                                    <FaInstagram/>
-                                                </button>
-                                            </a>
-                                        )}
+                                    
 
-                                        {singleTeamMember.facebookLink && (
-                                            <a href={singleTeamMember.facebookLink} target='_blank'>
-                                                <button className='btn btn-social-i-f btn-facebook'>
-                                                    <FaFacebookF/>
-                                                </button>
-                                            </a>
-                                        )}
-
-                                        {singleTeamMember.twitterLink && (
-                                            <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                <button className='btn btn-social-i-t btn-twitter'>
-                                                    <FaTwitter/>
-                                                </button>
-                                            </a>
-                                        )}
-
-                                        {singleTeamMember.youtubeLink && (
-                                            <a href={singleTeamMember.youtubeLink}
-                                            target='_blank'>
-                                                <button className='btn btn-social-i-y btn-youtube'>
-                                                    <FaYoutube/>
-                                                </button>
-                                            </a>
-                                        )}
-
-                                        {singleTeamMember.tiktokLink && (
-                                            <a href={singleTeamMember.tiktokLink}
-                                            target='_blank'>
-                                                <button className='btn btn-social-i btn-tiktok'>
-                                                    <FaTiktok/>
-                                                </button>
-                                            </a>
-                                        )} */}
-
-                                        <hr style={{margin: '0.5rem'}}/>
+                                        <hr style={{margin: '1rem'}}/>
 
                                     </div>
                                     

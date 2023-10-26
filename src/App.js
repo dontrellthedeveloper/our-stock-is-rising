@@ -20,6 +20,7 @@ import Purpose from "./pages/Purpose";
 import Shop from "./pages/Shop";
 import Standards from "./pages/Standards";
 import Updates from "./pages/Updates";
+import ProfessionalDevelopment from './pages/ProfessionalDevelopment';
 const App = () => {
   return (
     <>
@@ -35,6 +36,7 @@ const App = () => {
             <Route path='/extras' element={<Extras/>} />
             <Route path='/contact' element={<Contact/>}  />
             <Route path='/standards/:slug' element={<Standards/>} />
+            <Route path='/professional-development' element={<ProfessionalDevelopment/>}/>
         </Routes>
         <Footer/>
 

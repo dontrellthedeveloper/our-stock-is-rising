@@ -21,6 +21,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import {BiCaretRight, BiRightArrow} from "react-icons/bi";
 import videoBgMp4 from "../assets/our-stock-is-rising.mp4";
 import {AiOutlineLineChart} from "react-icons/ai";
+import { IoIosArrowDown } from 'react-icons/io';
 
 
 
@@ -210,11 +211,22 @@ function History() {
                                         <h2> <strong ></strong>Beginnings</h2>
                                     </div>
 
-                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>Our Stock is Rising" is a classroom activity originally developed in 2000 in response to students' disinterest in the Business section of the local newspaper during a Social Studies current events review.  I took it as a personal challenge to design an ongoing activity that incorporated the basic principles of an elementary curriculum to teach students the fundamentals of the stock market.  </p>
+                                    <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
 
+
+
+                                    <p className="about-text">
+                                    •	1999 – An Educational Response to a Rampant “Consumer” Culture  <br/>
+                                    •	2002 – Presentation at the Annual National Council of Teachers of Mathematics (NCTM), Las Vegas, NV <br/>          
+                                    •	2002 – Copyright: Library of Congress <br/>
+                                    •	2003 – A New Culture at Fairview Elementary, Dayton Public Schools                 
+                                    </p>
+
+
+                                    <hr style={{margin: '1.5rem', border: '2px solid #213805'}}/>
                                     
 
-                                    <div className='show-button-page'>
+                                    {/* <div className='show-button-page'>
 
                                         <hr style={{margin: '0.5rem'}}/>
                                     
@@ -263,85 +275,23 @@ function History() {
                                         <hr style={{margin: '0.5rem'}}/>
 
                                     </div>
-                                    
-                                    <div className="desc map-color-7 container-paragraph influencer-info" style={{display: 'none'}}>
-                                        <div className="map-paragraph">
-                                            <h2 className="i-map-paragraph"><b className='show-page-name-s'>{singleTeamMember.name}</b></h2>
-                                                <div className='show-button'>
-
-
-                                                    {singleTeamMember.instagramLink && (
-                                                        <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                            <button className='btn btn-social-i btn-instagram'>
-                                                                <FaInstagram/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.facebookLink && (
-                                                        <a href={singleTeamMember.facebookLink} target='_blank'>
-                                                            <button className='btn btn-social-i-f btn-facebook'>
-                                                                <FaFacebookF/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.twitterLink && (
-                                                        <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                            <button className='btn btn-social-i-t btn-twitter'>
-                                                                <FaTwitter/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.youtubeLink && (
-                                                        <a href={singleTeamMember.youtubeLink}
-                                                        target='_blank'>
-                                                            <button className='btn btn-social-i-y btn-youtube'>
-                                                                <FaYoutube/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.tiktokLink && (
-                                                        <a href={singleTeamMember.tiktokLink}
-                                                        target='_blank'>
-                                                            <button className='btn btn-social-i btn-tiktok'>
-                                                                <FaTiktok/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    <hr />
-
-                                                    <div className='template-p-detail'>
-                                                        {singleTeamMember.description}
-                                                    </div>
-
-                                                    <hr/>
-                                                </div>
-                    
-                                            <hr className='show-break-style'/>
-                                            <div className='template-p-detail'>
-
-                                                    <a
-                                                className='email__design-s'
-                                                href='mailto:shawn@ktmanagers.com'
-                                                target='_blank'>shawn@ktmanagers.com</a>
-                                            </div>
-                                        </div>
-                                    </div>                                    
+                                                                      
                                                                         
                                     <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
                                         <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
                                             <a href="#" title="Read Full" style={{backgroundColor: 'none'}}><span>More Info About Our Program</span></a>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                            {/*  Arrow Down */}
+                <a href="#about" className="arrow-down smooth-scroll" style={{color: '#213805'}}>
+                    <IoIosArrowDown icon="fa-solid fa-angle-down" />
+                </a>
             </section>
 
             <div className="map-color-3" >
@@ -371,133 +321,28 @@ function History() {
                                         <h2> <strong ></strong>Evolution</h2>
                                     </div>
 
-                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>Our Stock is Rising" is a classroom activity originally developed in 2000 in response to students' disinterest in the Business section of the local newspaper during a Social Studies current events review.  I took it as a personal challenge to design an ongoing activity that incorporated the basic principles of an elementary curriculum to teach students the fundamentals of the stock market.  </p>
-
+                                    <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
+                                    
+                                    <p className="about-text">
+                                    •	2000 - Using Hand-held Calculators <br/>
+                                    •	2000 - Converting Fractions to Decimals <br/>
+                                    •	2002 – Presentation to NCTM, Las Vegas <br/> 
+                                    •	2004 – Facilitator’s (Teacher) E-Spreadsheet <br/>    
+                                    •	2007 – Student’s E-Spreadsheet  <br/>
+                                    •	2008 – A Visit to Key Bank <br/>
+                                    •	2011 – Applying “Trend line” Projections <br/>
+                                    •	2015 – Entering The Ohio Stock Market Game <br/>
+                                    •	2017 –  Students Present to Wright State Univ. and Dayton’s Mayor <br/>  
+                                    •	2018 –  A Visit from Zales’ CEO <br/>
+                                    •	2021 –  Activity’s “How to” Manuscript to Publisher <br/>
+                                    •	2023 – Book Release Our Stock is Rising… <br/>
+                                    •	TBD – Professional Development Opportunities            
+                                    </p>
                                     
 
-                                    <div className='show-button-page'>
-
-                                        <hr style={{margin: '0.5rem'}}/>
-                                    
-                                        {singleTeamMember.instagramLink && (
-                                            <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                <button className='btn btn-social-i btn-instagram'>
-                                                    <FaInstagram/>
-                                                </button>
-                                            </a>
-                                        )}
-
-                                        {singleTeamMember.facebookLink && (
-                                            <a href={singleTeamMember.facebookLink} target='_blank'>
-                                                <button className='btn btn-social-i-f btn-facebook'>
-                                                    <FaFacebookF/>
-                                                </button>
-                                            </a>
-                                        )}
-
-                                        {singleTeamMember.twitterLink && (
-                                            <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                <button className='btn btn-social-i-t btn-twitter'>
-                                                    <FaTwitter/>
-                                                </button>
-                                            </a>
-                                        )}
-
-                                        {singleTeamMember.youtubeLink && (
-                                            <a href={singleTeamMember.youtubeLink}
-                                            target='_blank'>
-                                                <button className='btn btn-social-i-y btn-youtube'>
-                                                    <FaYoutube/>
-                                                </button>
-                                            </a>
-                                        )}
-
-                                        {singleTeamMember.tiktokLink && (
-                                            <a href={singleTeamMember.tiktokLink}
-                                            target='_blank'>
-                                                <button className='btn btn-social-i btn-tiktok'>
-                                                    <FaTiktok/>
-                                                </button>
-                                            </a>
-                                        )}
-
-                                        <hr style={{margin: '0.5rem'}}/>
-
-                                    </div>
-                                    
-                                    <div className="desc map-color-7 container-paragraph influencer-info" style={{display: 'none'}}>
-                                        <div className="map-paragraph">
-                                            <h2 className="i-map-paragraph"><b className='show-page-name-s'>{singleTeamMember.name}</b></h2>
-                                                <div className='show-button'>
-
-
-                                                    {singleTeamMember.instagramLink && (
-                                                        <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                            <button className='btn btn-social-i btn-instagram'>
-                                                                <FaInstagram/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.facebookLink && (
-                                                        <a href={singleTeamMember.facebookLink} target='_blank'>
-                                                            <button className='btn btn-social-i-f btn-facebook'>
-                                                                <FaFacebookF/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.twitterLink && (
-                                                        <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                            <button className='btn btn-social-i-t btn-twitter'>
-                                                                <FaTwitter/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.youtubeLink && (
-                                                        <a href={singleTeamMember.youtubeLink}
-                                                        target='_blank'>
-                                                            <button className='btn btn-social-i-y btn-youtube'>
-                                                                <FaYoutube/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.tiktokLink && (
-                                                        <a href={singleTeamMember.tiktokLink}
-                                                        target='_blank'>
-                                                            <button className='btn btn-social-i btn-tiktok'>
-                                                                <FaTiktok/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    <hr />
-
-                                                    <div className='template-p-detail'>
-                                                        {singleTeamMember.description}
-                                                    </div>
-
-                                                    <hr/>
-                                                </div>
-                    
-                                            <hr className='show-break-style'/>
-                                            <div className='template-p-detail'>
-
-                                                    <a
-                                                className='email__design-s'
-                                                href='mailto:shawn@ktmanagers.com'
-                                                target='_blank'>shawn@ktmanagers.com</a>
-                                            </div>
-                                        </div>
-                                    </div>                                    
+                                    <hr style={{margin: '1.5rem', border: '2px solid #213805'}}/>
                                                                         
-                                    <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
-                                        <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
-                                            <a href="#" title="Read Full" style={{backgroundColor: 'none'}}><span>More Info About Our Program</span></a>
-                                        </div>
-                                    </div>
+                                                                        
                                 </div>
                             </div>
 

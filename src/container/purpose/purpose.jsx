@@ -21,7 +21,7 @@ const purpose = () => {
 
 
 
-                            <div className="col-md-4 col-sm-4">
+                            <div className="col-md-4 col-sm-4 homepage-heading-display" >
                                 <div className="vertical-heading">
                                     <h5>Info about</h5>
                                     <h2>Our <br/>Program  </h2>
@@ -42,7 +42,7 @@ const purpose = () => {
                             
                             {/* About Right Side */}
 
-                            <div className="col-md-8 col-sm-8">
+                            <div className="col-md-8 col-sm-12">
                                 <div className="about-right">
                                 {/* <div className="horizontal-heading main-about" style={{color: '#000'}}>
                                     <h5 style={{color: '#000'}}>An Elementary Student's Introduction to the</h5>
@@ -57,7 +57,7 @@ const purpose = () => {
                                 {/* <div className="horizontal-heading main-about-p" style={{color: '#000'}}>
                                         <h3 style={{color: '#000'}}>The Program</h3>
                                     </div> */}
-                                    <p className="about-text">Our Stock is Rising" is a classroom activity originally developed in 2000 in response to students' disinterest in the Business section of the local newspaper during a Social Studies current events review.  I took it as a personal challenge to design an ongoing activity that incorporated the basic principles of an elementary curriculum to teach students the fundamentals of the stock market.  The results were overwhelmingly positive!  Students not only gained a basic understanding of business world applications for their grade-level curriculum but through this cooperative learning activity, they also felt a profound sense of inclusion in a future corporate America and international business arenas </p>
+                                    <p className="about-text">The program was presented with rave reviews at the National Council of Teachers of Math's Annual conference in 2002.  In 2008, it was lauded in Dr. Stephanie Dalton's book, Five Standards for Effective Teaching.  Later that year, my fourth-grade class of stock investors was invited to Key Bank in Dayton, OH.  With portfolios in hand, the junior executives wowed officials at the bank by conducting a mock board meeting.  One student even produced an Excel line graph of his team's stock's performance that showed the same slope as that produced by the bank's leased Bloomberg software, given the same time period. </p>
 
                                     <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
                                         <div class="card-link" style={{padding: '7px', borderTop: '0', }}>

@@ -1217,6 +1217,14 @@
 
 @media(max-width: 767px) {
 
+    #about .about-right {
+        margin-top: 40px !important;
+    }
+
+    .homepage-heading-display {
+        display: none;
+    }
+
     /* Navigation */
     .navbar-brand {
         margin-left: -30px;

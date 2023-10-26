@@ -139,31 +139,62 @@
             width: -webkit-fill-available;
         }
 
-            .basic-card .card-link a {
-                text-decoration: none;
-                position: relative;
-                padding: 10px 0px;
-            }
+        .basic-card .card-link-b {
+            padding: 25px;
+            width: -webkit-fill-available;
+        }
 
-            .basic-card .card-link a:after {
-                top: 30px;
-                content: "";
-                display: block;
-                height: 2px;
-                left: 50%;
-                position: absolute;
-                width: 0;
+        .basic-card .card-link a {
+            text-decoration: none;
+            position: relative;
+            padding: 10px 0px;
+        }
 
-                -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-                -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-                -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
-                transition: width 0.3s ease 0s, left 0.3s ease 0s;
-            }
+        .basic-card .card-link-b a {
+            text-decoration: none;
+            position: relative;
+            padding: 10px 0px;
+        }
 
-            .basic-card .card-link a:hover:after { 
-                width: 100%; 
-                left: 0; 
-            }
+        .basic-card .card-link a:after {
+            top: 30px;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            width: 0;
+
+            -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        }
+
+        .basic-card .card-link-b a:after {
+            top: 30px;
+            content: "";
+            display: block;
+            height: 2px;
+            left: 50%;
+            position: absolute;
+            width: 0;
+
+            -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+            transition: width 0.3s ease 0s, left 0.3s ease 0s;
+        }
+
+        .basic-card .card-link a:hover:after { 
+            width: 100%; 
+            left: 0; 
+        }
+
+        .basic-card .card-link-b a:hover:after { 
+            width: 100%; 
+            left: 0; 
+        }
     
     
     .basic-card-aqua {
@@ -184,7 +215,10 @@
         
         .card-link:hover {
             background-image: linear-gradient(to bottom right, #4dd0e1, #9fd399);
+        }
 
+        .card-link-b:hover {
+            background-image: linear-gradient(to bottom right, #4dd0e1, #9fd399);
         }
 
         .card-link a {
@@ -192,10 +226,19 @@
             font-weight: 500;
         }
 
+        .card-link-b a {
+            color: #000;
+            font-weight: 500;
+        }
+
         .card-link:hover a {
             color: #213705;
             font-weight: 500;
-            // -webkit-text-stroke: .25px #4dd0e1;
+        }
+
+        .card-link-b:hover a {
+            color: #213705;
+            font-weight: 500;
         }
 
     }
@@ -207,7 +250,8 @@
         }
     }
 
-        .basic-card-aqua .card-content, .basic-card .card-link a {
+        .basic-card-aqua .card-content, .basic-card .card-link a,
+        .basic-card-aqua .card-content, .basic-card .card-link-b a {
             
             text-align: center;
 
@@ -219,7 +263,13 @@
             text-align: center;
             background-color: #dcdcdc;
             // margin: 30px auto;
-            
+        }
+
+        .basic-card-aqua .card-link-b {
+            border-top:1px solid #000;
+            text-align: center;
+            background-color: #fff;
+            // margin: 30px auto;
         }
 
             // .basic-card-aqua .card-link a:after {

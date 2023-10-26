@@ -21,7 +21,7 @@ const history = () => {
 
 
 
-                            <div className="col-md-4 col-sm-4">
+                            <div className="col-md-4 col-sm-4 homepage-heading-display">
                                 <div className="vertical-heading">
                                     <h5>Info about</h5>
                                     <h2>Our <br/>History  </h2>
@@ -42,7 +42,7 @@ const history = () => {
                             
                             {/* About Right Side */}
 
-                            <div className="col-md-8 col-sm-8">
+                            <div className="col-md-8 col-sm-12">
                                 <div className="about-right">
                                 {/* <div className="horizontal-heading main-about" style={{color: '#000'}}>
                                     <h5 style={{color: '#000'}}>An Elementary Student's Introduction to the</h5>

@@ -21,6 +21,7 @@ import 'owl.carousel/dist/assets/owl.theme.default.css';
 import {BiCaretRight, BiRightArrow} from "react-icons/bi";
 import videoBgMp4 from "../assets/our-stock-is-rising.mp4";
 import {AiOutlineLineChart} from "react-icons/ai";
+import { IoIosArrowDown } from 'react-icons/io';
 
 
 
@@ -210,6 +211,9 @@ function About() {
                                         <h2> <strong ></strong>Gregory A. Powell</h2>
                                     </div>
 
+                                    <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
+
+
                                     <p className="about-text" style={{marginLeft: '20px', marginRight: '20px'}}>Gregory A. Powell is a former A Better Chance (ABC) Scholar and graduate
                                                                                                                 of The Peddie School in Hightstown, NJ. He is a retired, decorated U.S. Air
                                                                                                                 Force Major and a 22-year veteran of teaching in Dayton Public Schools. In
@@ -279,79 +283,13 @@ function About() {
 
                                     </div>
                                     
-                                    <div className="desc map-color-7 container-paragraph influencer-info" style={{display: 'none'}}>
-                                        <div className="map-paragraph">
-                                            <h2 className="i-map-paragraph"><b className='show-page-name-s'>{singleTeamMember.name}</b></h2>
-                                                <div className='show-button'>
-
-
-                                                    {singleTeamMember.instagramLink && (
-                                                        <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                            <button className='btn btn-social-i btn-instagram'>
-                                                                <FaInstagram/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.facebookLink && (
-                                                        <a href={singleTeamMember.facebookLink} target='_blank'>
-                                                            <button className='btn btn-social-i-f btn-facebook'>
-                                                                <FaFacebookF/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.twitterLink && (
-                                                        <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                            <button className='btn btn-social-i-t btn-twitter'>
-                                                                <FaTwitter/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.youtubeLink && (
-                                                        <a href={singleTeamMember.youtubeLink}
-                                                        target='_blank'>
-                                                            <button className='btn btn-social-i-y btn-youtube'>
-                                                                <FaYoutube/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.tiktokLink && (
-                                                        <a href={singleTeamMember.tiktokLink}
-                                                        target='_blank'>
-                                                            <button className='btn btn-social-i btn-tiktok'>
-                                                                <FaTiktok/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    <hr />
-
-                                                    <div className='template-p-detail'>
-                                                        {singleTeamMember.description}
-                                                    </div>
-
-                                                    <hr/>
-                                                </div>
-                    
-                                            <hr className='show-break-style'/>
-                                            <div className='template-p-detail'>
-
-                                                    <a
-                                                className='email__design-s'
-                                                href='mailto:shawn@ktmanagers.com'
-                                                target='_blank'>shawn@ktmanagers.com</a>
-                                            </div>
-                                        </div>
-                                    </div>                                    
+                              
                                                                         
-                                    <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
+                                    {/* <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
                                         <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
                                             <a href="#" title="Read Full" style={{backgroundColor: 'none'}}><span>More Info About Our Program</span></a>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -385,6 +323,9 @@ function About() {
                                         <h5 style={{color: '#000'}}>Info About</h5>
                                         <h2> <strong ></strong>My Story</h2>
                                     </div>
+
+                                    <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
+
 
                                     <p className="about-text" style={{marginLeft: '20px', marginRight: '20px'}}>I spent the early years researching the topic. The goal was to teach them as I learned and to stay one step ahead of my classes. I took them to see the experts, at Key Bank and the Wright State University School of Business.  As time went on, the experts came to us. The late Ellis Rowe (former VP, Mars Candy), and Theo Killion (former CEO, Zales Jewelry) flew in from Jacksonville and Chicago respectively, just to spend a few of their valuable hours for what they both found to be an invaluable cause.
 
@@ -516,11 +457,11 @@ Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, b
                                         </div>
                                     </div>                                    
                                                                         
-                                    <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
+                                    {/* <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
                                         <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
                                             <a href="#" title="Read Full" style={{backgroundColor: 'none'}}><span>More Info About Our Program</span></a>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
 
@@ -599,6 +540,11 @@ Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, b
                         </div>
                     </div>
                 </div>
+
+
+                <a href="#about" className="arrow-down smooth-scroll" style={{color: '#213805'}}>
+                    <IoIosArrowDown icon="fa-solid fa-angle-down" />
+                </a>
             </section>
 
             <Statement/>

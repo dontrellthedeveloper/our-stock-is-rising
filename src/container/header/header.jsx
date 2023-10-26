@@ -42,8 +42,7 @@ const header = () => {
 
             {/*  Arrow Down */}
             <a href="#about" className="arrow-down smooth-scroll">
-            <IoIosArrowDown icon="fa-solid fa-angle-down" />
-
+                <IoIosArrowDown icon="fa-solid fa-angle-down" />
             </a>
         </section>
     );

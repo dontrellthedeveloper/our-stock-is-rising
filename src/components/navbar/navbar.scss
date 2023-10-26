@@ -78,7 +78,8 @@
       .navbar__links-styles {
         text-decoration: none;
         flex-direction: column;
-        text-transform: uppercase;
+        // text-transform: uppercase;
+        text-transform: capitalize;
         font-weight: 500;
   
         transition: all 0.3s ease-in-out;
@@ -91,7 +92,8 @@
       .navbar__links-styles-scroll {
         text-decoration: none;
         flex-direction: column;
-        text-transform: uppercase;
+        // text-transform: uppercase;
+        text-transform: capitalize;
         font-weight: 500;
   
         transition: all 0.3s ease-in-out;
@@ -115,7 +117,7 @@
       }
     }
   
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1160px) {
       display: none;
     }
   }
@@ -284,16 +286,16 @@
           }
         }
   
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width: 1160px) {
           display: none;
         }
       }
   
-      @media screen and (min-width: 900px) {
+      @media screen and (min-width: 1160px) {
         display: none;
       }
     }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 1160px) {
       display: none;
     }
   }
@@ -382,16 +384,16 @@
           }
         }
   
-        @media screen and (min-width: 900px) {
+        @media screen and (min-width:  1160px) {
           display: none;
         }
       }
   
-      @media screen and (min-width: 900px) {
+      @media screen and (min-width: 1160px) {
         display: none;
       }
     }
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: 1160px) {
       display: none;
     }
   }

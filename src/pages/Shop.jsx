@@ -220,62 +220,12 @@ function Shop() {
 
                                     {/* <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>Our Stock is Rising" is a classroom activity originally developed in 2000 in response to students' disinterest in the Business section of the local newspaper during a Social Studies current events review.  I took it as a personal challenge to design an ongoing activity that incorporated the basic principles of an elementary curriculum to teach students the fundamentals of the stock market.  </p> */}
 
-                                    <hr style={{margin: '2rem'}}/>
+                                    <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
 
                                     <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>Book Synopsis  </p>
 
                                     
 
-                                    <div className='show-button-page'>
-
-                                        <hr style={{margin: '0.5rem'}}/>
-                                    
-                                        {singleTeamMember.instagramLink && (
-                                            <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                <button className='btn btn-social-i btn-instagram'>
-                                                    {/* <FaInstagram/> */}
-                                                    <FaAmazon/>
-                                                </button>
-                                            </a>
-                                        )}
-
-                                        {singleTeamMember.facebookLink && (
-                                            <a href={singleTeamMember.facebookLink} target='_blank'>
-                                                <button className='btn btn-social-i-f btn-facebook'>
-                                                    <FaShoppingCart/>
-                                                </button>
-                                            </a>
-                                        )}
-
-                                        {/* {singleTeamMember.twitterLink && (
-                                            <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                <button className='btn btn-social-i-t btn-twitter'>
-                                                    <FaTwitter/>
-                                                </button>
-                                            </a>
-                                        )}
-
-                                        {singleTeamMember.youtubeLink && (
-                                            <a href={singleTeamMember.youtubeLink}
-                                            target='_blank'>
-                                                <button className='btn btn-social-i-y btn-youtube'>
-                                                    <FaYoutube/>
-                                                </button>
-                                            </a>
-                                        )}
-
-                                        {singleTeamMember.tiktokLink && (
-                                            <a href={singleTeamMember.tiktokLink}
-                                            target='_blank'>
-                                                <button className='btn btn-social-i btn-tiktok'>
-                                                    <FaTiktok/>
-                                                </button>
-                                            </a>
-                                        )} */}
-
-                                        <hr style={{margin: '0.5rem'}}/>
-
-                                    </div>
                                     
                                     <div className="desc map-color-7 container-paragraph influencer-info" style={{display: 'none'}}>
                                         <div className="map-paragraph">
@@ -343,12 +293,83 @@ function Shop() {
                                                 target='_blank'>shawn@ktmanagers.com</a>
                                             </div>
                                         </div>
-                                    </div>                                    
-                                                                        
-                                    <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
-                                        <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
-                                            <a href="#" title="Read Full" style={{backgroundColor: 'none'}}><span>More Info About Our Program</span></a>
+                                    </div>         
+
+                                    <div className='show-button-page'>   
+
+                                        <hr style={{margin: '1rem'}}/>                        
+                                                                            
+                                            <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
+                                                <div class="card-link-b" style={{padding: '7px', borderTop: '0', }}>
+                                                    <a href="#" title="Read Full" style={{backgroundColor: 'none'}}><span>Purchase at AustinMacauley.com</span></a>
+                                                </div>
+                                            </div>
+
+                                        <hr style={{margin: '1rem'}}/>
+
+                                    </div>
+
+
+                                    <div className='show-button'>
+
+                                        {/* <hr style={{margin: '0.5rem'}}/> */}
+
+                                        <span>Purchase at Amazon.com</span>
+
+                                        {singleTeamMember.instagramLink && (
+                                            <a href={singleTeamMember.instagramLink} target='_blank'>
+                                                <button className='btn btn-social-i btn-instagram'>
+                                                    {/* <FaInstagram/> */}
+                                                    <FaAmazon/>
+                                                </button>
+                                            </a>
+                                        )}
+
+                                        {/* {singleTeamMember.facebookLink && (
+                                            <a href={singleTeamMember.facebookLink} target='_blank'>
+                                                <button className='btn btn-social-i-f btn-facebook'>
+                                                    <FaShoppingCart/>
+                                                </button>
+                                            </a>
+                                        )} */}
+
+                                        {/* {singleTeamMember.twitterLink && (
+                                            <a href={singleTeamMember.twitterLink} target='_blank'>
+                                                <button className='btn btn-social-i-t btn-twitter'>
+                                                    <FaTwitter/>
+                                                </button>
+                                            </a>
+                                        )}
+
+                                        {singleTeamMember.youtubeLink && (
+                                            <a href={singleTeamMember.youtubeLink}
+                                            target='_blank'>
+                                                <button className='btn btn-social-i-y btn-youtube'>
+                                                    <FaYoutube/>
+                                                </button>
+                                            </a>
+                                        )}
+
+                                        {singleTeamMember.tiktokLink && (
+                                            <a href={singleTeamMember.tiktokLink}
+                                            target='_blank'>
+                                                <button className='btn btn-social-i btn-tiktok'>
+                                                    <FaTiktok/>
+                                                </button>
+                                            </a>
+                                        )} */}
+
+                                        <hr style={{margin: '1.5rem', border: '2px solid #213805'}}/>
+
                                         </div>
+
+                                    <hr className='show-break-style'/>
+                                    <div className='template-p-detail'>
+                                            Do you have a question? Please email
+                                            <a
+                                        className='email__design-s'
+                                        href='mailto:gpowell@ourstockisrising.com'
+                                        target='_blank'> gpowell@ourstockisrising.com</a>
                                     </div>
                                 </div>
                             </div>

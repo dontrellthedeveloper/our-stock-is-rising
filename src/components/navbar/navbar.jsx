@@ -109,6 +109,20 @@ const Navbar = () => {
             Extras
           </NavLink>
         </li>
+        
+        <li className="app__flex p-text">
+          <div />
+          <NavLink
+            className={
+              scroll
+                ? "navbar__links-styles-scroll navbar__links-color-scroll"
+                : "navbar__links-styles navbar__links-color"
+            }
+            to="/professional-development"
+          >
+            Professional Development
+          </NavLink>
+        </li>
         <li className="app__flex p-text">
           <div />
           <NavLink

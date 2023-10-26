@@ -684,12 +684,19 @@
         margin-top: 20px;
         margin-bottom: 10px;
     }
+
+    .about-text {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
 }
 
 /* Extra Small Devices (Desktop & Laptops) */
 @media(max-width: 767px) {
 
-
+    .arrow-down {
+        display: none;
+    }
 
     /* Navigation */
     .navbar {
@@ -1212,10 +1219,26 @@
         padding: 10px 0;
     }
 
-
+    .about-text {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
 }
 
 @media(max-width: 767px) {
+
+    .col-mobile {
+        padding-bottom: 60px;
+    }
+
+    .about-text {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .col-mobile-top {
+        margin-top: 40px;
+    }
 
     #about .about-right {
         margin-top: 40px !important;

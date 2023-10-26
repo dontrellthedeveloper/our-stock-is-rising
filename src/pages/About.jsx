@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {
-    FaFacebookF, FaHandPointRight,
-    FaInstagram, FaRegEye, FaRegHandshake,
+    FaFacebookF, FaGooglePlus, FaHandPointRight,
+    FaInstagram, FaLinkedin, FaRegEye, FaRegHandshake,
     FaTiktok,
     FaTwitter,
     FaYoutube
@@ -129,9 +129,9 @@ function About() {
             <section id="about" style={{height: 'calc(100vh - 140px)', display: 'table', width: '100%'}}>
                 <div className="about-01" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                     <div className="container">
-                        <div className="row">
+                    <div className="row col-mobile-top" style={{justifyContent: 'center'}}>
                             {/* Left Side */}
-                            <div className="col-md-4 col-sm-4">
+                            <div className="col-md-4 col-sm-6">
                                 <div className="mobile__hide-image column-show map-color-7 influencer-image">
                                     <div className="portfolio-item">
                                         <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
@@ -204,7 +204,7 @@ function About() {
                             </div>
                             
                             {/* Right Side */}
-                            <div className="col-md-8 col-sm-8" style={{display: 'table'}}>
+                            <div className="col-md-8 col-sm-12 col-mobile" style={{display: 'table'}}>
                                 <div className="about-right" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                                     <div className="horizontal-heading main-about" style={{color: '#000'}}>
                                         <h5 style={{color: '#000'}}>About</h5>
@@ -239,11 +239,14 @@ function About() {
                                     
                                         {singleTeamMember.instagramLink && (
                                             <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                <button className='btn btn-social-i btn-instagram'>
-                                                    <FaInstagram/>
+                                                <button className='btn btn-social-i btn-linkedIn'>
+                                                    {/* <FaInstagram/> */}
+                                                    {/* <FaAmazon/> */}
+                                                    <FaLinkedin/>
                                                 </button>
                                             </a>
                                         )}
+
 
                                         {singleTeamMember.facebookLink && (
                                             <a href={singleTeamMember.facebookLink} target='_blank'>
@@ -253,13 +256,25 @@ function About() {
                                             </a>
                                         )}
 
-                                        {singleTeamMember.twitterLink && (
-                                            <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                <button className='btn btn-social-i-t btn-twitter'>
-                                                    <FaTwitter/>
+                                        {singleTeamMember.instagramLink && (
+                                            <a href={singleTeamMember.instagramLink} target='_blank'>
+                                                <button className='btn btn-social-i btn-instagram'>
+                                                    {/* <FaInstagram/> */}
+                                                    {/* <FaAmazon/> */}
+                                                    <FaInstagram/>
                                                 </button>
                                             </a>
                                         )}
+
+                                        {singleTeamMember.tiktokLink && (
+                                            <a href={singleTeamMember.tiktokLink}
+                                            target='_blank'>
+                                                <button className='btn btn-social-i btn-tiktok'>
+                                                    <FaTiktok/>
+                                                </button>
+                                            </a>
+                                        )}
+
 
                                         {singleTeamMember.youtubeLink && (
                                             <a href={singleTeamMember.youtubeLink}
@@ -270,11 +285,11 @@ function About() {
                                             </a>
                                         )}
 
-                                        {singleTeamMember.tiktokLink && (
-                                            <a href={singleTeamMember.tiktokLink}
+                                        {singleTeamMember.youtubeLink && (
+                                            <a href={singleTeamMember.youtubeLink}
                                             target='_blank'>
-                                                <button className='btn btn-social-i btn-tiktok'>
-                                                    <FaTiktok/>
+                                                <button className='btn btn-social-i-y btn-google'>
+                                                    <FaGooglePlus/>
                                                 </button>
                                             </a>
                                         )}
@@ -313,11 +328,11 @@ function About() {
             <section id="about" style={{height: 'calc(100vh - 140px)', display: 'table', width: '100%'}}>
                 <div className="about-01" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                     <div className="container">
-                        <div className="row">
+                    <div className="row col-mobile-top" style={{justifyContent: 'center'}}>
 
                             
                             {/* Right Side */}
-                            <div className="col-md-8 col-sm-8" style={{display: 'table'}}>
+                            <div className="col-md-8 col-sm-12" style={{display: 'table'}}>
                                 <div className="about-right" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                                     <div className="horizontal-heading main-about" style={{color: '#000'}}>
                                         <h5 style={{color: '#000'}}>Info About</h5>
@@ -345,11 +360,14 @@ Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, b
                                     
                                         {singleTeamMember.instagramLink && (
                                             <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                <button className='btn btn-social-i btn-instagram'>
-                                                    <FaInstagram/>
+                                                <button className='btn btn-social-i btn-linkedIn'>
+                                                    {/* <FaInstagram/> */}
+                                                    {/* <FaAmazon/> */}
+                                                    <FaLinkedin/>
                                                 </button>
                                             </a>
                                         )}
+
 
                                         {singleTeamMember.facebookLink && (
                                             <a href={singleTeamMember.facebookLink} target='_blank'>
@@ -359,13 +377,25 @@ Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, b
                                             </a>
                                         )}
 
-                                        {singleTeamMember.twitterLink && (
-                                            <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                <button className='btn btn-social-i-t btn-twitter'>
-                                                    <FaTwitter/>
+                                        {singleTeamMember.instagramLink && (
+                                            <a href={singleTeamMember.instagramLink} target='_blank'>
+                                                <button className='btn btn-social-i btn-instagram'>
+                                                    {/* <FaInstagram/> */}
+                                                    {/* <FaAmazon/> */}
+                                                    <FaInstagram/>
                                                 </button>
                                             </a>
                                         )}
+
+                                        {singleTeamMember.tiktokLink && (
+                                            <a href={singleTeamMember.tiktokLink}
+                                            target='_blank'>
+                                                <button className='btn btn-social-i btn-tiktok'>
+                                                    <FaTiktok/>
+                                                </button>
+                                            </a>
+                                        )}
+
 
                                         {singleTeamMember.youtubeLink && (
                                             <a href={singleTeamMember.youtubeLink}
@@ -376,11 +406,11 @@ Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, b
                                             </a>
                                         )}
 
-                                        {singleTeamMember.tiktokLink && (
-                                            <a href={singleTeamMember.tiktokLink}
+                                        {singleTeamMember.youtubeLink && (
+                                            <a href={singleTeamMember.youtubeLink}
                                             target='_blank'>
-                                                <button className='btn btn-social-i btn-tiktok'>
-                                                    <FaTiktok/>
+                                                <button className='btn btn-social-i-y btn-google'>
+                                                    <FaGooglePlus/>
                                                 </button>
                                             </a>
                                         )}
@@ -466,7 +496,7 @@ Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, b
                             </div>
 
                             {/* Left Side */}
-                            <div className="col-md4 col-sm-4">
+                            <div className="col-md-4 col-sm-6 col-mobile">
                                 <div className="mobile__hide-image column-show map-color-7 influencer-image">
                                     <div className="portfolio-item">
                                         <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>

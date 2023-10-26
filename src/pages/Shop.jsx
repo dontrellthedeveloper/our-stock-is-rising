@@ -132,7 +132,7 @@ function Shop() {
             <section id="about" style={{height: 'calc(100vh - 140px)', display: 'table', width: '100%'}}>
                 <div className="about-01" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                     <div className="container">
-                        <div className="row">
+                        <div className="row col-mobile-top" style={{justifyContent: 'center'}}>
                             {/* Left Side */}
                             <div className="col-md-6 col-sm-6">
                                 <div className="mobile__hide-image column-show map-color-7 influencer-image">
@@ -211,7 +211,7 @@ function Shop() {
                             </div>
                             
                             {/* Right Side */}
-                            <div className="col-md-6 col-sm-6" style={{display: 'table'}}>
+                            <div className="col-md-6 col-sm-12 col-mobile" style={{display: 'table'}}>
                                 <div className="about-right" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                                     <div className="horizontal-heading main-about" style={{color: '#000'}}>
                                         <h5 style={{color: '#000'}}>Purchase the book</h5>
@@ -318,7 +318,7 @@ function Shop() {
 
                                         {singleTeamMember.instagramLink && (
                                             <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                <button className='btn btn-social-i btn-instagram'>
+                                                <button className='btn btn-social-i btn-amazon'>
                                                     {/* <FaInstagram/> */}
                                                     <FaAmazon/>
                                                 </button>

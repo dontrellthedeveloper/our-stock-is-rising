@@ -129,7 +129,7 @@ function History() {
             <section id="about" style={{height: 'calc(100vh - 140px)', display: 'table', width: '100%'}}>
                 <div className="about-01" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                     <div className="container">
-                        <div className="row">
+                    <div className="row col-mobile-top" style={{justifyContent: 'center'}}>
                             {/* Left Side */}
                             <div className="col-md-6 col-sm-6">
                                 <div className="mobile__hide-image column-show map-color-7 influencer-image">
@@ -204,7 +204,7 @@ function History() {
                             </div>
                             
                             {/* Right Side */}
-                            <div className="col-md-6 col-sm-6" style={{display: 'table'}}>
+                            <div className="col-md-6 col-sm-12" style={{display: 'table'}}>
                                 <div className="about-right" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                                     <div className="horizontal-heading main-about" style={{color: '#000'}}>
                                         <h5 style={{color: '#000'}}>Our History's</h5>
@@ -310,11 +310,11 @@ function History() {
             <section id="about" style={{height: 'calc(100vh - 140px)', display: 'table', width: '100%'}}>
                 <div className="about-01" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                     <div className="container">
-                        <div className="row">
+                    <div className="row col-mobile-top" style={{justifyContent: 'center'}}>
 
                             
                             {/* Right Side */}
-                            <div className="col-md-6 col-sm-6" style={{display: 'table'}}>
+                            <div className="col-md-6 col-sm-12" style={{display: 'table'}}>
                                 <div className="about-right" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                                     <div className="horizontal-heading main-about" style={{color: '#000'}}>
                                         <h5 style={{color: '#000'}}>Our History's</h5>
@@ -322,7 +322,7 @@ function History() {
                                     </div>
 
                                     <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
-                                    
+
                                     <p className="about-text">
                                     •	2000 - Using Hand-held Calculators <br/>
                                     •	2000 - Converting Fractions to Decimals <br/>
@@ -347,7 +347,7 @@ function History() {
                             </div>
 
                             {/* Left Side */}
-                            <div className="col-md-6 col-sm-6">
+                            <div className="col-md-6 col-sm-6 col-mobile" style={{display: 'table'}}>
                                 <div className="mobile__hide-image column-show map-color-7 influencer-image">
                                     <div className="portfolio-item">
                                         <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>

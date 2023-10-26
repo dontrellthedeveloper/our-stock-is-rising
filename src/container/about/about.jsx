@@ -9,7 +9,46 @@ import {MdOutlineTipsAndUpdates} from 'react-icons/md'
 const about = () => {
     return (
         <section id="about">
+            {/* About 02 */}
+            <div className="about-02">
+                <div className="content-box-main-2">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-4 col-sm-4">
+                                <a href="/purpose" style={{textDecoration: 'none'}}>
+                                    <div className="about-item text-center about-h">
+                                        <AiOutlineLineChart className="react-icon-about"></AiOutlineLineChart>
+                                        <h3>Purpose / Objectives</h3>
+                                        <hr/>
+                                            <p>Purpose: To provide elementary students with a basic understanding of the stock market and its impact on their daily lives. </p>
+                                    </div>
+                                </a>
 
+                            </div>
+                            <div className="col-md-4 col-sm-4">
+                                <a href="/professional-development" style={{textDecoration: 'none'}}>
+                                    <div className="about-item text-center about-h">
+                                        <FaRegHandshake className="react-icon-about"></FaRegHandshake>
+                                        <h3>Professional Development</h3>
+                                        <hr/>
+                                            <p>I Need information to put for professional development. </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div className="col-md-4 col-sm-4">
+                                <a href="/updates" style={{textDecoration: 'none'}}>
+                                    <div className="about-item text-center about-h">
+                                        <MdOutlineTipsAndUpdates className="react-icon-about"></MdOutlineTipsAndUpdates>
+                                        <h3>Updates</h3>
+                                        <hr/>
+                                            <p>I Need information to put for updates.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
 
             {/* About 01 */}
             <div className="about-01">
@@ -158,46 +197,7 @@ const about = () => {
 
 
            
-            {/* About 02 */}
-            <div className="about-02">
-                <div className="content-box-main-2">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-4 col-sm-4">
-                                <a href="/purpose" style={{textDecoration: 'none'}}>
-                                    <div className="about-item text-center about-h">
-                                        <AiOutlineLineChart className="react-icon-about"></AiOutlineLineChart>
-                                        <h3>Purpose / Objectives</h3>
-                                        <hr/>
-                                            <p>Purpose: To provide elementary students with a basic understanding of the stock market and its impact on their daily lives. </p>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <div className="col-md-4 col-sm-4">
-                                <a href="/professional-development" style={{textDecoration: 'none'}}>
-                                    <div className="about-item text-center about-h">
-                                        <FaRegHandshake className="react-icon-about"></FaRegHandshake>
-                                        <h3>Professional Development</h3>
-                                        <hr/>
-                                            <p>I Need information to put for professional development. </p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div className="col-md-4 col-sm-4">
-                                <a href="/updates" style={{textDecoration: 'none'}}>
-                                    <div className="about-item text-center about-h">
-                                        <MdOutlineTipsAndUpdates className="react-icon-about"></MdOutlineTipsAndUpdates>
-                                        <h3>Updates</h3>
-                                        <hr/>
-                                            <p>I Need information to put for updates.</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>                                                                 
+                                                                
         </section>
     );
 };

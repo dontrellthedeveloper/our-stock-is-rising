@@ -254,21 +254,45 @@ section {
   border: 2px solid #4dd0e1;
 }
 
-.btn-instagram {
-  /* color: white; */
-  /* color: #213805;
+.btn-linkedIn {
+  color: #213805;
   background: #fff;
-  border: 1px solid #213805; */
+  border: 1px solid #213805;
+}
+
+.btn-linkedIn:hover,
+.btn-linkedIn:focus {
+  color: #fff;
+  background: #0072b1;
+  border: 1px solid #213805;
+}
+
+.btn-amazon {
   color: white;
   background: #FF9900;
   border: 1px solid #213805;
 }
 
+.btn-amazon:hover,
+.btn-amazon:focus {
+  color: #FF9900;
+  background: #fff;
+  border: 1px solid #213805;
+}
+
+
+.btn-instagram {
+  color: #213805;
+  background: #fff;
+  border: 1px solid #213805;
+}
+
+
 
 .btn-instagram:hover,
 .btn-instagram:focus {
-  color: #FF9900;
-  /* background:
+  color: #fff;
+  background:
           radial-gradient(circle farthest-corner at 35% 90%, #fec564, transparent 50%),
           radial-gradient(circle farthest-corner at 0 140%, #fec564, transparent 50%),
 
@@ -281,8 +305,8 @@ section {
           radial-gradient(ellipse farthest-corner at 100% 100%, #d9317a, transparent),
 
           linear-gradient(#6559ca, #bc318f 30%, #e33f5f 50%, #f77638 70%, #fec66d 100%);
-  border: 1px solid rgb(82, 88, 207); */
-  background: #fff;
+  border: 1px solid rgb(82, 88, 207);
+
   border: 1px solid #213805;
 }
 
@@ -294,9 +318,9 @@ section {
 .btn-facebook:hover,
 .btn-facebook:focus {
   color: #fff;
-  /* background: #3b5998; */
+  background: #3b5998;
   border: 1px solid #fff;
-  background: #213805;
+  /* background: #213805; */
 }
 
 .btn-tiktok {
@@ -320,6 +344,18 @@ section {
 .btn-youtube:focus {
   color: #fff;
   background: #FF0000;
+  border: 1px solid #fff;
+}
+
+.btn-google {
+  color: #213805;
+  background: #fff;
+}
+
+.btn-google:hover,
+.btn-google:focus {
+  color: #fff;
+  background: #db4a39;
   border: 1px solid #fff;
 }
 

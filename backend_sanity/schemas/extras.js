@@ -1,6 +1,6 @@
 export default {
-    name: 'about',
-    title: 'About',
+    name: 'extras',
+    title: 'Extras',
     type: 'document',
     fields: [
         {
@@ -33,36 +33,18 @@ export default {
             type: 'string'
         },
         {
-            name: 'imageUrl',
-            title: 'Image1',
-            type: 'image',
-            options: {
-                hotspot: true,
-            },
-        },
-        {
-            name: 'name2',
-            title: 'Page Title 2',
+            name: 'gameLink',
+            title: 'Stock Game Link',
             type: 'string',
         },
         {
-            name: 'preheading2',
-            title: 'Pre Heading 2',
-            type: 'string',
-        },
-        {
-            name: 'heading2',
-            title: 'Heading 2',
-            type: 'string',
-        },
-        {
-            name: 'description2',
-            title: 'Description 2',
+            name: 'gameText',
+            title: 'Stock Game Text',
             type: 'string'
         },
         {
-            name: 'imageUrl2',
-            title: 'Image2',
+            name: 'imageUrl',
+            title: 'Image1',
             type: 'image',
             options: {
                 hotspot: true,

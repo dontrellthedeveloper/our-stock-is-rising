@@ -28,8 +28,8 @@ import { IoIosArrowDown } from 'react-icons/io';
 
 
 function About() {
-    const [singleTeamMember, setSingleTeamMember] = useState(null);
-    const [services, setServices] = useState(null);
+    const [about, setAbout] = useState(null);
+    const [social, setSocial] = useState(null);
     const {slug} = useParams();
 
 
@@ -40,20 +40,13 @@ function About() {
             name,
             _id,
             slug,
-            instagramLink,
-            facebookLink,
-            twitterLink,
-            youtubeLink,
-            tiktokLink,
+            preheading,
+            heading,
             description,
-            about1,
-            about2,
-            companyGoalName,
-            companyGoalDescription,
-            companyGoalName2,
-            companyGoalDescription2,
-            companyGoalName3,
-            companyGoalDescription3,
+            name2,
+            preheading2,
+            heading2,
+            description2,
             imageUrl{
                 asset->{
                     _id,
@@ -65,37 +58,45 @@ function About() {
                     _id,
                     url
                 }
-            },
-            imageUrl3{
-                asset->{
-                    _id,
-                    url
-                }
             }
-        }`).then((data) => setSingleTeamMember(data[0]))
+        }`).then((data) => setAbout(data[0]))
             .catch(console.error)
     }, [slug]);
 
-
-
-
-
-
     useEffect(() => {
-        client.fetch(`*[_type == "service"] | order(order asc)`
+        client.fetch(`*[_type == "social"]{
+            _id,
+            linkedLink,
+            instagramLink,
+            facebookLink,
+            youTubeLink,
+            tiktokLink,
+            googlePlus
+        }`).then((data) => setSocial(data[0]))
+            .catch(console.error)
+    }, [slug]);
 
-        ).then((data) => {
-            setServices(data)
-        })
-
-    }, []);
+    console.log(about)
 
 
 
 
 
+    // useEffect(() => {
+    //     client.fetch(`*[_type == "social"]`
 
-    if(!singleTeamMember || !services) return (
+    //     ).then((data) => {
+    //         setSocial(data)
+    //     })
+
+    // }, []);
+
+
+
+
+
+
+    if(!about || !social) return (
         <div className="preloader">
             <div className="status"></div>
         </div>
@@ -117,7 +118,7 @@ function About() {
                     <div className="home-headings tools-p-align">
                         <div className="horizontal-heading influencer-name">
                             <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> 
-                            Bio
+                            {about.name}
                             </span>
                             </h1>
                         </div>
@@ -134,10 +135,10 @@ function About() {
                             <div className="col-md-4 col-sm-6">
                                 <div className="mobile__hide-image column-show map-color-7 influencer-image">
                                     <div className="portfolio-item">
-                                        <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
+                                        <img src={urlFor(about.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
                                         <div className="portfolio-item-overlay margin-top-g">
                                             <div className="portfolio-item-details text-center">
-                                                {singleTeamMember.imageTitle2 && (
+                                                {/* {singleTeamMember.imageTitle2 && (
                                                     <>
                                                         <h3>{singleTeamMember.imageTitle2}</h3>
                                                         <span></span>
@@ -146,19 +147,19 @@ function About() {
 
                                                 {singleTeamMember.imageDescription2 && (
                                                     <p className='influencer-description'>{singleTeamMember.imageDescription2}</p>
-                                                )}
+                                                )} */}
 
                                                 <div className='show-button'>
-                                                    {singleTeamMember.instagramLink && (
-                                                        <a href={singleTeamMember.instagramLink} target='_blank'>
+                                                    {social.instagramLink && (
+                                                        <a href={social.instagramLink} target='_blank'>
                                                             <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
                                                                 <FaInstagram/>
                                                             </button>
                                                         </a>
                                                     )}
 
-                                                    {singleTeamMember.facebookLink && (
-                                                        <a href={singleTeamMember.facebookLink} target='_blank'>
+                                                    {social.facebookLink && (
+                                                        <a href={social.facebookLink} target='_blank'>
                                                             <button className='btn btn-social-influencer-img btn-social-img
                                                             btn-social-facebook'>
                                                                 <FaFacebookF/>
@@ -166,17 +167,17 @@ function About() {
                                                         </a>
                                                     )}
 
-                                                    {singleTeamMember.twitterLink && (
+                                                    {/* {singleTeamMember.twitterLink && (
                                                         <a href={singleTeamMember.twitterLink} target='_blank'>
                                                             <button className='btn btn-social-influencer-img btn-social-img
                                                             btn-social-twitter'>
                                                                 <FaTwitter/>
                                                             </button>
                                                         </a>
-                                                    )}
+                                                    )} */}
 
-                                                    {singleTeamMember.youtubeLink && (
-                                                        <a href={singleTeamMember.youtubeLink}
+                                                    {social.youTubeLink && (
+                                                        <a href={social.youTubeLink}
                                                             target='_blank'>
                                                             <button className='btn btn-social-influencer-img btn-social-img
                                                             btn-social-youtube'>
@@ -185,8 +186,8 @@ function About() {
                                                         </a>
                                                     )}
 
-                                                    {singleTeamMember.tiktokLink && (
-                                                        <a href={singleTeamMember.tiktokLink}
+                                                    {social.tiktokLink && (
+                                                        <a href={social.tiktokLink}
                                                             target='_blank'>
                                                             <button className='btn btn-social-influencer-img btn-social-img
                                                             btn-social-tiktok'>
@@ -194,6 +195,8 @@ function About() {
                                                             </button>
                                                         </a>
                                                     )}
+
+
                                                 </div>
                                             </div>
                                         </div>
@@ -237,8 +240,8 @@ function About() {
 
                                         <hr style={{margin: '0.5rem'}}/>
                                     
-                                        {singleTeamMember.instagramLink && (
-                                            <a href={singleTeamMember.instagramLink} target='_blank'>
+                                        {social.linkedLink && (
+                                            <a href={social.linkedLink} target='_blank'>
                                                 <button className='btn btn-social-i btn-linkedIn'>
                                                     {/* <FaInstagram/> */}
                                                     {/* <FaAmazon/> */}
@@ -248,16 +251,16 @@ function About() {
                                         )}
 
 
-                                        {singleTeamMember.facebookLink && (
-                                            <a href={singleTeamMember.facebookLink} target='_blank'>
+                                        {social.facebookLink && (
+                                            <a href={social.facebookLink} target='_blank'>
                                                 <button className='btn btn-social-i-f btn-facebook'>
                                                     <FaFacebookF/>
                                                 </button>
                                             </a>
                                         )}
 
-                                        {singleTeamMember.instagramLink && (
-                                            <a href={singleTeamMember.instagramLink} target='_blank'>
+                                        {social.instagramLink && (
+                                            <a href={social.instagramLink} target='_blank'>
                                                 <button className='btn btn-social-i btn-instagram'>
                                                     {/* <FaInstagram/> */}
                                                     {/* <FaAmazon/> */}
@@ -266,8 +269,8 @@ function About() {
                                             </a>
                                         )}
 
-                                        {singleTeamMember.tiktokLink && (
-                                            <a href={singleTeamMember.tiktokLink}
+                                        {social.tiktokLink && (
+                                            <a href={social.tiktokLink}
                                             target='_blank'>
                                                 <button className='btn btn-social-i btn-tiktok'>
                                                     <FaTiktok/>
@@ -276,8 +279,8 @@ function About() {
                                         )}
 
 
-                                        {singleTeamMember.youtubeLink && (
-                                            <a href={singleTeamMember.youtubeLink}
+                                        {social.youTubeLink && (
+                                            <a href={social.youTubeLink}
                                             target='_blank'>
                                                 <button className='btn btn-social-i-y btn-youtube'>
                                                     <FaYoutube/>
@@ -285,8 +288,8 @@ function About() {
                                             </a>
                                         )}
 
-                                        {singleTeamMember.youtubeLink && (
-                                            <a href={singleTeamMember.youtubeLink}
+                                        {social.googlePlus && (
+                                            <a href={social.googlePlus}
                                             target='_blank'>
                                                 <button className='btn btn-social-i-y btn-google'>
                                                     <FaGooglePlus/>
@@ -317,7 +320,7 @@ function About() {
                     <div className="home-headings tools-p-align">
                         <div className="horizontal-heading influencer-name">
                             <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> 
-                            My Story
+                            {about.name2}
                             </span>
                             </h1>
                         </div>
@@ -335,22 +338,14 @@ function About() {
                             <div className="col-md-8 col-sm-12" style={{display: 'table'}}>
                                 <div className="about-right" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                                     <div className="horizontal-heading main-about" style={{color: '#000'}}>
-                                        <h5 style={{color: '#000'}}>Info About</h5>
-                                        <h2> <strong ></strong>My Story</h2>
+                                        <h5 style={{color: '#000'}}>{about.preheading2}</h5>
+                                        <h2> <strong ></strong>{about.heading2}</h2>
                                     </div>
 
                                     <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
 
 
-                                    <p className="about-text" style={{marginLeft: '20px', marginRight: '20px'}}>I spent the early years researching the topic. The goal was to teach them as I learned and to stay one step ahead of my classes. I took them to see the experts, at Key Bank and the Wright State University School of Business.  As time went on, the experts came to us. The late Ellis Rowe (former VP, Mars Candy), and Theo Killion (former CEO, Zales Jewelry) flew in from Jacksonville and Chicago respectively, just to spend a few of their valuable hours for what they both found to be an invaluable cause.
-
-
-
-This book is written by a teacher, for teachers. So unlike other books of its kind, this one’s not written by an expert in the field of investment financing. Quite frankly, I saw in this project, such a sense of urgency, that the need for it to be delivered by experts (whenever they became available), was outweighed by the need for it to be delivered in the here and now.
-
-
-
-Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, but to all the little kids in all the neighborhoods outside New York’s famed Financial District. It says that we are not always too young. And that the things we are allowed to be challenged by in our youth, won’t be the things that deny us a place at the table, as adults.  </p>
+                                    <p className="about-text" style={{marginLeft: '20px', marginRight: '20px'}}>{about.description2} </p>
 
                                     
 
@@ -358,8 +353,8 @@ Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, b
 
                                         <hr style={{margin: '0.5rem'}}/>
                                     
-                                        {singleTeamMember.instagramLink && (
-                                            <a href={singleTeamMember.instagramLink} target='_blank'>
+                                        {social.linkedLink && (
+                                            <a href={social.linkedLink} target='_blank'>
                                                 <button className='btn btn-social-i btn-linkedIn'>
                                                     {/* <FaInstagram/> */}
                                                     {/* <FaAmazon/> */}
@@ -369,16 +364,16 @@ Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, b
                                         )}
 
 
-                                        {singleTeamMember.facebookLink && (
-                                            <a href={singleTeamMember.facebookLink} target='_blank'>
+                                        {social.facebookLink && (
+                                            <a href={social.facebookLink} target='_blank'>
                                                 <button className='btn btn-social-i-f btn-facebook'>
                                                     <FaFacebookF/>
                                                 </button>
                                             </a>
                                         )}
 
-                                        {singleTeamMember.instagramLink && (
-                                            <a href={singleTeamMember.instagramLink} target='_blank'>
+                                        {social.instagramLink && (
+                                            <a href={social.instagramLink} target='_blank'>
                                                 <button className='btn btn-social-i btn-instagram'>
                                                     {/* <FaInstagram/> */}
                                                     {/* <FaAmazon/> */}
@@ -387,8 +382,8 @@ Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, b
                                             </a>
                                         )}
 
-                                        {singleTeamMember.tiktokLink && (
-                                            <a href={singleTeamMember.tiktokLink}
+                                        {social.tiktokLink && (
+                                            <a href={social.tiktokLink}
                                             target='_blank'>
                                                 <button className='btn btn-social-i btn-tiktok'>
                                                     <FaTiktok/>
@@ -397,8 +392,8 @@ Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, b
                                         )}
 
 
-                                        {singleTeamMember.youtubeLink && (
-                                            <a href={singleTeamMember.youtubeLink}
+                                        {social.youTubeLink && (
+                                            <a href={social.youTubeLink}
                                             target='_blank'>
                                                 <button className='btn btn-social-i-y btn-youtube'>
                                                     <FaYoutube/>
@@ -406,8 +401,8 @@ Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, b
                                             </a>
                                         )}
 
-                                        {singleTeamMember.youtubeLink && (
-                                            <a href={singleTeamMember.youtubeLink}
+                                        {social.googlePlus && (
+                                            <a href={social.googlePlus}
                                             target='_blank'>
                                                 <button className='btn btn-social-i-y btn-google'>
                                                     <FaGooglePlus/>
@@ -421,11 +416,11 @@ Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, b
                                     
                                     <div className="desc map-color-7 container-paragraph influencer-info" style={{display: 'none'}}>
                                         <div className="map-paragraph">
-                                            <h2 className="i-map-paragraph"><b className='show-page-name-s'>{singleTeamMember.name}</b></h2>
+                                            <h2 className="i-map-paragraph"><b className='show-page-name-s'>{about.name2}</b></h2>
                                                 <div className='show-button'>
 
 
-                                                    {singleTeamMember.instagramLink && (
+                                                    {/* {singleTeamMember.instagramLink && (
                                                         <a href={singleTeamMember.instagramLink} target='_blank'>
                                                             <button className='btn btn-social-i btn-instagram'>
                                                                 <FaInstagram/>
@@ -465,12 +460,12 @@ Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, b
                                                                 <FaTiktok/>
                                                             </button>
                                                         </a>
-                                                    )}
+                                                    )} */}
 
                                                     <hr />
 
                                                     <div className='template-p-detail'>
-                                                        {singleTeamMember.description}
+                                                        {about.description}
                                                     </div>
 
                                                     <hr/>
@@ -499,10 +494,10 @@ Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, b
                             <div className="col-md-4 col-sm-6 col-mobile">
                                 <div className="mobile__hide-image column-show map-color-7 influencer-image">
                                     <div className="portfolio-item">
-                                        <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
+                                        <img src={urlFor(about.imageUrl2).width(800).height(800).url()} className="influencer-image-2" alt=""/>
                                         <div className="portfolio-item-overlay margin-top-g">
                                             <div className="portfolio-item-details text-center">
-                                                {singleTeamMember.imageTitle2 && (
+                                                {/* {singleTeamMember.imageTitle2 && (
                                                     <>
                                                         <h3>{singleTeamMember.imageTitle2}</h3>
                                                         <span></span>
@@ -511,10 +506,10 @@ Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, b
 
                                                 {singleTeamMember.imageDescription2 && (
                                                     <p className='influencer-description'>{singleTeamMember.imageDescription2}</p>
-                                                )}
+                                                )} */}
 
                                                 <div className='show-button'>
-                                                    {singleTeamMember.instagramLink && (
+                                                    {/* {singleTeamMember.instagramLink && (
                                                         <a href={singleTeamMember.instagramLink} target='_blank'>
                                                             <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
                                                                 <FaInstagram/>
@@ -558,7 +553,7 @@ Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, b
                                                                 <FaTiktok/>
                                                             </button>
                                                         </a>
-                                                    )}
+                                                    )} */}
                                                 </div>
                                             </div>
                                         </div>
@@ -578,182 +573,6 @@ Our Stock Is Rising is a metaphor that speaks not just to the disenfranchised, b
             </section>
 
             <Statement/>
-
-            <section id="" style={{display: 'none'}} >
-                <div className="content-box-md-interact">
-                    <div className="">
-                        <div className="map-color-6">
-                            <div className="container" style={{height: '600px', display: 'table', verticalAlign: 'middle'}}>
-                                <div className="row">
-                                    <div id="content">
-                                        <section id="map-section" className="inner over client-section-b">
-                                            <div className="row-show port-popup show-page-image-s">
-                                                {singleTeamMember.imageUrl2 && (
-                                                    <div className="column-show map-color-7 influencer-image"
-                                                    >
-                                                        <img src={urlFor(singleTeamMember.imageUrl2).width(800).height(800).url()} className="influencer-image-2"
-                                                             alt=""/>
-
-                                                    </div>
-                                                )}
-                                                {/* <div className="mobile__hide-image column-show map-color-7 influencer-image">
-                                                    <div className="portfolio-item">
-                                                        <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
-
-                                                        <div className="portfolio-item-overlay margin-top-g">
-                                                            <div className="portfolio-item-details text-center">
-                                        
-                                                                {singleTeamMember.imageTitle2 && (
-                                                                    <>
-                                                                        <h3>{singleTeamMember.imageTitle2}</h3>
-                                                        
-                                                                        <span></span>
-                                                                    </>
-
-                                                                )}
-
-                                                            
-                                                                {singleTeamMember.imageDescription2 && (
-                                                                    <p className='influencer-description'>{singleTeamMember.imageDescription2}</p>
-                                                                )}
-
-                                                                <div className='show-button'>
-
-                                                                    {singleTeamMember.instagramLink && (
-                                                                        <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                                            <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
-                                                                                <FaInstagram/>
-                                                                            </button>
-                                                                        </a>
-                                                                    )}
-
-                                                                    {singleTeamMember.facebookLink && (
-                                                                        <a href={singleTeamMember.facebookLink} target='_blank'>
-                                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                                            btn-social-facebook'>
-                                                                                <FaFacebookF/>
-                                                                            </button>
-                                                                        </a>
-                                                                    )}
-
-                                                                    {singleTeamMember.twitterLink && (
-                                                                        <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                                            btn-social-twitter'>
-                                                                                <FaTwitter/>
-                                                                            </button>
-                                                                        </a>
-                                                                    )}
-
-                                                                    {singleTeamMember.youtubeLink && (
-                                                                        <a href={singleTeamMember.youtubeLink}
-                                                                            target='_blank'>
-                                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                                            btn-social-youtube'>
-                                                                                <FaYoutube/>
-                                                                            </button>
-                                                                        </a>
-                                                                    )}
-
-                                                                    {singleTeamMember.tiktokLink && (
-                                                                        <a href={singleTeamMember.tiktokLink}
-                                                                            target='_blank'>
-                                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                                            btn-social-tiktok'>
-                                                                                <FaTiktok/>
-                                                                            </button>
-                                                                        </a>
-                                                                    )}
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div> */}
-
-                                                {singleTeamMember.imageUrl3 && (
-                                                    <div className="column-show map-color-7 influencer-image"
-                                                    >
-                                                        <img src={urlFor(singleTeamMember.imageUrl3).width(800).height(800).url()} className="influencer-image-2"
-                                                             alt=""/>
-
-                                                    </div>
-                                                )}
-                                            </div>
-                                            <div className="desc map-color-7 container-paragraph influencer-info">
-                                                <div className="map-paragraph">
-                                                    <h2 className="i-map-paragraph"><b className='show-page-name-s'>{singleTeamMember.name}</b></h2>
-                                                    <div className='show-button'>
-
-
-                                                        {singleTeamMember.instagramLink && (
-                                                            <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                                <button className='btn btn-social-i btn-instagram'>
-                                                                    <FaInstagram/>
-                                                                </button>
-                                                            </a>
-                                                        )}
-
-                                                        {singleTeamMember.facebookLink && (
-                                                            <a href={singleTeamMember.facebookLink} target='_blank'>
-                                                                <button className='btn btn-social-i-f btn-facebook'>
-                                                                    <FaFacebookF/>
-                                                                </button>
-                                                            </a>
-                                                        )}
-
-                                                        {singleTeamMember.twitterLink && (
-                                                            <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                                <button className='btn btn-social-i-t btn-twitter'>
-                                                                    <FaTwitter/>
-                                                                </button>
-                                                            </a>
-                                                        )}
-
-                                                        {singleTeamMember.youtubeLink && (
-                                                            <a href={singleTeamMember.youtubeLink}
-                                                               target='_blank'>
-                                                                <button className='btn btn-social-i-y btn-youtube'>
-                                                                    <FaYoutube/>
-                                                                </button>
-                                                            </a>
-                                                        )}
-
-                                                        {singleTeamMember.tiktokLink && (
-                                                            <a href={singleTeamMember.tiktokLink}
-                                                               target='_blank'>
-                                                                <button className='btn btn-social-i btn-tiktok'>
-                                                                    <FaTiktok/>
-                                                                </button>
-                                                            </a>
-                                                        )}
-
-                                                        <hr />
-
-                                                        <div className='template-p-detail'>
-                                                            {singleTeamMember.description}
-                                                        </div>
-
-                                                        <hr/>
-                                                    </div>
-                            
-                                                    <hr className='show-break-style'/>
-                                                    <div className='template-p-detail'>
-
-                                                         <a
-                                                        className='email__design-s'
-                                                        href='mailto:shawn@ktmanagers.com'
-                                                        target='_blank'>shawn@ktmanagers.com</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
         </>
     );

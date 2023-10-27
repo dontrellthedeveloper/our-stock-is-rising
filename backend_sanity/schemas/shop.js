@@ -1,6 +1,6 @@
 export default {
-    name: 'about',
-    title: 'About',
+    name: 'shop',
+    title: 'Shop',
     type: 'document',
     fields: [
         {
@@ -29,44 +29,47 @@ export default {
         },
         {
             name: 'description',
-            title: 'Description',
+            title: 'Book Synopsis',
             type: 'string'
+        },
+        {
+            name: 'bookLink',
+            title: 'Austin Macauley Link',
+            type: 'string',
+        },
+        {
+            name: 'bookText',
+            title: 'Purchase at AustinMacauley.com',
+            type: 'string',
+        },
+        {
+            name: 'amazonLink',
+            title: 'Amazon Kindle Link',
+            type: 'string',
+        },
+        {
+            name: 'amazonText',
+            title: 'Purchase at Amazon.com',
+            type: 'string',
+        },
+        {
+            name: 'footerText',
+            title: 'Footer Text',
+            type: 'string',
+        },
+        {
+            name: 'footerEmail',
+            title: 'Footer Email',
+            type: 'string',
         },
         {
             name: 'imageUrl',
-            title: 'Image1',
-            type: 'image',
-            options: {
-                hotspot: true,
-            },
-        },
-        {
-            name: 'name2',
-            title: 'Page Title 2',
-            type: 'string',
-        },
-        {
-            name: 'preheading2',
-            title: 'Pre Heading 2',
-            type: 'string',
-        },
-        {
-            name: 'heading2',
-            title: 'Heading 2',
-            type: 'string',
-        },
-        {
-            name: 'description2',
-            title: 'Description 2',
-            type: 'string'
-        },
-        {
-            name: 'imageUrl2',
-            title: 'Image2',
+            title: 'Book Image',
             type: 'image',
             options: {
                 hotspot: true,
             },
         }
+
     ],
 };

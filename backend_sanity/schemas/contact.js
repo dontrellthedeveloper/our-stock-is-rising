@@ -1,6 +1,6 @@
 export default {
-    name: 'about',
-    title: 'About',
+    name: 'contact',
+    title: 'Contact',
     type: 'document',
     fields: [
         {
@@ -29,44 +29,24 @@ export default {
         },
         {
             name: 'description',
-            title: 'Description',
+            title: 'Business Card Info',
             type: 'string'
         },
         {
-            name: 'imageUrl',
-            title: 'Image1',
-            type: 'image',
-            options: {
-                hotspot: true,
-            },
-        },
-        {
-            name: 'name2',
-            title: 'Page Title 2',
+            name: 'footerText',
+            title: 'Footer Text',
             type: 'string',
         },
         {
-            name: 'preheading2',
-            title: 'Pre Heading 2',
+            name: 'footerEmail',
+            title: 'Email',
             type: 'string',
         },
         {
-            name: 'heading2',
-            title: 'Heading 2',
+            name: 'footerPhone',
+            title: 'Phone Number',
             type: 'string',
         },
-        {
-            name: 'description2',
-            title: 'Description 2',
-            type: 'string'
-        },
-        {
-            name: 'imageUrl2',
-            title: 'Image2',
-            type: 'image',
-            options: {
-                hotspot: true,
-            },
-        }
+
     ],
 };

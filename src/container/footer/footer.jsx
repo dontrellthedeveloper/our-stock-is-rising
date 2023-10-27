@@ -1,8 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './footer.scss';
-import {FaFacebookF, FaInstagram} from "react-icons/fa";
+import {FaFacebookF, FaGooglePlus, FaInstagram, FaLinkedin, FaTiktok, FaYoutube} from "react-icons/fa";
+import { client } from '../../client';
 
-const footer = () => {
+const Footer = () => {
+    const [social, setSocial] = useState(null);
+
+
+    useEffect(() => {
+        client.fetch(`*[_type == "social"]{
+            _id,
+            linkedLink,
+            instagramLink,
+            facebookLink,
+            youTubeLink,
+            tiktokLink,
+            googlePlus
+        }`).then((data) => setSocial(data[0]))
+            .catch(console.error)
+    }, []);
+
+    if(!social) return (
+        <div className="preloader">
+            <div className="status"></div>
+        </div>
+    )
+
+
     return (
         <>
             <section id="contact">
@@ -69,7 +93,7 @@ const footer = () => {
                                         </ul> */}
 
 
-                                        <ul className="social-list contact-icon-s">
+                                        {/* <ul className="social-list contact-icon-s">
                                             <li className="instagram-bg-color">
                                                 <a href="#" target="_blank">
                                                     <FaInstagram className="fa fa-instagram contact-icon-m insta-c-i contact-icon-margin"/>
@@ -80,7 +104,7 @@ const footer = () => {
                                                     <FaFacebookF className="fa fa-facebook contact-icon-m face-c-i contact-icon-margin"/>
                                                 </a>
                                             </li>
-                                        </ul>
+                                        </ul> */}
 
 
 
@@ -89,8 +113,64 @@ const footer = () => {
 
 
 
-                                        <p className="form-p-c">For more information, please fill out our contact
-                                            form.
+
+                                        <p className="form-p-c">
+                                        {social.linkedLink && (
+                                            <a href={social.linkedLink} target='_blank'>
+                                                <button className='btn btn-social-i btn-linkedIn'>
+                                                    {/* <FaInstagram/> */}
+                                                    {/* <FaAmazon/> */}
+                                                    <FaLinkedin/>
+                                                </button>
+                                            </a>
+                                        )}
+
+
+                                        {social.facebookLink && (
+                                            <a href={social.facebookLink} target='_blank'>
+                                                <button className='btn btn-social-i-f btn-facebook'>
+                                                    <FaFacebookF/>
+                                                </button>
+                                            </a>
+                                        )}
+
+                                        {social.instagramLink && (
+                                            <a href={social.instagramLink} target='_blank'>
+                                                <button className='btn btn-social-i btn-instagram'>
+                                                    {/* <FaInstagram/> */}
+                                                    {/* <FaAmazon/> */}
+                                                    <FaInstagram/>
+                                                </button>
+                                            </a>
+                                        )}
+
+                                        {social.tiktokLink && (
+                                            <a href={social.tiktokLink}
+                                            target='_blank'>
+                                                <button className='btn btn-social-i btn-tiktok'>
+                                                    <FaTiktok/>
+                                                </button>
+                                            </a>
+                                        )}
+
+
+                                        {social.youTubeLink && (
+                                            <a href={social.youTubeLink}
+                                            target='_blank'>
+                                                <button className='btn btn-social-i-y btn-youtube'>
+                                                    <FaYoutube/>
+                                                </button>
+                                            </a>
+                                        )}
+
+                                        {social.googlePlus && (
+                                            <a href={social.googlePlus}
+                                            target='_blank'>
+                                                <button className='btn btn-social-i-y btn-google'>
+                                                    <FaGooglePlus/>
+                                                </button>
+                                            </a>
+                                        )}
                                         </p>
 
 
@@ -161,4 +241,4 @@ const footer = () => {
     );
 };
 
-export default footer;
+export default Footer;

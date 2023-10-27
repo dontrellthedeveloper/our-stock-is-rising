@@ -243,15 +243,15 @@ section {
 
 .btn-red {
   color: #dcdcdc;
-  border: 2px solid #dcdcdc;
-  background-color: #a1a0a1;
+  border: 2px solid #9fd399;
+  background-color: #000;
 }
 
 .btn-red:hover,
 .btn-red:focus {
   color: #000;
-  background-color: #4dd0e1;
-  border: 2px solid #4dd0e1;
+  background-color: #9fd399;
+  border: 2px solid #9fd399;
 }
 
 .btn-linkedIn {
@@ -1253,11 +1253,12 @@ ul.social-list .twitter-bg-color a:hover {
 /* Contact Left */
 .form-styles-c {
   /* background-color: #a1a0a1; */
-  background-color: #cdcdcd;
+  background-color: #213805;
+  border: 2px solid #9fd399;
 }
 
 .line-br-color {
-  border: 1px solid #454545;
+  border: 1px solid #9fd399;
 }
 
 #submit-btn {
@@ -1367,7 +1368,7 @@ ul.office-details li i {
 
 /* Contact Right */
 .form-t-c {
-  color: #454545;
+  color: #fff;
   font-weight: bold;
 }
 
@@ -1458,18 +1459,19 @@ ul.office-details li i {
 |   |   |   |   Footer
 ================================================ */
 footer {
-  background: #9fd399;
+  background: #000;
   padding: 20px;
+  border-top: 2px solid #9fd399;
 }
 
 footer p {
-  color: #454545;
+  color: #fff;
   line-height: 20px;
 }
 
 footer p span {
   font-weight: bold;
-  color: #454545;
+  color: #fff;
 }
 
 .marg-top {

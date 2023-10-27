@@ -32,7 +32,8 @@ const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 
 function Contact() {
-    const [singleTeamMember, setSingleTeamMember] = useState(null);
+    const [contact, setContact] = useState(null);
+    const [social, setSocial] = useState(null);
     const [services, setServices] = useState(null);
     const {slug} = useParams();
 
@@ -46,46 +47,32 @@ function Contact() {
 
 
     useEffect(() => {
-        client.fetch(`*[_type == "about" && slug.current == 'about']{
+        client.fetch(`*[_type == "contact" && slug.current == 'contact']{
             name,
             _id,
-            slug,
-            instagramLink,
-            facebookLink,
-            twitterLink,
-            youtubeLink,
-            tiktokLink,
+            preheading,
+            heading,
             description,
-            about1,
-            about2,
-            companyGoalName,
-            companyGoalDescription,
-            companyGoalName2,
-            companyGoalDescription2,
-            companyGoalName3,
-            companyGoalDescription3,
-            imageUrl{
-                asset->{
-                    _id,
-                    url
-                }
-            },
-            imageUrl2{
-                asset->{
-                    _id,
-                    url
-                }
-            },
-            imageUrl3{
-                asset->{
-                    _id,
-                    url
-                }
-            }
-        }`).then((data) => setSingleTeamMember(data[0]))
+            footerText,
+            footerEmail,
+            footerPhone,
+        }`).then((data) => setContact(data[0]))
             .catch(console.error)
     }, [slug]);
 
+
+    useEffect(() => {
+        client.fetch(`*[_type == "social"]{
+            _id,
+            linkedLink,
+            instagramLink,
+            facebookLink,
+            youTubeLink,
+            tiktokLink,
+            googlePlus
+        }`).then((data) => setSocial(data[0]))
+            .catch(console.error)
+    }, [slug]);
 
 
 
@@ -105,7 +92,7 @@ function Contact() {
 
 
 
-    if(!singleTeamMember || !services) return (
+    if(!contact || !social) return (
         <div className="preloader">
             <div className="status"></div>
         </div>
@@ -127,7 +114,7 @@ function Contact() {
                     <div className="home-headings tools-p-align">
                         <div className="horizontal-heading influencer-name">
                             <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> 
-                            Contact
+                            {contact.name}
                             </span>
                             </h1>
                         </div>
@@ -229,13 +216,13 @@ function Contact() {
                             <div className="col-md-6 col-sm-12 col-mobile" style={{display: 'table'}}>
                                 <div className="about-right" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                                     <div className="horizontal-heading main-about" style={{color: '#000'}}>
-                                        <h5 style={{color: '#000'}}>More Info?</h5>
-                                        <h2> <strong ></strong>Contact Us</h2>
+                                        <h5 style={{color: '#000'}}>{contact.preheading}</h5>
+                                        <h2> <strong ></strong>{contact.heading}</h2>
                                     </div>
 
                                     <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
 
-                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>Info on Business Card </p>
+                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>{contact.description} </p>
 
                                     
 
@@ -248,9 +235,8 @@ function Contact() {
                                                 <a href="#" title="Read Full" style={{backgroundColor: 'none'}}><span>Contact Us</span></a>
                                             </div>
                                         </div> */}
-
-                                        {singleTeamMember.instagramLink && (
-                                            <a href={singleTeamMember.instagramLink} target='_blank'>
+                                        {social.linkedLink && (
+                                            <a href={social.linkedLink} target='_blank'>
                                                 <button className='btn btn-social-i btn-linkedIn'>
                                                     {/* <FaInstagram/> */}
                                                     {/* <FaAmazon/> */}
@@ -260,16 +246,16 @@ function Contact() {
                                         )}
 
 
-                                        {singleTeamMember.facebookLink && (
-                                            <a href={singleTeamMember.facebookLink} target='_blank'>
+                                        {social.facebookLink && (
+                                            <a href={social.facebookLink} target='_blank'>
                                                 <button className='btn btn-social-i-f btn-facebook'>
                                                     <FaFacebookF/>
                                                 </button>
                                             </a>
                                         )}
 
-                                        {singleTeamMember.instagramLink && (
-                                            <a href={singleTeamMember.instagramLink} target='_blank'>
+                                        {social.instagramLink && (
+                                            <a href={social.instagramLink} target='_blank'>
                                                 <button className='btn btn-social-i btn-instagram'>
                                                     {/* <FaInstagram/> */}
                                                     {/* <FaAmazon/> */}
@@ -278,8 +264,8 @@ function Contact() {
                                             </a>
                                         )}
 
-                                        {singleTeamMember.tiktokLink && (
-                                            <a href={singleTeamMember.tiktokLink}
+                                        {social.tiktokLink && (
+                                            <a href={social.tiktokLink}
                                             target='_blank'>
                                                 <button className='btn btn-social-i btn-tiktok'>
                                                     <FaTiktok/>
@@ -288,8 +274,8 @@ function Contact() {
                                         )}
 
 
-                                        {singleTeamMember.youtubeLink && (
-                                            <a href={singleTeamMember.youtubeLink}
+                                        {social.youTubeLink && (
+                                            <a href={social.youTubeLink}
                                             target='_blank'>
                                                 <button className='btn btn-social-i-y btn-youtube'>
                                                     <FaYoutube/>
@@ -297,8 +283,8 @@ function Contact() {
                                             </a>
                                         )}
 
-                                        {singleTeamMember.youtubeLink && (
-                                            <a href={singleTeamMember.youtubeLink}
+                                        {social.googlePlus && (
+                                            <a href={social.googlePlus}
                                             target='_blank'>
                                                 <button className='btn btn-social-i-y btn-google'>
                                                     <FaGooglePlus/>
@@ -313,11 +299,11 @@ function Contact() {
                                                                
                                     <hr className='show-break-style'/>
                                     <div className='template-p-detail'>
-                                            Do you have a question? Please email
+                                            {contact.footerText}
                                             <a
                                         className='email__design-s'
-                                        href='mailto:gpowell@ourstockisrising.com'
-                                        target='_blank'> gpowell@ourstockisrising.com</a>
+                                        href="mailto:gpowell@ourstockisrising.com"
+                                        target='_blank'> {contact.footerEmail}</a>
                                     </div>                          
                                     <hr className='show-break-style'/>
 
@@ -326,7 +312,7 @@ function Contact() {
                                             <a
                                         className='email__design-s'
                                         href='tel:+1-937-555-1212'
-                                        target='_blank'> (937) 555-1212</a>
+                                        target='_blank'> {contact.footerPhone}</a>
                                     </div>   
                                 </div>
                             </div>
@@ -342,183 +328,6 @@ function Contact() {
 
 
             <Statement/>
-
-            <section id="" style={{display: 'none'}} >
-                <div className="content-box-md-interact">
-                    <div className="">
-                        <div className="map-color-6">
-                            <div className="container" style={{height: '600px', display: 'table', verticalAlign: 'middle'}}>
-                                <div className="row">
-                                    <div id="content">
-                                        <section id="map-section" className="inner over client-section-b">
-                                            <div className="row-show port-popup show-page-image-s">
-                                                {singleTeamMember.imageUrl2 && (
-                                                    <div className="column-show map-color-7 influencer-image"
-                                                    >
-                                                        <img src={urlFor(singleTeamMember.imageUrl2).width(800).height(800).url()} className="influencer-image-2"
-                                                             alt=""/>
-
-                                                    </div>
-                                                )}
-                                                {/* <div className="mobile__hide-image column-show map-color-7 influencer-image">
-                                                    <div className="portfolio-item">
-                                                        <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
-
-                                                        <div className="portfolio-item-overlay margin-top-g">
-                                                            <div className="portfolio-item-details text-center">
-                                        
-                                                                {singleTeamMember.imageTitle2 && (
-                                                                    <>
-                                                                        <h3>{singleTeamMember.imageTitle2}</h3>
-                                                        
-                                                                        <span></span>
-                                                                    </>
-
-                                                                )}
-
-                                                            
-                                                                {singleTeamMember.imageDescription2 && (
-                                                                    <p className='influencer-description'>{singleTeamMember.imageDescription2}</p>
-                                                                )}
-
-                                                                <div className='show-button'>
-
-                                                                    {singleTeamMember.instagramLink && (
-                                                                        <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                                            <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
-                                                                                <FaInstagram/>
-                                                                            </button>
-                                                                        </a>
-                                                                    )}
-
-                                                                    {singleTeamMember.facebookLink && (
-                                                                        <a href={singleTeamMember.facebookLink} target='_blank'>
-                                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                                            btn-social-facebook'>
-                                                                                <FaFacebookF/>
-                                                                            </button>
-                                                                        </a>
-                                                                    )}
-
-                                                                    {singleTeamMember.twitterLink && (
-                                                                        <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                                            btn-social-twitter'>
-                                                                                <FaTwitter/>
-                                                                            </button>
-                                                                        </a>
-                                                                    )}
-
-                                                                    {singleTeamMember.youtubeLink && (
-                                                                        <a href={singleTeamMember.youtubeLink}
-                                                                            target='_blank'>
-                                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                                            btn-social-youtube'>
-                                                                                <FaYoutube/>
-                                                                            </button>
-                                                                        </a>
-                                                                    )}
-
-                                                                    {singleTeamMember.tiktokLink && (
-                                                                        <a href={singleTeamMember.tiktokLink}
-                                                                            target='_blank'>
-                                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                                            btn-social-tiktok'>
-                                                                                <FaTiktok/>
-                                                                            </button>
-                                                                        </a>
-                                                                    )}
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div> */}
-
-                                                {singleTeamMember.imageUrl3 && (
-                                                    <div className="column-show map-color-7 influencer-image"
-                                                    >
-                                                        <img src={urlFor(singleTeamMember.imageUrl3).width(800).height(800).url()} className="influencer-image-2"
-                                                             alt=""/>
-
-                                                    </div>
-                                                )}
-                                            </div>
-                                            <div className="desc map-color-7 container-paragraph influencer-info">
-                                                <div className="map-paragraph">
-                                                    <h2 className="i-map-paragraph"><b className='show-page-name-s'>{singleTeamMember.name}</b></h2>
-                                                    <div className='show-button'>
-
-
-                                                        {singleTeamMember.instagramLink && (
-                                                            <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                                <button className='btn btn-social-i btn-instagram'>
-                                                                    <FaInstagram/>
-                                                                </button>
-                                                            </a>
-                                                        )}
-
-                                                        {singleTeamMember.facebookLink && (
-                                                            <a href={singleTeamMember.facebookLink} target='_blank'>
-                                                                <button className='btn btn-social-i-f btn-facebook'>
-                                                                    <FaFacebookF/>
-                                                                </button>
-                                                            </a>
-                                                        )}
-
-                                                        {singleTeamMember.twitterLink && (
-                                                            <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                                <button className='btn btn-social-i-t btn-twitter'>
-                                                                    <FaTwitter/>
-                                                                </button>
-                                                            </a>
-                                                        )}
-
-                                                        {singleTeamMember.youtubeLink && (
-                                                            <a href={singleTeamMember.youtubeLink}
-                                                               target='_blank'>
-                                                                <button className='btn btn-social-i-y btn-youtube'>
-                                                                    <FaYoutube/>
-                                                                </button>
-                                                            </a>
-                                                        )}
-
-                                                        {singleTeamMember.tiktokLink && (
-                                                            <a href={singleTeamMember.tiktokLink}
-                                                               target='_blank'>
-                                                                <button className='btn btn-social-i btn-tiktok'>
-                                                                    <FaTiktok/>
-                                                                </button>
-                                                            </a>
-                                                        )}
-
-                                                        <hr />
-
-                                                        <div className='template-p-detail'>
-                                                            {singleTeamMember.description}
-                                                        </div>
-
-                                                        <hr/>
-                                                    </div>
-                            
-                                                    <hr className='show-break-style'/>
-                                                    <div className='template-p-detail'>
-
-                                                         <a
-                                                        className='email__design-s'
-                                                        href='mailto:shawn@ktmanagers.com'
-                                                        target='_blank'>shawn@ktmanagers.com</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
         </>
     );
 }

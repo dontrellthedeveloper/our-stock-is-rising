@@ -78,7 +78,7 @@ const Footer = () => {
                             {/*</div>*/}
                             <div className="col-md-9 contact-main-form-s">
                                 <div className="form-styles-c" id="contact-right">
-                                    <form action="https://formspree.io/xkngaakg" method="POST">
+                                    <form action="https://formspree.io/f/xzbloooy" method="POST">
                                         <h4 className="form-t-c">Send A Message</h4>
                                         <hr className="line-br-color"/>
 

@@ -91,7 +91,7 @@ const about = () => {
 
                                     <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
                                         <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
-                                            <a href="#" title="Read Full" style={{backgroundColor: 'none'}}><span>Play the Stock Market Game</span></a>
+                                            <a href="https://www.stockmarketgame.org/" title="Read Full" style={{backgroundColor: 'none'}}><span>Play the Stock Market Game</span></a>
                                         </div>
                                     </div>
 

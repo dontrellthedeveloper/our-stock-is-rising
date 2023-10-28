@@ -567,9 +567,9 @@ function About() {
                 </div>
 
 
-                <a href="#about" className="arrow-down smooth-scroll" style={{color: '#213805'}}>
+                {/* <a href="#about2" className="arrow-down smooth-scroll" style={{color: '#213805'}}>
                     <IoIosArrowDown icon="fa-solid fa-angle-down" />
-                </a>
+                </a> */}
             </section>
 
             <Statement/>

@@ -62,7 +62,7 @@ const standards = () => {
                                         </div>
                         
                                         <div class="card-link">
-                                            <a href="#" title="Read Full"><span>Read Full</span></a>
+                                            <a href="https://www.thecorestandards.org/" title="Read Full"><span>Read Full</span></a>
                                         </div>
                                     </div>
                 
@@ -76,7 +76,7 @@ const standards = () => {
                                         </div>
                         
                                         <div class="card-link">
-                                            <a href="#" title="Read Full"><span>Read Full</span></a>
+                                            <a href="https://www.thecorestandards.org/" title="Read Full"><span>Read Full</span></a>
                                         </div>
                                     </div>
                 
@@ -93,7 +93,7 @@ const standards = () => {
                                         </div>
                         
                                         <div class="card-link">
-                                            <a href="#" title="Read Full"><span>Read Full</span></a>
+                                            <a href="https://www.thecorestandards.org/" title="Read Full"><span>Read Full</span></a>
                                         </div>
                                     </div>
                 
@@ -108,7 +108,7 @@ const standards = () => {
                                         </div>
                         
                                         <div class="card-link">
-                                            <a href="#" title="Read Full"><span>Read Full</span></a>
+                                            <a href="https://www.thecorestandards.org/" title="Read Full"><span>Read Full</span></a>
                                         </div>
                                     </div>
                 
@@ -123,7 +123,7 @@ const standards = () => {
                                         </div>
                         
                                         <div class="card-link">
-                                            <a href="#" title="Read Full"><span>Read Full</span></a>
+                                            <a href="https://www.thecorestandards.org/" title="Read Full"><span>Read Full</span></a>
                                         </div>
                                     </div>
                 
@@ -138,7 +138,7 @@ const standards = () => {
                                         </div>
                         
                                         <div class="card-link">
-                                            <a href="#" title="Read Full"><span>Read Full</span></a>
+                                            <a href="https://www.thecorestandards.org/" title="Read Full"><span>Read Full</span></a>
                                         </div>
                                     </div>
                 

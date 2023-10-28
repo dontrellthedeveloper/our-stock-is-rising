@@ -64,7 +64,7 @@ const history = () => {
 
                                     <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
                                         <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
-                                            <a href="#" title="Read Full" style={{backgroundColor: 'none'}}><span>More Info About Our History</span></a>
+                                            <a href="/history" title="Read Full" style={{backgroundColor: 'none'}}><span>More Info About Our History</span></a>
                                         </div>
                                     </div>
 

@@ -229,11 +229,12 @@ function Purpose() {
                 </div>
 
             {/*  Arrow Down */}
-            <a href="#about" className="arrow-down smooth-scroll" style={{color: '#213805'}}>
+            <a href="#about2" className="arrow-down smooth-scroll" style={{color: '#213805'}}>
                 <IoIosArrowDown icon="fa-solid fa-angle-down" />
             </a>
 
             </section>
+
 
             <div className="map-color-3" >
                 <div className="row" style={{marginRight: '0'}}>
@@ -248,7 +249,7 @@ function Purpose() {
                 </div>
             </div>
 
-            <section id="about" style={{height: 'calc(100vh - 140px)', display: 'table', width: '100%'}}>
+            <section id="about2" style={{height: 'calc(100vh - 140px)', display: 'table', width: '100%'}}>
                 <div className="about-01" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                     <div className="container">
                     <div className="row col-mobile-top" style={{justifyContent: 'center'}}>

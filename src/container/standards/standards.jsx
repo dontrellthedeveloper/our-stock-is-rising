@@ -57,9 +57,14 @@ const standards = () => {
                                     <div class="basic-card basic-card-aqua " >
                                         <div class="card-content">
                                             <span class="card-title">ELA-LITERACY <br/> (SL6.2) </span>
+                                            <br/>
+                                            {/* <span class="card-text">English </span> */}
+
                                             <p class="card-text">
                                             Interpret information presented in diverse media and formats and explain how it contributes to a topic under study                                            </p>
                                         </div>
+
+                            
                         
                                         <div class="card-link">
                                             <a href="https://www.thecorestandards.org/" title="Read Full"><span>Read Full</span></a>

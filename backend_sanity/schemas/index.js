@@ -7,5 +7,6 @@ import pd from './pd';
 import about from "./about";
 import contact from './contact';
 import social from './social';
+import standards from './standards';
 
-export const schemaTypes = [shop, updates, purpose, history, extras, pd, about, contact, social]
+export const schemaTypes = [shop, updates, purpose, history, extras, pd, about, contact, social, standards]

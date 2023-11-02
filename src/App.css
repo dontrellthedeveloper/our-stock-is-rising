@@ -77,7 +77,7 @@ section {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #213805;
   /* background: #fff; */
 }
 

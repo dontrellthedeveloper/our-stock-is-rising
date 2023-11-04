@@ -8,5 +8,6 @@ import about from "./about";
 import contact from './contact';
 import social from './social';
 import standards from './standards';
+import homepage from './homepage';
 
-export const schemaTypes = [shop, updates, purpose, history, extras, pd, about, contact, social, standards]
+export const schemaTypes = [homepage, shop, updates, purpose, history, extras, pd, about, contact, social, standards]

@@ -14,28 +14,48 @@ export default {
             hidden: true
         },
         {
-            name: 'name',
-            title: 'Page Title',
+            name: 'hptitle',
+            title: 'Homepage Title',
             type: 'string',
         },
         {
-            name: 'preheading',
-            title: 'Pre Heading',
+            name: 'tagline',
+            title: 'Tagline',
             type: 'string',
         },
         {
-            name: 'heading',
-            title: 'Heading',
+            name: 'hpbutton',
+            title: 'Homepage Button',
             type: 'string',
         },
         {
-            name: 'description',
-            title: 'Business Card Info',
+            name: 'boxheading',
+            title: 'Box 1 Heading',
             type: 'string'
         },
         {
-            name: 'preheading2',
-            title: 'Pre Heading 2',
+            name: 'boxtext',
+            title: 'Box 1 Text',
+            type: 'string',
+        },
+        {
+            name: 'boxheading2',
+            title: 'Box 2 Heading',
+            type: 'string'
+        },
+        {
+            name: 'boxtext2',
+            title: 'Box 2 Text',
+            type: 'string',
+        },
+        {
+            name: 'boxheading3',
+            title: 'Box 3 Heading',
+            type: 'string'
+        },
+        {
+            name: 'boxtext3',
+            title: 'Box 3 Text',
             type: 'string',
         },
         {

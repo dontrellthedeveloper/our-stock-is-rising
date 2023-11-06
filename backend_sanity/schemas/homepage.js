@@ -49,6 +49,21 @@ export default {
             type: 'string'
         },
         {
+            name: 'preheading3',
+            title: 'Pre Heading 3',
+            type: 'string',
+        },
+        {
+            name: 'heading3',
+            title: 'Heading 3',
+            type: 'string',
+        },
+        {
+            name: 'description 3',
+            title: 'Business Card Info 3',
+            type: 'string'
+        },
+        {
             name: 'footerText',
             title: 'Footer Text',
             type: 'string',

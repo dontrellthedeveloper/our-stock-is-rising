@@ -28,7 +28,8 @@ import videoBgMp4 from "../assets/our-stock-is-rising.mp4";
 import {AiOutlineLineChart} from "react-icons/ai";
 
 
-
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 
 function Shop() {
@@ -112,13 +113,13 @@ function Shop() {
             </div>
 
 
-            <section id="about" style={{height: 'calc(100vh - 140px)', display: 'table', width: '100%'}}>
+            <section id="about" style={{ paddingTop: '120px', paddingBottom: '120px', display: 'table', width: '100%'}}>
                 <div className="about-01" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                     <div className="container">
                         <div className="row col-mobile-top" style={{justifyContent: 'center'}}>
                             {/* Left Side */}
-                            <div className="col-md-6 col-sm-6">
-                                <div className="mobile__hide-image column-show map-color-7 influencer-image">
+                            <div className="col-md-5 col-sm-6">
+                                <div className="mobile__hide-image column-show map-color-7 influencer-image" style={{marginTop: '0'}}>
                                     <div className="portfolio-item">
                                         <img 
                                             src={urlFor(shop.imageUrl).url()} 
@@ -158,7 +159,7 @@ function Shop() {
                             </div>
                             
                             {/* Right Side */}
-                            <div className="col-md-6 col-sm-12 col-mobile" style={{display: 'table'}}>
+                            <div className="col-md-7 col-sm-12 col-mobile" style={{display: 'table'}}>
                                 <div className="about-right" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                                     <div className="horizontal-heading main-about" style={{color: '#000'}}>
                                         <h5 style={{color: '#000'}}>{shop.preheading}</h5>
@@ -167,9 +168,9 @@ function Shop() {
 
                                     {/* <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>Our Stock is Rising" is a classroom activity originally developed in 2000 in response to students' disinterest in the Business section of the local newspaper during a Social Studies current events review.  I took it as a personal challenge to design an ongoing activity that incorporated the basic principles of an elementary curriculum to teach students the fundamentals of the stock market.  </p> */}
 
-                                    <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
+                                    {/* <hr style={{margin: '2rem', border: '2px solid #213805'}}/> */}
 
-                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>{shop.description}  </p>
+
 
                                            
 
@@ -192,19 +193,32 @@ function Shop() {
 
                                         {/* <hr style={{margin: '0.5rem'}}/> */}
 
-                                        <span>{shop.amazonText}</span>
 
-                                        {shop.amazonLink && (
-                                            <a href={shop.amazonLink} target='_blank'>
-                                                <button className='btn btn-social-i btn-amazon'>
-                                                    {/* <FaInstagram/> */}
-                                                    <FaAmazon/>
-                                                </button>
-                                            </a>
-                                        )}
+                                        <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>
+                                    
+                                    <ReactMarkdown 
+                                                children={shop.description} 
+                                                remarkPlugins={[remarkGfm]}   
+                                                /> 
+                                    </p>
+
+                                    <hr style={{margin: '1.5rem', border: '2px solid #213805'}}/>
+
+                                    
+
+                                    <span>{shop.amazonText}</span>
+
+                                    {shop.amazonLink && (
+                                        <a href={shop.amazonLink} target='_blank'>
+                                            <button className='btn btn-social-i btn-amazon'>
+                                                {/* <FaInstagram/> */}
+                                                <FaAmazon/>
+                                            </button>
+                                        </a>
+                                    )}
 
 
-                                        <hr style={{margin: '1.5rem', border: '2px solid #213805'}}/>
+                                    <hr style={{margin: '1.5rem', border: '2px solid #213805'}}/>
 
                                         </div>
 

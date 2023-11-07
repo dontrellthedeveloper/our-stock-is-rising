@@ -6,6 +6,9 @@ import {AiOutlineLineChart} from "react-icons/ai";
 import {FaFacebookF, FaInstagram, FaRegEye, FaRegHandshake, FaTiktok, FaTwitter, FaYoutube} from "react-icons/fa";
 import { client } from '../../client';
 
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+
 const Purpose = () => {
 
 
@@ -80,20 +83,15 @@ const Purpose = () => {
 
                             <div className="col-md-4 col-sm-4 homepage-heading-display" >
                                 <div className="vertical-heading">
+                                {purpose.sec2Subheading && (
                                 <h5>{purpose.sec2Subheading}</h5>
+                                )}
+                                {purpose.sec2SubHeading2 && (
                                     <h2 style={{width: '150px'}}>{purpose.sec2SubHeading2}</h2>
+                                )}
                                 </div>
 
 
-                                {/* <div className="vertical-heading">
-                                    <h5>Who We Are</h5>
-                                    <h2>A <strong>Story</strong><br/>About Us</h2>
-                                </div>
-
-                                <div className="vertical-heading">
-                                    <h5>Who We Are</h5>
-                                    <h2>A <strong>Story</strong><br/>About Us</h2>
-                                </div> */}
                             </div>
 
                             
@@ -101,24 +99,32 @@ const Purpose = () => {
 
                             <div className="col-md-8 col-sm-12">
                                 <div className="about-right">
-                                {/* <div className="horizontal-heading main-about" style={{color: '#000'}}>
-                                    <h5 style={{color: '#000'}}>An Elementary Student's Introduction to the</h5>
-                                    <h2 style={{color: '#000'}}> <strong >Stock</strong> Market</h2>
-                                </div> */}
+
 
                                 <div className="horizontal-heading main-about" style={{color: '#000'}}>
+                                {purpose.sec2Preheading && (
                                     <h5 style={{color: '#000'}}>{purpose.sec2Preheading}</h5>
+                                    )}
+                                    {purpose.sec2Heading && (
                                     <h2> {purpose.sec2Heading}</h2>
+                                    )}
                                 </div>
 
-                                {/* <div className="horizontal-heading main-about-p" style={{color: '#000'}}>
-                                        <h3 style={{color: '#000'}}>The Program</h3>
-                                    </div> */}
-                                    <p className="about-text">{purpose.sec2Description} </p>
+
+                                    {purpose.sec2Description && (
+                                        <p className="about-text">
+                                        <ReactMarkdown 
+                                            children={purpose.sec2Description} 
+                                            remarkPlugins={[remarkGfm]}   
+                                        />
+                                         </p>
+                                     )}
 
                                     <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
                                         <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
+                                        {purpose.sec2Link && (
                                             <a href={purpose.sec2Link} title="Read Full" style={{backgroundColor: 'none'}}><span>{purpose.sec2LinkText}</span></a>
+                                        )}
                                         </div>
                                     </div>
 

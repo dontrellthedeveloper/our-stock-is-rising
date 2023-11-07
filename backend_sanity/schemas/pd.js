@@ -31,7 +31,7 @@ export default {
         {
             name: 'description',
             title: 'Description',
-            type: 'string'
+            type: 'markdown'
         },
         {
             name: 'mailLink',

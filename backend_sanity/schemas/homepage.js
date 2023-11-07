@@ -15,17 +15,17 @@ export default {
         },
         {
             name: 'tagline',
-            title: 'Tagline',
-            type: 'string',
-        },
-        {
-            name: 'hpbuttonLink',
-            title: 'Homepage Button Link',
+            title: 'Banner Tagline',
             type: 'string',
         },
         {
             name: 'hpbuttonText',
-            title: 'Homepage Button Text',
+            title: 'Banner Button Text',
+            type: 'string',
+        },
+        {
+            name: 'hpbuttonLink',
+            title: 'Banner Button Link',
             type: 'string',
         },
         {
@@ -36,7 +36,7 @@ export default {
         {
             name: 'boxtext',
             title: 'Box 1 Text',
-            type: 'string',
+            type: 'markdown',
         },
         {
             name: 'boxLink',
@@ -51,7 +51,7 @@ export default {
         {
             name: 'boxtext2',
             title: 'Box 2 Text',
-            type: 'string',
+            type: 'markdown',
         },
         {
             name: 'boxLink2',
@@ -66,7 +66,7 @@ export default {
         {
             name: 'boxtext3',
             title: 'Box 3 Text',
-            type: 'string',
+            type: 'markdown',
         },
         {
             name: 'boxLink3',
@@ -75,113 +75,113 @@ export default {
         },
         {
             name: 'secPreheading',
-            title: 'Secion 1 Pre Heading',
+            title: 'Section 1 Pre Heading',
             type: 'string',
         },
         {
             name: 'secHeading',
-            title: 'Secion 1 Heading',
+            title: 'Section 1 Heading',
             type: 'string',
-        },
-        {
-            name: 'secDescription',
-            title: 'Secion 1 Description',
-            type: 'string'
-        },
-        {
-            name: 'secLink',
-            title: 'Secion 1 Button Link',
-            type: 'string',
-        },
-        {
-            name: 'secLinkText',
-            title: 'Secion 1 Button Text',
-            type: 'string'
         },
         {
             name: 'secSubheading',
-            title: 'Secion 1 Sub Heading',
+            title: 'Section 1 Pre Heading/Left',
             type: 'string',
         },
         {
             name: 'secSubHeading2',
-            title: 'Secion 1 Sub Heading 2',
+            title: 'Section 1 Heading/Left',
+            type: 'string',
+        },
+        {
+            type: "markdown",
+            name: "secDescription",
+            title: 'Section 1 Description',
+        },
+        {
+            name: 'secLinkText',
+            title: 'Section 1 Button Text',
+            type: 'string'
+        },
+        {
+            name: 'secLink',
+            title: 'Section 1 Button Link',
             type: 'string',
         },
         {
             name: 'sec2Preheading',
-            title: 'Secion 2 Pre Heading',
+            title: 'Section 2 Pre Heading',
             type: 'string',
         },
         {
             name: 'sec2Heading',
-            title: 'Secion 2 Heading',
+            title: 'Section 2 Heading',
             type: 'string',
-        },
-        {
-            name: 'sec2Description',
-            title: 'Secion 2 Description',
-            type: 'string'
-        },
-        {
-            name: 'sec2Link',
-            title: 'Secion 2 Button Link',
-            type: 'string',
-        },
-        {
-            name: 'sec2LinkText',
-            title: 'Secion 2 Button Text',
-            type: 'string'
         },
         {
             name: 'sec2Subheading',
-            title: 'Secion 2 Sub Heading',
+            title: 'Section 2 Pre Heading/Left',
             type: 'string',
         },
         {
             name: 'sec2SubHeading2',
-            title: 'Secion 2 Sub Heading 2',
+            title: 'Section 2 Heading/Left',
+            type: 'string',
+        },
+        {
+            name: 'sec2Description',
+            title: 'Section 2 Description',
+            type: 'markdown'
+        },
+        {
+            name: 'sec2LinkText',
+            title: 'Section 2 Button Text',
+            type: 'string'
+        },
+        {
+            name: 'sec2Link',
+            title: 'Section 2 Button Link',
             type: 'string',
         },
         {
             name: 'sec3Preheading',
-            title: 'Secion 3 Pre Heading',
+            title: 'Section 3 Pre Heading',
             type: 'string',
         },
         {
             name: 'sec3Heading',
-            title: 'Secion 3 Heading',
+            title: 'Section 3 Heading',
             type: 'string',
-        },
-        {
-            name: 'sec3Description',
-            title: 'Secion 3 Description',
-            type: 'string'
-        },
-        {
-            name: 'sec3Link',
-            title: 'Secion 3 Button Link',
-            type: 'string',
-        },
-        {
-            name: 'sec3LinkText',
-            title: 'Secion 3 Button Text',
-            type: 'string'
         },
         {
             name: 'sec3Subheading',
-            title: 'Secion 3 Sub Heading',
+            title: 'Section 3 Pre Heading/Left',
             type: 'string',
         },
         {
             name: 'sec3SubHeading2',
-            title: 'Secion 3 Sub Heading 2',
+            title: 'Section 3 Heading/Left',
+            type: 'string',
+        },
+        {
+            name: 'sec3Description',
+            title: 'Section 3 Description',
+            type: 'markdown'
+        },
+        {
+            name: 'sec3LinkText',
+            title: 'Section 3 Button Text',
+            type: 'string'
+        },
+        {
+            name: 'sec3Link',
+            title: 'Section 3 Button Link',
             type: 'string',
         },
         {
             name: 'statement',
             title: 'Homepage Statement',
-            type: 'string',
+            type: 'markdown',
         },
         {
             name: 'standardsTitle',

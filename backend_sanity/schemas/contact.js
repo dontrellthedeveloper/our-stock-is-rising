@@ -31,7 +31,7 @@ export default {
         {
             name: 'description',
             title: 'Business Card Info',
-            type: 'string'
+            type: 'markdown'
         },
         {
             name: 'footerText',

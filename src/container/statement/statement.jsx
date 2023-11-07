@@ -3,6 +3,8 @@ import './statement.scss';
 import {FaQuoteLeft, FaQuoteRight} from "react-icons/fa";
 import { client } from '../../client';
 
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 const Statement = () => {
 
@@ -66,8 +68,18 @@ const Statement = () => {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="tech-statement text-center">
-                            <h3><FaQuoteLeft/> {statement.statement} <FaQuoteRight/></h3>
-                                {/*<p>- Sean Gardner -</p>*/}
+                            {statement.statement && (
+                            <h3>
+
+                            {/* <FaQuoteLeft/>  */}
+                            <ReactMarkdown 
+                                            children={statement.statement}  
+                                            remarkPlugins={[remarkGfm]}   
+                                        />
+
+                           {/* <FaQuoteRight/> */}
+                           </h3>
+                            )}
                             </div>
                         </div>
                     </div>

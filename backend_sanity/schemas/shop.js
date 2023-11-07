@@ -31,7 +31,7 @@ export default {
         {
             name: 'description',
             title: 'Book Synopsis',
-            type: 'string'
+            type: 'markdown'
         },
         {
             name: 'bookLink',

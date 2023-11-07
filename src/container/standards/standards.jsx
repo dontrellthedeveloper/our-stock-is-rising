@@ -7,6 +7,9 @@ import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import { client } from '../../client';
 
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
+
 const Standards = () => {
     const [standards, setStandards] = useState(null);
     const [home, setHome] = useState([]);
@@ -82,7 +85,9 @@ const Standards = () => {
                     <div className="row">
                         <div className="col-md-12 text-center">
                             <div className="horizontal-heading" style={{marginBottom: '40px'}}>
+                            {home.standardsTitle && (
                                 <h2 className="brand-thin"> <strong className="brand-bold">{home.standardsTitle} </strong></h2>
+                             )}
                             </div>
                         </div>
                     </div>
@@ -125,19 +130,30 @@ const Standards = () => {
                                     <div class="basic-card basic-card-aqua " >
                                         <div class="card-content">
                                             <div style={{width: '200px', margin: '0 auto'}}>
+                                            {standard.title && (
                                             <span class="card-title">{standard.title} </span>
+                                            )}
                                             </div>
                                             {/* <br/> */}
                                             {/* <span class="card-text">English </span> */}
 
+                                            {standard.description && (
                                             <p class="card-text">
-                                            {standard.description}                                            </p>
+                                            {/* {standard.description}      */}
+                                            <ReactMarkdown 
+                                            children={standard.description} 
+                                            remarkPlugins={[remarkGfm]}   
+                                        />                                  
+                                        </p>
+                                            )}
                                         </div>
 
                             
                         
                                         <div class="card-link">
+                                        {standard.standardsLink && (
                                             <a href={standard.standardsLink} title="Read Full"><span>Learn More</span></a>
+                                            )}
                                         </div>
                                     </div>
                 

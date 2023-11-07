@@ -31,7 +31,7 @@ export default {
         {
             name: 'description',
             title: 'Description',
-            type: 'string'
+            type: 'markdown'
         },
         {
             name: 'imageUrl',
@@ -59,7 +59,7 @@ export default {
         {
             name: 'description2',
             title: 'Description 2',
-            type: 'string'
+            type: 'markdown'
         },
         {
             name: 'imageUrl2',

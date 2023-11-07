@@ -1227,6 +1227,10 @@
 
 @media(max-width: 767px) {
 
+    #about {
+        padding-top: 0 !important;
+    }
+
     .col-mobile {
         padding-bottom: 60px;
     }
@@ -1237,7 +1241,7 @@
     }
 
     .col-mobile-top {
-        margin-top: 40px;
+        margin-top: 20px;
     }
 
     #about .about-right {

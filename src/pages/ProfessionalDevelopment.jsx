@@ -23,7 +23,8 @@ import videoBgMp4 from "../assets/our-stock-is-rising.mp4";
 import {AiOutlineLineChart} from "react-icons/ai";
 
 
-
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 
 function ProfessionalDevelopment() {
@@ -89,7 +90,7 @@ function ProfessionalDevelopment() {
                     <div className="home-headings tools-p-align">
                         <div className="horizontal-heading influencer-name">
                             <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> 
-                            Professional Development
+                            {pd.name}
                             </span>
                             </h1>
                         </div>
@@ -102,78 +103,7 @@ function ProfessionalDevelopment() {
                 <div className="about-01" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                     <div className="container">
                         <div className="row" style={{justifyContent:'center'}}>
-                            {/* Left Side */}
-                            {/* <div className="col-md-6 col-sm-6">
-                                <div className="mobile__hide-image column-show map-color-7 influencer-image">
-                                    <div className="portfolio-item">
-                                        <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
-                                        <div className="portfolio-item-overlay margin-top-g">
-                                            <div className="portfolio-item-details text-center">
-                                                {singleTeamMember.imageTitle2 && (
-                                                    <>
-                                                        <h3>{singleTeamMember.imageTitle2}</h3>
-                                                        <span></span>
-                                                    </>
-                                                )}
-
-                                                {singleTeamMember.imageDescription2 && (
-                                                    <p className='influencer-description'>{singleTeamMember.imageDescription2}</p>
-                                                )}
-
-                                                <div className='show-button'>
-                                                    {singleTeamMember.instagramLink && (
-                                                        <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
-                                                                <FaInstagram/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.facebookLink && (
-                                                        <a href={singleTeamMember.facebookLink} target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-facebook'>
-                                                                <FaFacebookF/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.twitterLink && (
-                                                        <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-twitter'>
-                                                                <FaTwitter/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.youtubeLink && (
-                                                        <a href={singleTeamMember.youtubeLink}
-                                                            target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-youtube'>
-                                                                <FaYoutube/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.tiktokLink && (
-                                                        <a href={singleTeamMember.tiktokLink}
-                                                            target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-tiktok'>
-                                                                <FaTiktok/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div> */}
+                           
                             
                             {/* Right Side */}
                             <div className="col-md-10 col-sm-10" style={{display: 'table'}}>
@@ -187,10 +117,17 @@ function ProfessionalDevelopment() {
 
 
                                     <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>
-{pd.description}</p>
+                      
+                                    <ReactMarkdown 
+                                                children={pd.description} 
+                                                remarkPlugins={[remarkGfm]}   
+                                                />
+                                    </p>
                                     
+                                    <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
 
-                                    <div className='show-button-page'>
+
+                                    {/* <div className='show-button-page'>
 
                                         <hr style={{margin: '1rem'}}/>
                                     
@@ -202,7 +139,7 @@ function ProfessionalDevelopment() {
 
                                         <hr style={{margin: '1rem'}}/>
 
-                                    </div>
+                                    </div> */}
                                                                    
                                                                         
                                     

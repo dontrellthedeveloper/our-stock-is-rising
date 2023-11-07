@@ -23,7 +23,8 @@ import videoBgMp4 from "../assets/our-stock-is-rising.mp4";
 import {AiOutlineLineChart} from "react-icons/ai";
 
 
-
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 
 function Updates() {
@@ -112,11 +113,18 @@ function Updates() {
 
                                     <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
 
-                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>{updates.description} </p>
+                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>
+                                    {/* {updates.description}  */}
+                                    <ReactMarkdown 
+                                                children={updates.description} 
+                                                remarkPlugins={[remarkGfm]}   
+                                                />
+                                    </p>
 
                                     
+                                    <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
 
-                                    <div className='show-button-page'>
+                                    {/* <div className='show-button-page'>
 
                                         <hr style={{margin: '1rem'}}/>
 
@@ -130,7 +138,7 @@ function Updates() {
 
                                         <hr style={{margin: '1rem'}}/>
 
-                                    </div>
+                                    </div> */}
                                     
                                 </div>
                             </div>

@@ -180,7 +180,7 @@ function Shop() {
                                                                             
                                             <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
                                                 <div class="card-link-b" style={{padding: '7px', borderTop: '0', }}>
-                                                    <a href={shop.bookLink} title="Read Full" style={{backgroundColor: 'none'}}><span>{shop.bookText}</span></a>
+                                                    <a href={shop.bookLink} target='_blank' title="Read Full" style={{backgroundColor: 'none'}}><span>{shop.bookText}</span></a>
                                                 </div>
                                             </div>
 
@@ -194,7 +194,7 @@ function Shop() {
                                         {/* <hr style={{margin: '0.5rem'}}/> */}
 
 
-                                        <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>
+                                        <p className="about-text" style={{marginLeft: '40px', marginRight: '40px'}}>
                                     
                                     <ReactMarkdown 
                                                 children={shop.description} 

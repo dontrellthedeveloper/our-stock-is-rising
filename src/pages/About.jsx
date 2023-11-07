@@ -24,7 +24,8 @@ import {AiOutlineLineChart} from "react-icons/ai";
 import { IoIosArrowDown } from 'react-icons/io';
 
 
-
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 
 function About() {
@@ -127,7 +128,7 @@ function About() {
             </div>
 
 
-            <section id="about" style={{height: 'calc(100vh - 140px)', display: 'table', width: '100%'}}>
+            <section id="about" style={{paddingTop: '120px', paddingBottom: '120px', display: 'table', width: '100%'}}>
                 <div className="about-01" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                     <div className="container">
                     <div className="row col-mobile-top" style={{justifyContent: 'center'}}>
@@ -138,16 +139,6 @@ function About() {
                                         <img src={urlFor(about.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
                                         <div className="portfolio-item-overlay margin-top-g">
                                             <div className="portfolio-item-details text-center">
-                                                {/* {singleTeamMember.imageTitle2 && (
-                                                    <>
-                                                        <h3>{singleTeamMember.imageTitle2}</h3>
-                                                        <span></span>
-                                                    </>
-                                                )}
-
-                                                {singleTeamMember.imageDescription2 && (
-                                                    <p className='influencer-description'>{singleTeamMember.imageDescription2}</p>
-                                                )} */}
 
                                                 <div className='show-button'>
                                                     {social.instagramLink && (
@@ -210,29 +201,20 @@ function About() {
                             <div className="col-md-8 col-sm-12 col-mobile" style={{display: 'table'}}>
                                 <div className="about-right" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                                     <div className="horizontal-heading main-about" style={{color: '#000'}}>
-                                        <h5 style={{color: '#000'}}>About</h5>
-                                        <h2> <strong ></strong>Gregory A. Powell</h2>
+                                        <h5 style={{color: '#000'}}>{about.preheading}</h5>
+                                        <h2> <strong ></strong>{about.heading}</h2>
                                     </div>
 
                                     <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
 
 
-                                    <p className="about-text" style={{marginLeft: '20px', marginRight: '20px'}}>Gregory A. Powell is a former A Better Chance (ABC) Scholar and graduate
-                                                                                                                of The Peddie School in Hightstown, NJ. He is a retired, decorated U.S. Air
-                                                                                                                Force Major and a 22-year veteran of teaching in Dayton Public Schools. In
-                                                                                                                2005, he was District Teacher of the Year, a state finalist in Ohio, and a Martha
-                                                                                                                Holden Jennings Scholar. Mr. Powell is also a former Master Teacher with the
-                                                                                                                Ohio Department of Education and former Senior STEM Fellow with the
-                                                                                                                Dayton Regional STEM Center (DRSC). His “Compressed Air Vehicle”
-                                                                                                                lesson plan gained national distribution on the DRSC website. He has
-                                                                                                                published articles in Social Studies and the Young Learner in 2018 and 2021.
-                                                                                                                Mr. Powell has also presented to national audiences, including; Symposium on
-                                                                                                                Urban Teacher Education, Birmingham, AL (2011); Critical Questions in
-                                                                                                                Education Conference, New Orleans, LA (2017); and Innovative Schools
-                                                                                                                Summit, Atlanta, GA (2022). He holds a Master’s Degree from The Air Force
-                                                                                                                Institute of Technology and certificates in teaching and educational
-                                                                                                                supervision from the University of Dayton. Originally from Miami, FL, Mr.
-                                                                                                                Powell now resides in Union, Ohio.  </p>
+                                    <p className="about-text" style={{marginLeft: '20px', marginRight: '20px'}}>
+                                    <ReactMarkdown 
+                                                children={about.description} 
+                                                remarkPlugins={[remarkGfm]}   
+                                                /> 
+               
+                                    </p>
 
                                     
 
@@ -301,13 +283,7 @@ function About() {
 
                                     </div>
                                     
-                              
-                                                                        
-                                    {/* <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
-                                        <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
-                                            <a href="#" title="Read Full" style={{backgroundColor: 'none'}}><span>More Info About Our Program</span></a>
-                                        </div>
-                                    </div> */}
+                            
                                 </div>
                             </div>
                         </div>
@@ -328,7 +304,7 @@ function About() {
                 </div>
             </div>
 
-            <section id="about" style={{height: 'calc(100vh - 140px)', display: 'table', width: '100%'}}>
+            <section id="about" style={{paddingTop: '120px', paddingBottom: '120px', display: 'table', width: '100%'}}>
                 <div className="about-01" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                     <div className="container">
                     <div className="row col-mobile-top" style={{justifyContent: 'center'}}>
@@ -345,7 +321,13 @@ function About() {
                                     <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
 
 
-                                    <p className="about-text" style={{marginLeft: '20px', marginRight: '20px'}}>{about.description2} </p>
+                                    <p className="about-text" style={{marginLeft: '20px', marginRight: '20px'}}>
+                                    <ReactMarkdown 
+                                                children={about.description2} 
+                                                remarkPlugins={[remarkGfm]}   
+                                                /> 
+
+                                    </p>
 
                                     
 
@@ -420,48 +402,6 @@ function About() {
                                                 <div className='show-button'>
 
 
-                                                    {/* {singleTeamMember.instagramLink && (
-                                                        <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                            <button className='btn btn-social-i btn-instagram'>
-                                                                <FaInstagram/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.facebookLink && (
-                                                        <a href={singleTeamMember.facebookLink} target='_blank'>
-                                                            <button className='btn btn-social-i-f btn-facebook'>
-                                                                <FaFacebookF/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.twitterLink && (
-                                                        <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                            <button className='btn btn-social-i-t btn-twitter'>
-                                                                <FaTwitter/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.youtubeLink && (
-                                                        <a href={singleTeamMember.youtubeLink}
-                                                        target='_blank'>
-                                                            <button className='btn btn-social-i-y btn-youtube'>
-                                                                <FaYoutube/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.tiktokLink && (
-                                                        <a href={singleTeamMember.tiktokLink}
-                                                        target='_blank'>
-                                                            <button className='btn btn-social-i btn-tiktok'>
-                                                                <FaTiktok/>
-                                                            </button>
-                                                        </a>
-                                                    )} */}
-
                                                     <hr />
 
                                                     <div className='template-p-detail'>
@@ -482,11 +422,7 @@ function About() {
                                         </div>
                                     </div>                                    
                                                                         
-                                    {/* <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
-                                        <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
-                                            <a href="#" title="Read Full" style={{backgroundColor: 'none'}}><span>More Info About Our Program</span></a>
-                                        </div>
-                                    </div> */}
+
                                 </div>
                             </div>
 
@@ -497,63 +433,10 @@ function About() {
                                         <img src={urlFor(about.imageUrl2).width(800).height(800).url()} className="influencer-image-2" alt=""/>
                                         <div className="portfolio-item-overlay margin-top-g">
                                             <div className="portfolio-item-details text-center">
-                                                {/* {singleTeamMember.imageTitle2 && (
-                                                    <>
-                                                        <h3>{singleTeamMember.imageTitle2}</h3>
-                                                        <span></span>
-                                                    </>
-                                                )}
 
-                                                {singleTeamMember.imageDescription2 && (
-                                                    <p className='influencer-description'>{singleTeamMember.imageDescription2}</p>
-                                                )} */}
 
                                                 <div className='show-button'>
-                                                    {/* {singleTeamMember.instagramLink && (
-                                                        <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
-                                                                <FaInstagram/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.facebookLink && (
-                                                        <a href={singleTeamMember.facebookLink} target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-facebook'>
-                                                                <FaFacebookF/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.twitterLink && (
-                                                        <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-twitter'>
-                                                                <FaTwitter/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.youtubeLink && (
-                                                        <a href={singleTeamMember.youtubeLink}
-                                                            target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-youtube'>
-                                                                <FaYoutube/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.tiktokLink && (
-                                                        <a href={singleTeamMember.tiktokLink}
-                                                            target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-tiktok'>
-                                                                <FaTiktok/>
-                                                            </button>
-                                                        </a>
-                                                    )} */}
+                                                  
                                                 </div>
                                             </div>
                                         </div>
@@ -566,10 +449,6 @@ function About() {
                     </div>
                 </div>
 
-
-                {/* <a href="#about2" className="arrow-down smooth-scroll" style={{color: '#213805'}}>
-                    <IoIosArrowDown icon="fa-solid fa-angle-down" />
-                </a> */}
             </section>
 
             <Statement/>

@@ -27,9 +27,10 @@ import { IoIosArrowDown } from 'react-icons/io';
 
 import GoogleMapReact from 'google-map-react';
 
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
-
 
 function Contact() {
     const [contact, setContact] = useState(null);
@@ -129,73 +130,7 @@ function Contact() {
                     <div className="row col-mobile-top" style={{justifyContent: 'center'}}>
                             {/* Left Side */}
                             <div className="col-md-6 col-sm-12">
-                                {/* <div className="mobile__hide-image column-show map-color-7 influencer-image">
-                                    <div className="portfolio-item">
-                                        <div className="portfolio-item-overlay margin-top-g">
-                                            <div className="portfolio-item-details text-center">
-                                                {singleTeamMember.imageTitle2 && (
-                                                    <>
-                                                        <h3>{singleTeamMember.imageTitle2}</h3>
-                                                        <span></span>
-                                                    </>
-                                                )}
 
-                                                {singleTeamMember.imageDescription2 && (
-                                                    <p className='influencer-description'>{singleTeamMember.imageDescription2}</p>
-                                                )}
-
-                                                <div className='show-button'>
-                                                    {singleTeamMember.instagramLink && (
-                                                        <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
-                                                                <FaInstagram/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.facebookLink && (
-                                                        <a href={singleTeamMember.facebookLink} target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-facebook'>
-                                                                <FaFacebookF/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.twitterLink && (
-                                                        <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-twitter'>
-                                                                <FaTwitter/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.youtubeLink && (
-                                                        <a href={singleTeamMember.youtubeLink}
-                                                            target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-youtube'>
-                                                                <FaYoutube/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.tiktokLink && (
-                                                        <a href={singleTeamMember.tiktokLink}
-                                                            target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-tiktok'>
-                                                                <FaTiktok/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div> */}
 
                                 <div style={{ height: '50vh', width: '100%' }}>
                                             <GoogleMapReact
@@ -222,7 +157,14 @@ function Contact() {
 
                                     <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
 
-                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>{contact.description} </p>
+                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>
+                                    
+                                    
+                                    <ReactMarkdown 
+                                                children={contact.description}  
+                                                remarkPlugins={[remarkGfm]}   
+                                                /> 
+                                    </p>
 
                                     
 

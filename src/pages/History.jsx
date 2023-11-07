@@ -24,83 +24,54 @@ import {AiOutlineLineChart} from "react-icons/ai";
 import { IoIosArrowDown } from 'react-icons/io';
 
 
-
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 
 function History() {
     // const [singleTeamMember, setSingleTeamMember] = useState(null);
-    const [services, setServices] = useState(null);
+    const [history, setHistory] = useState(null);
     const {slug} = useParams();
 
 
 
 
-    // useEffect(() => {
-    //     client.fetch(`*[_type == "about" && slug.current == 'about']{
-    //         name,
-    //         _id,
-    //         slug,
-    //         instagramLink,
-    //         facebookLink,
-    //         twitterLink,
-    //         youtubeLink,
-    //         tiktokLink,
-    //         description,
-    //         about1,
-    //         about2,
-    //         companyGoalName,
-    //         companyGoalDescription,
-    //         companyGoalName2,
-    //         companyGoalDescription2,
-    //         companyGoalName3,
-    //         companyGoalDescription3,
-    //         imageUrl{
-    //             asset->{
-    //                 _id,
-    //                 url
-    //             }
-    //         },
-    //         imageUrl2{
-    //             asset->{
-    //                 _id,
-    //                 url
-    //             }
-    //         },
-    //         imageUrl3{
-    //             asset->{
-    //                 _id,
-    //                 url
-    //             }
-    //         }
-    //     }`).then((data) => setSingleTeamMember(data[0]))
-    //         .catch(console.error)
-    // }, [slug]);
-
-
-
-
-
-
     useEffect(() => {
-        client.fetch(`*[_type == "service"]`
+        client.fetch(`*[_type == "history" && slug.current == 'history']{
+            name,
+            _id,
+            slug,
+            preheading,
+            heading,
+            description,
+            name2,
+            preheading2,
+            heading2,
+            description2,
+            imageUrl{
+                asset->{
+                    _id,
+                    url
+                }
+            },
+            imageUrl2{
+                asset->{
+                    _id,
+                    url
+                }
+            }
+        }`).then((data) => setHistory(data[0]))
+            .catch(console.error)
+    }, [slug]);
 
-        ).then((data) => {
-            setServices(data)
-        })
-
-    }, []);
 
 
+    if(!history) return (
+        <div className="preloader">
+            <div className="status"></div>
+        </div>
+    )
 
-
-
-
-    // if(!singleTeamMember || !services) return (
-    //     <div className="preloader">
-    //         <div className="status"></div>
-    //     </div>
-    // )
-    // if(!services) return <div>Loading.....</div>
 
 
     return (
@@ -117,7 +88,7 @@ function History() {
                     <div className="home-headings tools-p-align">
                         <div className="horizontal-heading influencer-name">
                             <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> 
-                            History
+                            {history.name}
                             </span>
                             </h1>
                         </div>
@@ -134,57 +105,14 @@ function History() {
                             <div className="col-md-6 col-sm-6">
                                 <div className="mobile__hide-image column-show map-color-7 influencer-image">
                                     <div className="portfolio-item">
-                                        <img src={images.history} className="influencer-image-2" alt=""/>
+
+                                    <img src={urlFor(history.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
                                         {/* <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/> */}
                                         <div className="portfolio-item-overlay margin-top-g">
                                             <div className="portfolio-item-details text-center">
 
                                                 <div className='show-button'>
-                                                    {/* {singleTeamMember.instagramLink && (
-                                                        <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
-                                                                <FaInstagram/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.facebookLink && (
-                                                        <a href={singleTeamMember.facebookLink} target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-facebook'>
-                                                                <FaFacebookF/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.twitterLink && (
-                                                        <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-twitter'>
-                                                                <FaTwitter/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.youtubeLink && (
-                                                        <a href={singleTeamMember.youtubeLink}
-                                                            target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-youtube'>
-                                                                <FaYoutube/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.tiktokLink && (
-                                                        <a href={singleTeamMember.tiktokLink}
-                                                            target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-tiktok'>
-                                                                <FaTiktok/>
-                                                            </button>
-                                                        </a>
-                                                    )} */}
+                                                
                                                 </div>
                                             </div>
                                         </div>
@@ -198,19 +126,20 @@ function History() {
                             <div className="col-md-6 col-sm-12" style={{display: 'table'}}>
                                 <div className="about-right" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                                     <div className="horizontal-heading main-about" style={{color: '#000'}}>
-                                        <h5 style={{color: '#000'}}>Our History's</h5>
-                                        <h2> <strong ></strong>Beginnings</h2>
+                                        <h5 style={{color: '#000'}}>{history.preheading}</h5>
+                                        <h2> <strong ></strong>{history.heading}</h2>
                                     </div>
 
                                     <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
 
 
 
-                                    <p className="about-text">
-                                    •	1999 – An Educational Response to a Rampant “Consumer” Culture  <br/>
-                                    •	2002 – Presentation at the Annual National Council of Teachers of Mathematics (NCTM), Las Vegas, NV <br/>          
-                                    •	2002 – Copyright: Library of Congress <br/>
-                                    •	2003 – A New Culture at Fairview Elementary, Dayton Public Schools                 
+                                    <p className="about-text" style={{textAlign: 'left', marginLeft: '60px', marginRight: '60px'}}>
+                                    <ReactMarkdown 
+                                                children={history.description} 
+                                                remarkPlugins={[remarkGfm]}   
+                                                />
+                    
                                     </p>
 
 
@@ -233,7 +162,7 @@ function History() {
                     <div className="home-headings tools-p-align">
                         <div className="horizontal-heading influencer-name">
                             <h1 className="home-headings-2 influencer-name-h1"><span className='influencer-name-span'> 
-                            History
+                            {history.name2}
                             </span>
                             </h1>
                         </div>
@@ -251,26 +180,17 @@ function History() {
                             <div className="col-md-6 col-sm-12" style={{display: 'table'}}>
                                 <div className="about-right" style={{display: 'table-cell', verticalAlign: 'middle'}}>
                                     <div className="horizontal-heading main-about" style={{color: '#000'}}>
-                                        <h5 style={{color: '#000'}}>Our History's</h5>
-                                        <h2> <strong ></strong>Evolution</h2>
+                                        <h5 style={{color: '#000'}}>{history.preheading2}</h5>
+                                        <h2> <strong ></strong>{history.heading2}</h2>
                                     </div>
 
                                     <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
 
-                                    <p className="about-text">
-                                    •	2000 - Using Hand-held Calculators <br/>
-                                    •	2000 - Converting Fractions to Decimals <br/>
-                                    •	2002 – Presentation to NCTM, Las Vegas <br/> 
-                                    •	2004 – Facilitator’s (Teacher) E-Spreadsheet <br/>    
-                                    •	2007 – Student’s E-Spreadsheet  <br/>
-                                    •	2008 – A Visit to Key Bank <br/>
-                                    •	2011 – Applying “Trend line” Projections <br/>
-                                    •	2015 – Entering The Ohio Stock Market Game <br/>
-                                    •	2017 –  Students Present to Wright State Univ. and Dayton’s Mayor <br/>  
-                                    •	2018 –  A Visit from Zales’ CEO <br/>
-                                    •	2021 –  Activity’s “How to” Manuscript to Publisher <br/>
-                                    •	2023 – Book Release Our Stock is Rising… <br/>
-                                    •	TBD – Professional Development Opportunities            
+                                    <p className="about-text" style={{textAlign: 'left', marginLeft: '60px', marginRight: '60px'}}>
+                                    <ReactMarkdown 
+                                                children={history.description2} 
+                                                remarkPlugins={[remarkGfm]}   
+                                                />            
                                     </p>
                                     
 
@@ -284,7 +204,7 @@ function History() {
                             <div className="col-md-6 col-sm-6 col-mobile" style={{display: 'table'}}>
                                 <div className="mobile__hide-image column-show map-color-7 influencer-image">
                                     <div className="portfolio-item">
-                                    <img src={images.history} className="influencer-image-2" alt=""/>
+                                    <img src={urlFor(history.imageUrl2).width(800).height(800).url()} className="influencer-image-2" alt=""/>
                                         {/* <img src={urlFor(singleTeamMember.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/> */}
                                         <div className="portfolio-item-overlay margin-top-g">
                                             <div className="portfolio-item-details text-center">

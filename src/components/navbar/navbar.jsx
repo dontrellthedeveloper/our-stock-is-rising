@@ -224,6 +224,15 @@ const Navbar = () => {
               <li>
                 <NavLink
                   className="app__navbar-menu-links"
+                  to="/professional-development"
+                  onClick={() => setToggle(false)}
+                >
+                  Professional Development
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  className="app__navbar-menu-links"
                   to="/about"
                   onClick={() => setToggle(false)}
                 >

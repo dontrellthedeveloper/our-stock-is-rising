@@ -187,7 +187,7 @@ const About = () => {
                                     <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
                                         <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
                                         {about.secLink && (
-                                            <a href={about.secLink} title="Read Full" style={{backgroundColor: 'none'}}><span>{about.secLinkText}</span></a>
+                                            <a href={about.secLink} target='_blank' title="Read Full" style={{backgroundColor: 'none'}}><span>{about.secLinkText}</span></a>
                                             )}
                                         </div>
                                     </div>

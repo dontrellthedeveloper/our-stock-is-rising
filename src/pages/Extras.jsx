@@ -24,7 +24,8 @@ import {AiOutlineLineChart, AiOutlineStock} from "react-icons/ai";
 import { IoIosArrowDown } from 'react-icons/io';
 
 
-
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 
 function Extras() {
@@ -127,43 +128,7 @@ function Extras() {
                                                         </a>
                                                     )}
 
-                                                    {/* {singleTeamMember.facebookLink && (
-                                                        <a href={singleTeamMember.facebookLink} target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-facebook'>
-                                                                <FaFacebookF/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.twitterLink && (
-                                                        <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-twitter'>
-                                                                <FaTwitter/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.youtubeLink && (
-                                                        <a href={singleTeamMember.youtubeLink}
-                                                            target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-youtube'>
-                                                                <FaYoutube/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.tiktokLink && (
-                                                        <a href={singleTeamMember.tiktokLink}
-                                                            target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-tiktok'>
-                                                                <FaTiktok/>
-                                                            </button>
-                                                        </a>
-                                                    )} */}
+                                                   
                                                 </div>
                                             </div>
                                         </div>
@@ -183,7 +148,13 @@ function Extras() {
 
                                     <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
 
-                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>{extras.description}  </p>
+                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>
+                                
+                                    <ReactMarkdown 
+                                                children= {extras.description}  
+                                                remarkPlugins={[remarkGfm]}   
+                                                />
+                                    </p>
 
                                     
 
@@ -193,7 +164,7 @@ function Extras() {
                                     
                                         <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
                                         <div class="card-link-b" style={{padding: '7px', borderTop: '0', }}>
-                                            <a href={extras.gameLink} title="Play the Stock Market Game" style={{backgroundColor: 'none'}}><span>{extras.gameText}</span></a>
+                                            <a href={extras.gameLink} target='_blank' title="Play the Stock Market Game" style={{backgroundColor: 'none'}}><span>{extras.gameText}</span></a>
                                         </div>
                                     </div>
 

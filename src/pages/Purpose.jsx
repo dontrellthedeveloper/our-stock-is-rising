@@ -24,7 +24,8 @@ import {AiOutlineLineChart} from "react-icons/ai";
 import { IoIosArrowDown } from 'react-icons/io';
 
 
-
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 
 
 function Purpose() {
@@ -123,66 +124,7 @@ function Purpose() {
                                     <div className="portfolio-item">
                                         <img src={urlFor(purpose.imageUrl).width(800).height(800).url()} className="influencer-image-2" alt=""/>
                                         <div className="portfolio-item-overlay margin-top-g">
-                                            {/* <div className="portfolio-item-details text-center">
-                                                {singleTeamMember.imageTitle2 && (
-                                                    <>
-                                                        <h3>{singleTeamMember.imageTitle2}</h3>
-                                                        <span></span>
-                                                    </>
-                                                )}
 
-                                                {singleTeamMember.imageDescription2 && (
-                                                    <p className='influencer-description'>{singleTeamMember.imageDescription2}</p>
-                                                )}
-
-                                                <div className='show-button'>
-                                                    {singleTeamMember.instagramLink && (
-                                                        <a href={singleTeamMember.instagramLink} target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
-                                                                <FaInstagram/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.facebookLink && (
-                                                        <a href={singleTeamMember.facebookLink} target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-facebook'>
-                                                                <FaFacebookF/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.twitterLink && (
-                                                        <a href={singleTeamMember.twitterLink} target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-twitter'>
-                                                                <FaTwitter/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.youtubeLink && (
-                                                        <a href={singleTeamMember.youtubeLink}
-                                                            target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-youtube'>
-                                                                <FaYoutube/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-
-                                                    {singleTeamMember.tiktokLink && (
-                                                        <a href={singleTeamMember.tiktokLink}
-                                                            target='_blank'>
-                                                            <button className='btn btn-social-influencer-img btn-social-img
-                                                            btn-social-tiktok'>
-                                                                <FaTiktok/>
-                                                            </button>
-                                                        </a>
-                                                    )}
-                                                </div>
-                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
@@ -201,23 +143,15 @@ function Purpose() {
                                     <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
 
 
-                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>{purpose.description}  </p>
+                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>
+                                 
+                                    <ReactMarkdown 
+                                                children={purpose.description} 
+                                                remarkPlugins={[remarkGfm]}   
+                                                />
+                                     </p>
 
-                                    
-
-                                    {/* <div className='show-button-page'>
-
-                                        <hr style={{margin: '1rem'}}/>
-                                    
-                                        <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
-                                            <div class="card-link-b" style={{padding: '7px', borderTop: '0', }}>
-                                                <a href="#" title="Read Full" style={{backgroundColor: 'none'}}><span>More Info About Our Program</span></a>
-                                            </div>
-                                        </div>
-
-                                        <hr style={{margin: '1rem'}}/>
-
-                                    </div> */}
+                                
                                                                    
                                     <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
                        
@@ -266,7 +200,13 @@ function Purpose() {
                                     <hr style={{margin: '2rem', border: '2px solid #213805'}}/>
 
 
-                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>{purpose.description2}  </p>
+                                    <p className="about-text" style={{marginLeft: '80px', marginRight: '80px'}}>
+
+                                    <ReactMarkdown 
+                                                children={purpose.description2} 
+                                                remarkPlugins={[remarkGfm]}   
+                                                />
+                                    </p>
 
                             
                            

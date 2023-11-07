@@ -152,7 +152,7 @@ const Standards = () => {
                         
                                         <div class="card-link">
                                         {standard.standardsLink && (
-                                            <a href={standard.standardsLink} title="Read Full"><span>Learn More</span></a>
+                                            <a href={standard.standardsLink} target='_blank' title="Read Full"><span>Learn More</span></a>
                                             )}
                                         </div>
                                     </div>

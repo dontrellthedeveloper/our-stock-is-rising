@@ -14,18 +14,18 @@ export default {
             hidden: true
         },
         {
-            name: 'hptitle',
-            title: 'Homepage Title',
-            type: 'string',
-        },
-        {
             name: 'tagline',
             title: 'Tagline',
             type: 'string',
         },
         {
-            name: 'hpbutton',
-            title: 'Homepage Button',
+            name: 'hpbuttonLink',
+            title: 'Homepage Button Link',
+            type: 'string',
+        },
+        {
+            name: 'hpbuttonText',
+            title: 'Homepage Button Text',
             type: 'string',
         },
         {
@@ -39,6 +39,11 @@ export default {
             type: 'string',
         },
         {
+            name: 'boxLink',
+            title: 'Box 1 Link',
+            type: 'string',
+        },
+        {
             name: 'boxheading2',
             title: 'Box 2 Heading',
             type: 'string'
@@ -46,6 +51,11 @@ export default {
         {
             name: 'boxtext2',
             title: 'Box 2 Text',
+            type: 'string',
+        },
+        {
+            name: 'boxLink2',
+            title: 'Box 2 Link',
             type: 'string',
         },
         {
@@ -59,45 +69,139 @@ export default {
             type: 'string',
         },
         {
-            name: 'heading2',
-            title: 'Heading 2',
+            name: 'boxLink3',
+            title: 'Box 3 Link',
             type: 'string',
         },
         {
-            name: 'description 2',
-            title: 'Business Card Info 2',
+            name: 'secPreheading',
+            title: 'Secion 1 Pre Heading',
+            type: 'string',
+        },
+        {
+            name: 'secHeading',
+            title: 'Secion 1 Heading',
+            type: 'string',
+        },
+        {
+            name: 'secDescription',
+            title: 'Secion 1 Description',
             type: 'string'
         },
         {
-            name: 'preheading3',
-            title: 'Pre Heading 3',
+            name: 'secLink',
+            title: 'Secion 1 Button Link',
             type: 'string',
         },
         {
-            name: 'heading3',
-            title: 'Heading 3',
-            type: 'string',
-        },
-        {
-            name: 'description 3',
-            title: 'Business Card Info 3',
+            name: 'secLinkText',
+            title: 'Secion 1 Button Text',
             type: 'string'
         },
         {
-            name: 'footerText',
-            title: 'Footer Text',
+            name: 'secSubheading',
+            title: 'Secion 1 Sub Heading',
             type: 'string',
         },
         {
-            name: 'footerEmail',
-            title: 'Email',
+            name: 'secSubHeading2',
+            title: 'Secion 1 Sub Heading 2',
             type: 'string',
         },
         {
-            name: 'footerPhone',
-            title: 'Phone Number',
+            name: 'sec2Preheading',
+            title: 'Secion 2 Pre Heading',
             type: 'string',
         },
-
+        {
+            name: 'sec2Heading',
+            title: 'Secion 2 Heading',
+            type: 'string',
+        },
+        {
+            name: 'sec2Description',
+            title: 'Secion 2 Description',
+            type: 'string'
+        },
+        {
+            name: 'sec2Link',
+            title: 'Secion 2 Button Link',
+            type: 'string',
+        },
+        {
+            name: 'sec2LinkText',
+            title: 'Secion 2 Button Text',
+            type: 'string'
+        },
+        {
+            name: 'sec2Subheading',
+            title: 'Secion 2 Sub Heading',
+            type: 'string',
+        },
+        {
+            name: 'sec2SubHeading2',
+            title: 'Secion 2 Sub Heading 2',
+            type: 'string',
+        },
+        {
+            name: 'sec3Preheading',
+            title: 'Secion 3 Pre Heading',
+            type: 'string',
+        },
+        {
+            name: 'sec3Heading',
+            title: 'Secion 3 Heading',
+            type: 'string',
+        },
+        {
+            name: 'sec3Description',
+            title: 'Secion 3 Description',
+            type: 'string'
+        },
+        {
+            name: 'sec3Link',
+            title: 'Secion 3 Button Link',
+            type: 'string',
+        },
+        {
+            name: 'sec3LinkText',
+            title: 'Secion 3 Button Text',
+            type: 'string'
+        },
+        {
+            name: 'sec3Subheading',
+            title: 'Secion 3 Sub Heading',
+            type: 'string',
+        },
+        {
+            name: 'sec3SubHeading2',
+            title: 'Secion 3 Sub Heading 2',
+            type: 'string',
+        },
+        {
+            name: 'statement',
+            title: 'Homepage Statement',
+            type: 'string',
+        },
+        {
+            name: 'footerPreheading',
+            title: 'Footer Contact Pre Heading',
+            type: 'string',
+        },
+        {
+            name: 'footerHeading',
+            title: 'Footer Contact Heading',
+            type: 'string',
+        },
+        {
+            name: 'footerDescription',
+            title: 'Footer Contact Description',
+            type: 'string'
+        },
+        {
+            name: 'footerCopyriight',
+            title: 'Footer Copyright Text',
+            type: 'string',
+        }
     ],
 };

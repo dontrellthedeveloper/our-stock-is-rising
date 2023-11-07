@@ -5,7 +5,7 @@ import videoBgMp4 from '../../assets/our-stock-is-rising.mp4';
 // import videoBgOgv from '../../assets/KT-Management-home-screen-video-city.ogv';
 // import videoBgWebm from '../../assets/KT-Management-home-screen-video-city.webm';
 import {IoIosArrowDown} from "react-icons/io";
-
+import { images } from "../../constants";
 
 const header = () => {
     return (
@@ -25,8 +25,9 @@ const header = () => {
                 <div className="home-content-inner text-center">
 
                     <div className="home-heading">
-                        <h1 className="home-heading-1">Our<span> Stock</span></h1><br/>
-                        <h1 className="home-heading-2"><span> </span>Is Rising</h1>
+                        {/* <h1 className="home-heading-1">Our<span> Stock</span></h1><br/>
+                        <h1 className="home-heading-2"><span> </span>Is Rising</h1> */}
+                        <img src={images.hptext} alt="logo" />
                     </div>
 
                     <div className="home-text">

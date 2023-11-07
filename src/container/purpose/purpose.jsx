@@ -1,11 +1,68 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './purpose.scss'
 
 import {images} from "../../constants";
 import {AiOutlineLineChart} from "react-icons/ai";
 import {FaFacebookF, FaInstagram, FaRegEye, FaRegHandshake, FaTiktok, FaTwitter, FaYoutube} from "react-icons/fa";
+import { client } from '../../client';
 
-const purpose = () => {
+const Purpose = () => {
+
+
+    const [purpose, setPurpose] = useState([]);
+
+    useEffect(() => {
+        client.fetch(`*[_type == "homepage"] | order(orderRank) {
+            tagline,
+            _id,
+            hpbuttonLink,
+            hpbuttonText,
+            boxheading,
+            boxtext,
+            boxLink,
+            boxheading2,
+            boxtext2,
+            boxLink2,
+            boxheading3,
+            boxtext3,
+            boxLink3,
+            secPreheading,
+            secHeading,
+            secDescription,
+            secLink,
+            secLinkText,
+            secSubheading,
+            secSubHeading2,
+            sec2Preheading,
+            sec2Heading,
+            sec2Description,
+            sec2Link,
+            sec2LinkText,
+            sec2Subheading,
+            sec2SubHeading2,
+            sec3Preheading,
+            sec3Heading,
+            sec3Description,
+            sec3Link,
+            sec3LinkText,
+            sec3Subheading,
+            sec3SubHeading2,
+            statement,
+            footerPreheading,
+            footerHeading,
+            footerDescription,
+            footerCopyriight
+        }`).then((data) => setPurpose(data[0]))
+            .catch(console.error)
+    }, []);
+
+    if(!purpose) return (
+        <div className="preloader">
+            <div className="status"></div>
+        </div>
+    )
+
+
     return (
         <section id="about">
 
@@ -23,8 +80,8 @@ const purpose = () => {
 
                             <div className="col-md-4 col-sm-4 homepage-heading-display" >
                                 <div className="vertical-heading">
-                                    <h5>Info about</h5>
-                                    <h2>Our <br/>Program  </h2>
+                                <h5>{purpose.sec2Subheading}</h5>
+                                    <h2 style={{width: '150px'}}>{purpose.sec2SubHeading2}</h2>
                                 </div>
 
 
@@ -50,18 +107,18 @@ const purpose = () => {
                                 </div> */}
 
                                 <div className="horizontal-heading main-about" style={{color: '#000'}}>
-                                    <h5 style={{color: '#000'}}>Information about</h5>
-                                    <h2> <strong ></strong>Our Program</h2>
+                                    <h5 style={{color: '#000'}}>{purpose.sec2Preheading}</h5>
+                                    <h2> {purpose.sec2Heading}</h2>
                                 </div>
 
                                 {/* <div className="horizontal-heading main-about-p" style={{color: '#000'}}>
                                         <h3 style={{color: '#000'}}>The Program</h3>
                                     </div> */}
-                                    <p className="about-text">The program was presented with rave reviews at the National Council of Teachers of Math's Annual conference in 2002.  In 2008, it was lauded in Dr. Stephanie Dalton's book, Five Standards for Effective Teaching.  Later that year, my fourth-grade class of stock investors was invited to Key Bank in Dayton, OH.  With portfolios in hand, the junior executives wowed officials at the bank by conducting a mock board meeting.  One student even produced an Excel line graph of his team's stock's performance that showed the same slope as that produced by the bank's leased Bloomberg software, given the same time period. </p>
+                                    <p className="about-text">{purpose.sec2Description} </p>
 
                                     <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
                                         <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
-                                            <a href="/purpose" title="Read Full" style={{backgroundColor: 'none'}}><span>More Info About Our Program</span></a>
+                                            <a href={purpose.sec2Link} title="Read Full" style={{backgroundColor: 'none'}}><span>{purpose.sec2LinkText}</span></a>
                                         </div>
                                     </div>
 
@@ -71,98 +128,6 @@ const purpose = () => {
                             </div>
                         </div>
 
-                        {/* About Bottom */}
-                        <div className="row" style={{display: 'none'}}>
-                            <div className="col-md-12">
-                                <div className="about-bottom">
-
-
-                                                        <div className="mobile__hide-image column-show map-color-7 influencer-image">
-                                                            <div className="portfolio-item">
-                                                                <img src={images.logo} className="influencer-image-2" alt=""/>
-
-                                                                <div className="portfolio-item-overlay margin-top-g">
-                                                                    <div className="portfolio-item-details text-center">
-                                                                        {/*Item Header*/}
-                                                                        {/* {singleTeamMember.imageTitle2 && ( */}
-                                                                            <>
-                                                                                <h3>
-                                                                                Test
-                                                                                {/* {singleTeamMember.imageTitle2} */}
-                                                                                </h3>
-                                                                                {/*Item Strips*/}
-                                                              
-                                                                                <span></span>
-                                                                            </>
-
-                                                                        {/* )} */}
-
-                                                                        {/*Item Description */}
-                                                                        {/* {singleTeamMember.imageDescription2 && (
-                                                                            <p className='influencer-description'>{singleTeamMember.imageDescription2}</p>
-                                                                        )} */}
-
-                                                                        <div className='show-button'>
-
-                                                                            {/* {singleTeamMember.instagramLink && ( */}
-                                                                                <a href='' target='_blank'>
-                                                                                    <button className='btn btn-social-influencer-img btn-social-img btn-social-instagram'>
-                                                                                        <FaInstagram/>
-                                                                                    </button>
-                                                                                </a>
-                                                                            {/* )} */}
-
-                                                                            {/* {singleTeamMember.facebookLink && ( */}
-                                                                                <a href='' target='_blank'>
-                                                                                    <button className='btn btn-social-influencer-img btn-social-img
-                                                                                    btn-social-facebook'>
-                                                                                        <FaFacebookF/>
-                                                                                    </button>
-                                                                                </a>
-                                                                            {/* )} */}
-
-                                                                            {/* {singleTeamMember.twitterLink && ( */}
-                                                                                <a href='' target='_blank'>
-                                                                                    <button className='btn btn-social-influencer-img btn-social-img
-                                                                                    btn-social-twitter'>
-                                                                                        <FaTwitter/>
-                                                                                    </button>
-                                                                                </a>
-                                                                            {/* )} */}
-
-                                                                            {/* {singleTeamMember.youtubeLink && ( */}
-                                                                                <a href=''
-                                                                                   target='_blank'>
-                                                                                    <button className='btn btn-social-influencer-img btn-social-img
-                                                                                    btn-social-youtube'>
-                                                                                        <FaYoutube/>
-                                                                                    </button>
-                                                                                </a>
-                                                                            {/* )} */}
-
-                                                                            {/* {singleTeamMember.tiktokLink && ( */}
-                                                                                <a href=''
-                                                                                   target='_blank'>
-                                                                                    <button className='btn btn-social-influencer-img btn-social-img
-                                                                                    btn-social-tiktok'>
-                                                                                        <FaTiktok/>
-                                                                                    </button>
-                                                                                </a>
-                                                                            {/* )} */}
-
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-
-                                                        </div>
-
-
-                                {/* <img src={images.aboutLeft} alt="About Us" className="img-responsive about__image-section"/> */}
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -172,4 +137,4 @@ const purpose = () => {
     );
 };
 
-export default purpose;
+export default Purpose;

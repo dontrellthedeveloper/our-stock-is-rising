@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './header.scss';
 import videoBgImg from '../../assets/our-stock-is-rising.jpg'
 import videoBgMp4 from '../../assets/our-stock-is-rising.mp4';
@@ -7,7 +7,67 @@ import videoBgMp4 from '../../assets/our-stock-is-rising.mp4';
 import {IoIosArrowDown} from "react-icons/io";
 import { images } from "../../constants";
 
-const header = () => {
+import {urlFor, client} from "../../client";
+
+
+const Header = () => {
+
+
+    const [banner, setBanner] = useState([]);
+
+    useEffect(() => {
+        client.fetch(`*[_type == "homepage"] | order(orderRank) {
+            tagline,
+            _id,
+            hpbuttonLink,
+            hpbuttonText,
+            boxheading,
+            boxtext,
+            boxLink,
+            boxheading2,
+            boxtext2,
+            boxLink2,
+            boxheading3,
+            boxtext3,
+            boxLink3,
+            secPreheading,
+            secHeading,
+            secDescription,
+            secLink,
+            secLinkText,
+            secSubheading,
+            secSubHeading2,
+            sec2Preheading,
+            sec2Heading,
+            sec2Description,
+            sec2Link,
+            sec2LinkText,
+            sec2Subheading,
+            sec2SubHeading2,
+            sec3Preheading,
+            sec3Heading,
+            sec3Description,
+            sec3Link,
+            sec3LinkText,
+            sec3Subheading,
+            sec3SubHeading2,
+            statement,
+            footerPreheading,
+            footerHeading,
+            footerDescription,
+            footerCopyriight
+        }`).then((data) => setBanner(data[0]))
+            .catch(console.error)
+    }, []);
+
+    if(!banner) return (
+        <div className="preloader">
+            <div className="status"></div>
+        </div>
+    )
+
+
+
     return (
         <section id='home'>
 
@@ -31,11 +91,11 @@ const header = () => {
                     </div>
 
                     <div className="home-text">
-                        <p>Wall Street in the Classroom</p>
+                        <p>{banner.tagline}</p>
                     </div>
 
                     <div className="home-btn">
-                        <a className="btn btn-general btn-home smooth-scroll" href="/shop" title="Get Represented" role="button">Shop</a>
+                        <a className="btn btn-general btn-home smooth-scroll" href={banner.hpbuttonLink} title={banner.hpbuttonText} role="button">{banner.hpbuttonText}</a>
                     </div>
                 </div>
             </div>
@@ -49,4 +109,4 @@ const header = () => {
     );
 };
 
-export default header;
+export default Header;

@@ -1,12 +1,71 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './about.scss'
 
 import {images} from "../../constants";
 import {AiOutlineLineChart} from "react-icons/ai";
 import {FaFacebookF, FaInstagram, FaRegEye, FaRegHandshake, FaTiktok, FaTwitter, FaYoutube} from "react-icons/fa";
 import {MdOutlineTipsAndUpdates} from 'react-icons/md'
+import {urlFor, client} from "../../client";
 
-const about = () => {
+const About = () => {
+
+
+
+    const [about, setAbout] = useState([]);
+
+    useEffect(() => {
+        client.fetch(`*[_type == "homepage"] | order(orderRank) {
+            tagline,
+            _id,
+            hpbuttonLink,
+            hpbuttonText,
+            boxheading,
+            boxtext,
+            boxLink,
+            boxheading2,
+            boxtext2,
+            boxLink2,
+            boxheading3,
+            boxtext3,
+            boxLink3,
+            secPreheading,
+            secHeading,
+            secDescription,
+            secLink,
+            secLinkText,
+            secSubheading,
+            secSubHeading2,
+            sec2Preheading,
+            sec2Heading,
+            sec2Description,
+            sec2Link,
+            sec2LinkText,
+            sec2Subheading,
+            sec2SubHeading2,
+            sec3Preheading,
+            sec3Heading,
+            sec3Description,
+            sec3Link,
+            sec3LinkText,
+            sec3Subheading,
+            sec3SubHeading2,
+            statement,
+            footerPreheading,
+            footerHeading,
+            footerDescription,
+            footerCopyriight
+        }`).then((data) => setAbout(data[0]))
+            .catch(console.error)
+    }, []);
+
+    if(!about) return (
+        <div className="preloader">
+            <div className="status"></div>
+        </div>
+    )
+
+
+
     return (
         <section id="about">
             {/* About 02 */}
@@ -15,33 +74,33 @@ const about = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-4 col-sm-4">
-                                <a href="/purpose" style={{textDecoration: 'none'}}>
+                                <a href={about.boxLink} style={{textDecoration: 'none'}}>
                                     <div className="about-item text-center about-h">
                                         <AiOutlineLineChart className="react-icon-about"></AiOutlineLineChart>
-                                        <h3>Purpose / Objectives</h3>
+                                        <h3>{about.boxheading}</h3>
                                         <hr/>
-                                            <p>Purpose: To provide elementary students with a basic understanding of the stock market and its impact on their daily lives. </p>
+                                            <p>{about.boxtext}</p>
                                     </div>
                                 </a>
 
                             </div>
                             <div className="col-md-4 col-sm-4">
-                                <a href="/professional-development" style={{textDecoration: 'none'}}>
+                                <a href={about.boxLink2} style={{textDecoration: 'none'}}>
                                     <div className="about-item text-center about-h">
                                         <FaRegHandshake className="react-icon-about"></FaRegHandshake>
-                                        <h3>Professional Development</h3>
+                                        <h3>{about.boxheading2}</h3>
                                         <hr/>
-                                            <p>I Need information to put for professional development. </p>
+                                            <p>{about.boxtext2}</p>
                                     </div>
                                 </a>
                             </div>
                             <div className="col-md-4 col-sm-4">
-                                <a href="/updates" style={{textDecoration: 'none'}}>
+                                <a href={about.boxLink3} style={{textDecoration: 'none'}}>
                                     <div className="about-item text-center about-h">
                                         <MdOutlineTipsAndUpdates className="react-icon-about"></MdOutlineTipsAndUpdates>
-                                        <h3>Updates</h3>
+                                        <h3>{about.boxheading3}</h3>
                                         <hr/>
-                                            <p>I Need information to put for updates.</p>
+                                            <p>{about.boxtext3}</p>
                                     </div>
                                 </a>
                             </div>
@@ -62,8 +121,10 @@ const about = () => {
 
                             <div className="col-md-4 col-sm-4 homepage-heading-display">
                                 <div className="vertical-heading">
-                                    <h5>Intro to the</h5>
-                                    <h2>Stock <strong></strong><br/>Market</h2>
+                                    {/* <h5>Intro to the</h5>
+                                    <h2>Stock <strong></strong><br/>Market</h2> */}
+                                    <h5>{about.secSubheading}</h5>
+                                    <h2 style={{width: '150px'}}>{about.secSubHeading2}</h2>
                                 </div>
 
 
@@ -84,14 +145,14 @@ const about = () => {
                             <div className="col-md-8 col-sm-12">
                                 <div className="about-right">
                                 <div className="horizontal-heading main-about" style={{color: '#000'}}>
-                                    <h5 style={{color: '#000'}}>An Elementary Student's Introduction to the</h5>
-                                    <h2> <strong >Stock</strong> Market</h2>
+                                    <h5 style={{color: '#000'}}>{about.secPreheading}</h5>
+                                    <h2> {about.secHeading}</h2>
                                 </div>
-                                    <p className="about-text">Our Stock is Rising" is a classroom activity originally developed in 2000 in response to students' disinterest in the Business section of the local newspaper during a Social Studies current events review.  I took it as a personal challenge to design an ongoing activity that incorporated the basic principles of an elementary curriculum to teach students the fundamentals of the stock market.  The results were overwhelmingly positive!  Students not only gained a basic understanding of business world applications for their grade-level curriculum but through this cooperative learning activity, they also felt a profound sense of inclusion in a future corporate America and international business arenas. </p>
+                                    <p className="about-text">{about.secDescription} </p>
 
                                     <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
                                         <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
-                                            <a href="https://www.stockmarketgame.org/" title="Read Full" style={{backgroundColor: 'none'}}><span>Play the Stock Market Game</span></a>
+                                            <a href={about.secLink} title="Read Full" style={{backgroundColor: 'none'}}><span>{about.secLinkText}</span></a>
                                         </div>
                                     </div>
 
@@ -202,4 +263,4 @@ const about = () => {
     );
 };
 
-export default about;
+export default About;

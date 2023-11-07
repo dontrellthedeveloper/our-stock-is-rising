@@ -184,6 +184,11 @@ export default {
             type: 'string',
         },
         {
+            name: 'standardsTitle',
+            title: 'Core Statement Title',
+            type: 'string',
+        },
+        {
             name: 'footerPreheading',
             title: 'Footer Contact Pre Heading',
             type: 'string',

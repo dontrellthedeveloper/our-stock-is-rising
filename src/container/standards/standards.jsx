@@ -1,12 +1,80 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './standards.scss';
 
 import {images} from "../../constants";
 import OwlCarousel from "react-owl-carousel";
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
+import { client } from '../../client';
 
-const standards = () => {
+const Standards = () => {
+    const [standards, setStandards] = useState(null);
+    const [home, setHome] = useState([]);
+
+    useEffect(() => {
+        client.fetch(`*[_type == "standards"] | order(order asc)`
+        ).then((data) => {
+            setStandards(data)
+        })
+
+    }, []);
+
+
+
+
+    useEffect(() => {
+        client.fetch(`*[_type == "homepage"] | order(orderRank) {
+            tagline,
+            _id,
+            hpbuttonLink,
+            hpbuttonText,
+            boxheading,
+            boxtext,
+            boxLink,
+            boxheading2,
+            boxtext2,
+            boxLink2,
+            boxheading3,
+            boxtext3,
+            boxLink3,
+            secPreheading,
+            secHeading,
+            secDescription,
+            secLink,
+            secLinkText,
+            secSubheading,
+            secSubHeading2,
+            sec2Preheading,
+            sec2Heading,
+            sec2Description,
+            sec2Link,
+            sec2LinkText,
+            sec2Subheading,
+            sec2SubHeading2,
+            sec3Preheading,
+            sec3Heading,
+            sec3Description,
+            sec3Link,
+            sec3LinkText,
+            sec3Subheading,
+            sec3SubHeading2,
+            statement,
+            standardsTitle,
+            footerPreheading,
+            footerHeading,
+            footerDescription,
+            footerCopyriight
+        }`).then((data) => setHome(data[0]))
+            .catch(console.error)
+    }, []);
+
+    if(!home || !standards) return (
+        <div className="preloader">
+            <div className="status"></div>
+        </div>
+    )
+
+
     return (
         <section id="brands">
             <div className="content-box-md-brands">
@@ -14,7 +82,7 @@ const standards = () => {
                     <div className="row">
                         <div className="col-md-12 text-center">
                             <div className="horizontal-heading" style={{marginBottom: '40px'}}>
-                                <h2 className="brand-thin"> <strong className="brand-bold">Ohio  Common Core Standards </strong></h2>
+                                <h2 className="brand-thin"> <strong className="brand-bold">{home.standardsTitle} </strong></h2>
                             </div>
                         </div>
                     </div>
@@ -52,27 +120,30 @@ const standards = () => {
                                 }}
                             >
 
-
-                                <div className="item client">
+                                {standards.map((standard, index) => (
+                                <div key={standard.title + index} className="item client">
                                     <div class="basic-card basic-card-aqua " >
                                         <div class="card-content">
-                                            <span class="card-title">ELA-LITERACY <br/> (SL6.2) </span>
-                                            <br/>
+                                            <div style={{width: '200px', margin: '0 auto'}}>
+                                            <span class="card-title">{standard.title} </span>
+                                            </div>
+                                            {/* <br/> */}
                                             {/* <span class="card-text">English </span> */}
 
                                             <p class="card-text">
-                                            Interpret information presented in diverse media and formats and explain how it contributes to a topic under study                                            </p>
+                                            {standard.description}                                            </p>
                                         </div>
 
                             
                         
                                         <div class="card-link">
-                                            <a href="https://www.thecorestandards.org/" title="Read Full"><span>Read Full</span></a>
+                                            <a href={standard.standardsLink} title="Read Full"><span>Learn More</span></a>
                                         </div>
                                     </div>
                 
                                 </div>
-                                <div className="item client">
+                                ))}
+                                {/* <div className="item client">
                                     <div class="basic-card basic-card-aqua ">
                                         <div class="card-content">
                                             <span class="card-title">ELA-LITERACY <br/> (SL.6.5)</span>
@@ -147,9 +218,9 @@ const standards = () => {
                                         </div>
                                     </div>
                 
-                                </div>
+                                </div> */}
 
-              
+
                             </OwlCarousel>
                         </div>
                     </div>
@@ -218,4 +289,4 @@ const standards = () => {
     );
 };
 
-export default standards;
+export default Standards;

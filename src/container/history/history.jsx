@@ -1,11 +1,68 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './history.scss'
 
 import {images} from "../../constants";
 import {AiOutlineLineChart} from "react-icons/ai";
 import {FaFacebookF, FaInstagram, FaRegEye, FaRegHandshake, FaTiktok, FaTwitter, FaYoutube} from "react-icons/fa";
+import { client } from '../../client';
 
-const history = () => {
+const History = () => {
+
+
+    const [history, setHistory] = useState([]);
+
+    useEffect(() => {
+        client.fetch(`*[_type == "homepage"] | order(orderRank) {
+            tagline,
+            _id,
+            hpbuttonLink,
+            hpbuttonText,
+            boxheading,
+            boxtext,
+            boxLink,
+            boxheading2,
+            boxtext2,
+            boxLink2,
+            boxheading3,
+            boxtext3,
+            boxLink3,
+            secPreheading,
+            secHeading,
+            secDescription,
+            secLink,
+            secLinkText,
+            secSubheading,
+            secSubHeading2,
+            sec2Preheading,
+            sec2Heading,
+            sec2Description,
+            sec2Link,
+            sec2LinkText,
+            sec2Subheading,
+            sec2SubHeading2,
+            sec3Preheading,
+            sec3Heading,
+            sec3Description,
+            sec3Link,
+            sec3LinkText,
+            sec3Subheading,
+            sec3SubHeading2,
+            statement,
+            footerPreheading,
+            footerHeading,
+            footerDescription,
+            footerCopyriight
+        }`).then((data) => setHistory(data[0]))
+            .catch(console.error)
+    }, []);
+
+    if(!history) return (
+        <div className="preloader">
+            <div className="status"></div>
+        </div>
+    )
+
+
     return (
         <section id="about">
 
@@ -22,9 +79,11 @@ const history = () => {
 
 
                             <div className="col-md-4 col-sm-4 homepage-heading-display">
-                                <div className="vertical-heading">
-                                    <h5>Info about</h5>
-                                    <h2>Our <br/>History  </h2>
+                            <div className="vertical-heading">
+                                    {/* <h5>Intro to the</h5>
+                                    <h2>Stock <strong></strong><br/>Market</h2> */}
+                                    <h5>{history.sec3Subheading}</h5>
+                                    <h2 style={{width: '150px'}}>{history.sec3SubHeading2}</h2>
                                 </div>
 
 
@@ -50,21 +109,19 @@ const history = () => {
                                 </div> */}
 
                                 <div className="horizontal-heading main-about" style={{color: '#000'}}>
-                                    <h5 style={{color: '#000'}}>Information about</h5>
-                                    <h2> <strong ></strong>Our History</h2>
+                                    <h5 style={{color: '#000'}}>{history.sec3Preheading}</h5>
+                                    <h2> {history.sec3Heading}</h2>
                                 </div>
 
                                 {/* <div className="horizontal-heading main-about-p" style={{color: '#000'}}>
                                         <h3 style={{color: '#000'}}>Our History</h3>
                                     </div> */}
 
-                                    <p className="about-text">From 2016 - 2018, my stock market teams at Dayton Boys Preparatory Academy garnered five top-ten finishes in the Elementary Division of the Ohio Stock Market Game.  They competed against more than 100 teams each time out, including some of the most prestigious private and Catholic schools in the state.  In 2017, our sixth-grade team presented at Wright State University's Annual Network for Educational Renewal Conference.  Later that spring, they were invited and presented at a Dayton City Commissioners Meeting that was broadcast on YouTube.  In 2018, one of our sixth-grade teams finished 8th in the state after spending an unprecedented 13 weeks at the top!  You can see them at work in the video below.</p>
-                                    <p className="about-text">A presentation of Our Stock Is Rising was well received at Fairborn Ohio's Innovations in Learning Conference in February 2020. We look forward to presentations at more school districts following the lifting of COVID-19 restrictions.</p>
-
+                                    <p className="about-text">{history.sec3Description} </p>
 
                                     <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
                                         <div class="card-link" style={{padding: '7px', borderTop: '0', }}>
-                                            <a href="/history" title="Read Full" style={{backgroundColor: 'none'}}><span>More Info About Our History</span></a>
+                                            <a href={history.sec3Link} title="Read Full" style={{backgroundColor: 'none'}}><span>{history.sec3LinkText}</span></a>
                                         </div>
                                     </div>
 
@@ -175,4 +232,4 @@ const history = () => {
     );
 };
 
-export default history;
+export default History;

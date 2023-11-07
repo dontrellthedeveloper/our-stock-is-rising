@@ -10,8 +10,7 @@ export default {
             options: {
                 source: 'name',
                 maxLength: 96,
-            },
-            hidden: true
+            }
         },
         {
             name: 'name',

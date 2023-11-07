@@ -37,11 +37,13 @@ export default {
             name: 'mailLink',
             title: 'Mailink List Link',
             type: 'string',
+            hidden: true
         },
         {
             name: 'mailText',
             title: 'Mailing List Text',
-            type: 'string'
+            type: 'string',
+            hidden: true
         },
     ],
 };

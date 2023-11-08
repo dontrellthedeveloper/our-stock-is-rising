@@ -24,6 +24,11 @@ html, body {
   height: 100%;
 }
 
+a {
+  color: #9fd399;
+  text-decoration: underline;
+}
+
 body {
   color: #000;
   font-family: Roboto, Helvetica, Arial, sans-serif;
@@ -294,7 +299,7 @@ section {
 
 .btn-red {
   color: #dcdcdc;
-  border: 2px solid #9fd399;
+  border: 2px solid #000;
   background-color: #000;
 }
 
@@ -302,7 +307,7 @@ section {
 .btn-red:focus {
   color: #000;
   background-color: #9fd399;
-  border: 2px solid #9fd399;
+  border: 2px solid #000;
 }
 
 .btn-linkedIn {
@@ -1304,12 +1309,12 @@ ul.social-list .twitter-bg-color a:hover {
 /* Contact Left */
 .form-styles-c {
   /* background-color: #a1a0a1; */
-  background-color: #213805;
+  background-color: #9fd399;
   border: 2px solid #9fd399;
 }
 
 .line-br-color {
-  border: 1px solid #9fd399;
+  border: 1px solid #000;
 }
 
 #submit-btn {
@@ -1419,7 +1424,7 @@ ul.office-details li i {
 
 /* Contact Right */
 .form-t-c {
-  color: #fff;
+  color: #000;
   font-weight: bold;
 }
 
@@ -1510,14 +1515,15 @@ ul.office-details li i {
 |   |   |   |   Footer
 ================================================ */
 footer {
-  background: #000;
+  background: #9fd399;
   padding: 20px;
   border-top: 2px solid #9fd399;
 }
 
 footer p {
-  color: #fff;
+  color: #000;
   line-height: 20px;
+  font-weight: 700;
 }
 
 footer p span {
@@ -1527,6 +1533,10 @@ footer p span {
 
 .marg-top {
   margin-top: 10px;
+}
+
+.form-control {
+  border: 1px solid #000;
 }
 
 

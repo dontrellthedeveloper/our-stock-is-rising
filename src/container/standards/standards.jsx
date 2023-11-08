@@ -138,7 +138,7 @@ const Standards = () => {
                                             {/* <span class="card-text">English </span> */}
 
                                             {standard.description && (
-                                            <p class="card-text">
+                                            <p class="card-text influencer-description">
                                             {/* {standard.description}      */}
                                             <ReactMarkdown 
                                             children={standard.description} 

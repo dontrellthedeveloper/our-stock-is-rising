@@ -44,6 +44,9 @@ pre code {
   font-family: 'open sans', 'sans-serif' !important;
 }
 
+ul {
+  list-style-position:  inside;
+}
 
 
 h1,
@@ -509,7 +512,7 @@ section {
   transform: rotate(-90deg);
   position: relative;
   top: 85px;
-  left: -53px;
+  left: -13px;
 }
 
 .vertical-heading h2 {

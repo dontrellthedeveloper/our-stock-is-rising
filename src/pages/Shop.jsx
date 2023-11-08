@@ -160,7 +160,7 @@ function Shop() {
                             
                             {/* Right Side */}
                             <div className="col-md-7 col-sm-12 col-mobile" style={{display: 'table'}}>
-                                <div className="about-right" style={{display: 'table-cell', verticalAlign: 'middle'}}>
+                                <div className="about-right" style={{display: 'table-cell'}}>
                                     <div className="horizontal-heading main-about" style={{color: '#000'}}>
                                         <h5 style={{color: '#000'}}>{shop.preheading}</h5>
                                         <h2> <strong ></strong>{shop.heading}</h2>

@@ -94,11 +94,12 @@ const Standards = () => {
                     <div className="row">
                         <div className="col-md-12">
                             <OwlCarousel
-                                items='5'
+                                // items='5'
                                 autoplay
-                            smartSpeed='700'
+                            smartSpeed='5000'
                             loop
                             autoplayHoverPause='true'
+                            autoplayTimeout='5000'
                             width='1000'
                             nav
                             dots='true'

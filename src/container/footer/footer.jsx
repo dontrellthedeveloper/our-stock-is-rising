@@ -92,8 +92,7 @@ const Footer = () => {
 
                             <div className="col-md-9 contact-main-form-s">
                                 <div className="form-styles-c" id="contact-right">
-                                    <form action="https://formspree.io/f/xzbloooy" method="POST">
-                                        <h4 className="form-t-c">{footer.footerDescription}</h4>
+                                <h4 className="form-t-c">{footer.footerDescription}</h4>
                                         <hr className="line-br-color"/>
 
 
@@ -156,6 +155,8 @@ const Footer = () => {
                                             </a>
                                         )}
                                         </p>
+                                    <form action="https://formspree.io/f/xzbloooy" method="POST">
+
 
 
                                             <div className="row">

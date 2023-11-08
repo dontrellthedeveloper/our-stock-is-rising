@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './header.scss';
 import videoBgImg from '../../assets/our-stock-is-rising.jpg'
-import videoBgMp4 from '../../assets/our-stock-is-rising.mp4';
+import videoBgMp4 from '../../assets/our-stock-is-rising2.mp4';
 // import videoBgOgv from '../../assets/KT-Management-home-screen-video-city.ogv';
 // import videoBgWebm from '../../assets/KT-Management-home-screen-video-city.webm';
 import {IoIosArrowDown} from "react-icons/io";

@@ -246,7 +246,7 @@ text-shadow: 15px 10px 0 #000;
 .basic-card-aqua {
 
     .card-content {
-        height: 220px;
+        height: 300px;
     }
 }
 
@@ -339,7 +339,7 @@ text-shadow: 15px 10px 0 #000;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 3; /* number of lines to show */
-  line-clamp: 3;
+  -webkit-line-clamp: 8;
+  line-clamp: 8;
   -webkit-box-orient: vertical;
 }

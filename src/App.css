@@ -49,8 +49,12 @@ pre code {
   font-family: 'open sans', 'sans-serif' !important;
 }
 
-ul {
+/* ul {
   list-style-position:  inside;
+} */
+
+ul li {
+  text-align: left;
 }
 
 

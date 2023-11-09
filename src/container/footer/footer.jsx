@@ -155,7 +155,7 @@ const Footer = () => {
                                             </a>
                                         )}
                                         </p>
-                                    <form action="https://formspree.io/f/xzbloooy" method="POST">
+                                    <form action="https://formspree.io/f/myyqvabe" method="POST">
 
 
 

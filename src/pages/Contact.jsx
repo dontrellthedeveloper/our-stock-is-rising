@@ -253,7 +253,7 @@ function Contact() {
                                             {/* You can also reach us by phone */}
                                             <a
                                         className='email__design-s'
-                                        href='tel:+1-937-555-1212'
+                                        href={`tel:${contact.footerPhone}`}
                                         target='_blank'> {contact.footerPhone}</a>
                                     </div>   
                                 </div>

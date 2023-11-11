@@ -156,9 +156,6 @@ const Footer = () => {
                                         )}
                                         </p>
                                     <form action="https://formspree.io/f/myyqvabe" method="POST">
-
-
-
                                             <div className="row">
                                                 <div className="col-md-6 col-sm-6">
                                                     <div className="form-group">

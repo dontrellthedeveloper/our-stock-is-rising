@@ -54,6 +54,16 @@ export default {
             type: 'string',
         },
         {
+            name: 'barnesLink',
+            title: 'Barnes Link',
+            type: 'string',
+        },
+        {
+            name: 'barnesText',
+            title: 'Purchase at Barnes & Noble',
+            type: 'string',
+        },
+        {
             name: 'footerText',
             title: 'Footer Text',
             type: 'string',

@@ -52,6 +52,8 @@ function Shop() {
             bookText,
             amazonLink,
             amazonText,
+            barnesLink,
+            barnesText,
             footerText,
             footerEmail,
             imageUrl{
@@ -191,36 +193,51 @@ function Shop() {
 
                                     <div className='show-button'>
 
-                                        {/* <hr style={{margin: '0.5rem'}}/> */}
-
 
                                         <p className="about-text" style={{marginLeft: '40px', marginRight: '40px'}}>
                                     
-                                    <ReactMarkdown 
-                                                children={shop.description} 
-                                                remarkPlugins={[remarkGfm]}   
-                                                /> 
-                                    </p>
+                                        <ReactMarkdown 
+                                                    children={shop.description} 
+                                                    remarkPlugins={[remarkGfm]}   
+                                                    /> 
+                                        </p>
 
-                                    <hr style={{margin: '1.5rem', border: '2px solid #213805'}}/>
+                                        <hr style={{margin: '1.5rem', border: '2px solid #213805'}}/>
 
-                                    
+                                        
 
-                                    <span>{shop.amazonText}</span>
+                                        <span>{shop.amazonText}</span>
 
-                                    {shop.amazonLink && (
-                                        <a href={shop.amazonLink} target='_blank'>
-                                            <button className='btn btn-social-i btn-amazon'>
-                                                {/* <FaInstagram/> */}
-                                                <FaAmazon/>
-                                            </button>
-                                        </a>
+                                        {shop.amazonLink && (
+                                            <a href={shop.amazonLink} target='_blank'>
+                                                <button className='btn btn-social-i btn-amazon'>
+                                                    {/* <FaInstagram/> */}
+                                                    <FaAmazon/>
+                                                </button>
+                                            </a>
+                                        )}
+
+                                        {!shop.barnesLink && (
+                                        <hr style={{margin: '1.5rem', border: '2px solid #213805'}}/>
+                                        )}
+                                    </div>
+
+
+                                    {shop.barnesLink && (
+                                    <div className='show-button-page'>   
+
+                                        <hr style={{margin: '1rem'}}/>                        
+                                                                            
+                                            <div class="basic-card basic-card-aqua " style={{margin: '0 auto'}}>
+                                                <div class="card-link-b" style={{padding: '7px', borderTop: '0', }}>
+                                                    <a href={shop.barnesLink} target='_blank' title="Read Full" style={{backgroundColor: 'none'}}><span>{shop.barnesText}</span></a>
+                                                </div>
+                                            </div>
+
+                                        <hr style={{margin: '1rem'}}/>
+
+                                    </div>
                                     )}
-
-
-                                    <hr style={{margin: '1.5rem', border: '2px solid #213805'}}/>
-
-                                        </div>
 
                                     <hr className='show-break-style'/>
                                     <div className='template-p-detail'>

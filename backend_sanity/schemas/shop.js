@@ -55,7 +55,7 @@ export default {
         },
         {
             name: 'barnesLink',
-            title: 'Barnes Link',
+            title: 'Barnes & Noble Link',
             type: 'string',
         },
         {

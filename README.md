@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/dontrellthedeveloper/our-stock-is-rising">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="src/assets/logo-light.png" alt="Logo" height="80">
   </a>
 
 <h3 align="center">Our Stock Is Rising - React website</h3>
@@ -244,9 +244,9 @@ Project Link: [https://github.com/dontrellthedeveloper/our-stock-is-rising](http
 [license-url]: https://github.com/dontrellthedeveloper/ktmanagers-react-sanity-rebuild/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/dontrell-washington
-[product-screenshot]: images/screenshot2.png
-[product-screenshot2]: images/screenshot3.png
-[product-screenshot3]: images/screenshot4.png
+[product-screenshot]: src/assets/screenshot2.png
+[product-screenshot2]: src/assets/screenshot3.png
+[product-screenshot3]: src/assets/screenshot4.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 

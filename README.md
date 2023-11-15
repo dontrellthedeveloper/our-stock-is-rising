@@ -95,8 +95,10 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![Sanity][Sanity.io]][Sanity-url]
-* [![Netlify][Netlify]][Netlify-url]
-
+* [![AWSCloudfront][AWSCloudfront]][AWSCloudfront-url]
+* [![AWSS3][AWSS3]][AWSS3-url]
+* [![AWSRoute53][AWSRoute53]][AWSRoute53-url]
+  
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -286,3 +288,15 @@ Project Link: [https://github.com/dontrellthedeveloper/our-stock-is-rising](http
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+
+
+
+[AWSS3]: https://img.shields.io/badge/AWS%20S3-569A31?style=for-the-badge&logo=amazon%20s3&logoColor=ffffff
+[AWSS3-url]: https://aws.amazon.com/s3/
+
+[AWSCloudfront]: https://img.shields.io/badge/AWS%20Cloudfront-7848D5?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAARVBMVEVHcEzz8Pvx7fr08fvy7vvz8Pvy7vvk3fXy7/vy7/vu6fnu6vnz8Pvv6/ny7/vz7/vq5fjz8Pvw7Pny7/v18vv08Pvz7/ta8ns3AAAAF3RSTlMAYzVxWG4tBIB5FxFoJj1dC1EcRKeQTtluvqQAAACASURBVAgdBcEHAsAgCACxcyDg7vL/T20CMPr7uVkEgCfFmFN3PwrMviEcr7oO3Kmh+UrSUCmsicasGjMUwcYtXkGlso1XVui5KGeCY7v1NUJo5QLHa8sKc81Lt5GfOwBEl1KEmkoAGClFKRDdNsDT/QGY72mq9fsuALiDuZsP4AdGGAV+6pAcqAAAAABJRU5ErkJggg==
+[AWSCloudfront-url]: https://www.amazonaws.cn/en/cloudfront/
+
+
+[AWSRoute53]: https://img.shields.io/badge/AWS%20Route%2053-7848D5?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAPFBMVEVHcEzz8Pvu6fnx7vvz8Pvo4vf08Pvy7vv08fvy7vrz8Pvy7vrx7vrv6vnu6fnx7vrt6Pny7vry7/vx7vstIv5QAAAAFHRSTlMAZhdIYQZuUmlNeFs0LCFVDUR+Pbyt+bYAAACDSURBVAgdBcGHAcMgEACxA77ScfbfNRLUPvWGXZ1fBRWXME+L4nGRc8Q9wl2GB+Lm7e39MnsGN/wBwO9YhZJZz1pjNw9llzF/tvdX5yiLaHZrK7U0tWZ0f+yRUya/0/lOwkUvtNGxHMWX6vKQ7NQimWImmRIVdHmR9yTOVADQ1ftUgD90xAWzTgyFTQAAAABJRU5ErkJggg==
+[AWSRoute53-url]: https://aws.amazon.com/route53/

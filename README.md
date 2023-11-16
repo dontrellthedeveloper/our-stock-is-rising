@@ -92,6 +92,7 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
+* [![JS][JS]][JS-url]
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 * [![Sanity][Sanity.io]][Sanity-url]
@@ -300,3 +301,7 @@ Project Link: [https://github.com/dontrellthedeveloper/our-stock-is-rising](http
 
 [AWSRoute53]: https://img.shields.io/badge/AWS%20Route%2053-7848D5?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAPFBMVEVHcEzz8Pvu6fnx7vvz8Pvo4vf08Pvy7vv08fvy7vrz8Pvy7vrx7vrv6vnu6fnx7vrt6Pny7vry7/vx7vstIv5QAAAAFHRSTlMAZhdIYQZuUmlNeFs0LCFVDUR+Pbyt+bYAAACDSURBVAgdBcGHAcMgEACxA77ScfbfNRLUPvWGXZ1fBRWXME+L4nGRc8Q9wl2GB+Lm7e39MnsGN/wBwO9YhZJZz1pjNw9llzF/tvdX5yiLaHZrK7U0tWZ0f+yRUya/0/lOwkUvtNGxHMWX6vKQ7NQimWImmRIVdHmR9yTOVADQ1ftUgD90xAWzTgyFTQAAAABJRU5ErkJggg==
 [AWSRoute53-url]: https://aws.amazon.com/route53/
+
+
+[JS]: https://img.shields.io/badge/JavaScript-111?style=for-the-badge&logo=javascript&logoColor=F7DF1E
+[JS-url]: https://www.javascript.com/

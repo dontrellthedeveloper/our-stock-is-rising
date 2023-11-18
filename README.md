@@ -34,7 +34,7 @@
     <img src="src/assets/logo-light.png" alt="Logo" height="80">
   </a>
 
-<h3 align="center">Our Stock Is Rising - React website</h3>
+<h3 align="center">Our Stock Is Rising - Wallstreet in the classroom</h3>
 
   <p align="center">
    This website was built using React.js, Bootstrap, Sanity.io, and Amazon S3

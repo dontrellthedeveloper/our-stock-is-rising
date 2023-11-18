@@ -37,7 +37,7 @@
 <h3 align="center">Our Stock Is Rising - Wallstreet in the classroom</h3>
 
   <p align="center">
-   This website was built using React.js, Bootstrap, Sanity.io, and Amazon S3
+   This website was built using React.js, Bootstrap, Sanity.io, AWS Cloudfront, AWS Route 53 and AWS S3
     <br />
     <a href="https://github.com/dontrellthedeveloper/our-stock-is-rising"><strong>Explore the docs »</strong></a>
     <br />

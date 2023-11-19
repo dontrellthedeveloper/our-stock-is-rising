@@ -40,7 +40,7 @@ export default {
         },
         {
             name: 'bookText',
-            title: 'Purchase at AustinMacauley.com',
+            title: 'Purchase Button Text',
             type: 'string',
         },
         {
@@ -50,7 +50,7 @@ export default {
         },
         {
             name: 'amazonText',
-            title: 'Purchase at Amazon.com',
+            title: 'Amazon Button Text',
             type: 'string',
         },
         {
@@ -60,7 +60,7 @@ export default {
         },
         {
             name: 'barnesText',
-            title: 'Purchase at Barnes & Noble',
+            title: 'Barnes & Noble Button Text',
             type: 'string',
         },
         {
